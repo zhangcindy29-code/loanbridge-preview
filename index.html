@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LoanBridge | Sydney's Trusted Mortgage &amp; Property Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c9c6c0",
+                        "surface-container": "#efeded",
+                        "inverse-surface": "#303030",
+                        "primary-fixed": "#b6ebfe",
+                        "surface-container-low": "#f5f3f3",
+                        "on-error": "#ffffff",
+                        "secondary": "#735c00",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#30302b",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary": "#003441",
+                        "on-primary-fixed-variant": "#114d5d",
+                        "on-tertiary-container": "#b6b4ad",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "on-secondary-container": "#745c00",
+                        "outline": "#70787c",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed": "#ffe088",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-secondary-fixed-variant": "#574500",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#9acee1",
+                        "surface-container-highest": "#e4e2e2",
+                        "outline-variant": "#c0c8cb",
+                        "surface-bright": "#fbf9f8",
+                        "primary-container": "#0f4c5c",
+                        "on-tertiary-fixed-variant": "#474742",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "on-primary-container": "#87bbce",
+                        "surface-tint": "#306576",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-container": "#fed65b",
+                        "tertiary-container": "#464641",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbd9d9",
+                        "surface": "#fbf9f8",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#40484b",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#9acee1",
+                        "background": "#fbf9f8",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#001f28"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 76, 92, 0.08);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0px 8px 30px rgba(15, 76, 92, 0.12);
+            transform: translateY(-4px);
+        }
+        .glass-header {
+            background: rgba(251, 249, 248, 0.8);
+            backdrop-filter: blur(8px);
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #306576 !important;
+            ring: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="docked full-width top-0 sticky z-50 glass-header border-b border-outline-variant/30 shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-md font-bold text-primary" href="#">LoanBridge</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-label-sm text-label-sm" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#find-broker">Find a Broker</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Loan Types</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#calculators">Calculators</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Knowledge Hub</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<!-- Language Switcher -->
+<div class="relative group">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-sm text-label-sm py-2">
+<span class="material-symbols-outlined">language</span>
+<span>English</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 top-full mt-1 hidden group-hover:block bg-surface border border-outline-variant/30 rounded-lg shadow-lg py-2 min-w-[140px]">
+<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">简体中文</a>
+<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">繁體中文</a>
+<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">Tiếng Việt</a>
+</div>
+</div>
+<button class="hidden lg:block px-6 py-2.5 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-label-sm">Match Me with a Broker</button>
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition-all scale-95 active:scale-90 text-label-sm">Free Consultation</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden" id="home">
+<div class="absolute top-0 right-0 w-1/2 h-full -z-10 opacity-10">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Trusted by Sydney's Chinese &amp; Vietnamese communities
+                    </div>
+<h1 class="font-display-lg text-display-lg text-primary">
+                        Home Loans Made Simple in <span class="text-secondary">Your Own Language.</span>
+</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                        Sydney's trusted mortgage and property partner. We speak your language and understand your goals, helping you navigate the Australian property market with absolute confidence.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">Free Consultation</button>
+<button class="px-8 py-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-all">Match Me with a Broker</button>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Luxury Sydney Property" class="w-full h-[500px] object-cover" data-alt="A sun-drenched, high-end modern residential property in a leafy Sydney suburb, showcasing expansive glass walls and clean architectural lines. The lighting is warm and golden, reflecting the late afternoon sun. The atmosphere is sophisticated and aspirational, utilizing a palette of deep teals and soft creams to mirror the LoanBridge brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQHj4c-W6N4lGFkDlTdSbv7gleMlJpAF0lceN5r-CEaI6zFM1qrdsmaHL3-NAvmfvqe1d22QN_HZHHWCbLFQlYwBPEwpH_Hmt160aqh-kGofbggSuuuH7A2iDauVzEAXy9PJCTubhzZy38cAfoWnk7V7nJhit0eEKu-VAs_NwiUaThSvs2AANBhrVVmURVs4mKJJ4n4cN1Uz6SASCvq7c2Ph4fkrLPzNbHukPUmkKqxPUjGkoW-A_ADn8VMFbNNNcXWzmv_b0Dr1Ua"/>
+</div>
+<!-- Stats Overlay Card -->
+<div class="absolute -bottom-8 -left-8 bg-surface p-6 rounded-xl shadow-xl border border-outline-variant/30 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<div class="font-bold text-headline-md text-primary">2,500+</div>
+<div class="text-on-surface-variant text-label-sm">Families Assisted</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Smart Broker Match (Centerpiece) -->
+<section class="py-16 bg-surface-container-low" id="find-broker">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-surface rounded-3xl p-8 md:p-12 shadow-xl border border-outline-variant/20">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Find Your Perfect Broker</h2>
+<p class="text-on-surface-variant">Tell us a bit about your needs and we'll match you with an expert who speaks your language and understands your local market.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Location</label>
+<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
+<option>Select Sydney Region</option>
+<option>North Shore</option>
+<option>Western Sydney</option>
+<option>South Sydney</option>
+<option>Eastern Suburbs</option>
+<option>Hills District</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Preferred Language</label>
+<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<option>Select Language</option>
+<option>English</option>
+<option>Mandarin (普通话)</option>
+<option>Cantonese (粵語)</option>
+<option>Vietnamese (Tiếng Việt)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Loan Type</label>
+<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<option>Select Type</option>
+<option>Owner Occupier</option>
+<option>Investment</option>
+<option>Refinance</option>
+<option>First Home Buyer</option>
+<option>Construction</option>
+<option>Commercial</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Loan Amount</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="$0.00" type="text"/>
+</div>
+<div class="lg:col-span-4 mt-4 flex justify-center">
+<button class="w-full md:w-auto px-12 py-4 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]" type="submit">
+                                Match Now
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Why LoanBridge -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Why Sydney Communities Choose LoanBridge</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Providing a bridge between your financial goals and institutional success with a personalized local touch.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface p-8 rounded-2xl card-shadow border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-4xl">translate</span>
+</div>
+<h3 class="font-headline-md text-xl mb-4 text-primary">Full Native-Language Support</h3>
+<p class="text-on-surface-variant leading-relaxed">Communicate comfortably in Mandarin, Cantonese, or Vietnamese. We ensure you understand every clause of your mortgage contract.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-8 rounded-2xl card-shadow border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-4xl">home_work</span>
+</div>
+<h3 class="font-headline-md text-xl mb-4 text-primary">One-Stop Investment Package</h3>
+<p class="text-on-surface-variant leading-relaxed">Beyond just loans, we offer property management and legal referral services to streamline your entire property investment journey.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-8 rounded-2xl card-shadow border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-4xl">location_on</span>
+</div>
+<h3 class="font-headline-md text-xl mb-4 text-primary">Trusted Local Presence</h3>
+<p class="text-on-surface-variant leading-relaxed">With deep roots in the Sydney and NSW property markets, we provide insights that only a long-term local partner can offer.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculators -->
+<section class="py-24 bg-surface-container" id="calculators">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-md text-primary mb-2">Plan Your Future</h2>
+<p class="text-on-surface-variant">Simple, transparent tools to help you budget for your new home.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Borrowing Power -->
+<div class="bg-surface p-8 rounded-3xl shadow-lg border border-outline-variant/20">
+<h3 class="font-headline-md text-xl mb-8 flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-secondary">calculate</span>
+                            Borrowing Power
+                        </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<label class="text-label-sm font-semibold">Annual Household Income</label>
+<span class="text-primary font-bold" id="income-val">$120,000</span>
+</div>
+<input class="w-full accent-secondary" max="500000" min="50000" oninput="document.getElementById('income-val').innerText = '$' + parseInt(this.value).toLocaleString()" step="5000" type="range" value="120000"/>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<label class="text-label-sm font-semibold">Monthly Expenses</label>
+<span class="text-primary font-bold" id="expense-val">$3,500</span>
+</div>
+<input class="w-full accent-secondary" max="10000" min="500" oninput="document.getElementById('expense-val').innerText = '$' + parseInt(this.value).toLocaleString()" step="100" type="range" value="3500"/>
+</div>
+<div class="mt-12 p-6 bg-primary-container rounded-2xl text-center">
+<p class="text-on-primary-container text-sm uppercase tracking-wider mb-2">Estimated Borrowing Power</p>
+<div class="text-3xl font-bold text-on-primary">$780,000 - $850,000</div>
+</div>
+</div>
+</div>
+<!-- Mortgage Repayment -->
+<div class="bg-surface p-8 rounded-3xl shadow-lg border border-outline-variant/20">
+<h3 class="font-headline-md text-xl mb-8 flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-secondary">payments</span>
+                            Mortgage Repayment
+                        </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<label class="text-label-sm font-semibold">Loan Amount</label>
+<span class="text-primary font-bold" id="loan-val">$650,000</span>
+</div>
+<input class="w-full accent-secondary" max="2000000" min="100000" oninput="document.getElementById('loan-val').innerText = '$' + parseInt(this.value).toLocaleString()" step="10000" type="range" value="650000"/>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<label class="text-label-sm font-semibold">Interest Rate (p.a.)</label>
+<span class="text-primary font-bold" id="rate-val">5.85%</span>
+</div>
+<input class="w-full accent-secondary" max="10" min="1" oninput="document.getElementById('rate-val').innerText = this.value + '%'" step="0.05" type="range" value="5.85"/>
+</div>
+<div class="mt-12 p-6 bg-secondary-container rounded-2xl text-center">
+<p class="text-on-secondary-container text-sm uppercase tracking-wider mb-2">Monthly Repayments</p>
+<div class="text-3xl font-bold text-on-secondary-container">$3,830 / month</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promotions Band -->
+<section class="py-16">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Promo 1 -->
+<div class="relative overflow-hidden bg-primary p-8 rounded-3xl text-on-primary flex items-center justify-between group">
+<div class="relative z-10 max-w-[60%]">
+<span class="inline-block px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest mb-4">Investor Exclusive</span>
+<h4 class="text-2xl font-bold mb-4">Free Property Management</h4>
+<p class="text-on-primary/80 mb-6">Up to 12 months free property management for new investment loan clients.</p>
+<button class="px-6 py-2 bg-white text-primary rounded-full font-bold hover:bg-secondary-container transition-colors">Claim Offer</button>
+</div>
+<span class="material-symbols-outlined text-[120px] opacity-10 absolute -right-4 -bottom-4 rotate-12 group-hover:rotate-0 transition-transform duration-500">real_estate_agent</span>
+</div>
+<!-- Promo 2 -->
+<div class="relative overflow-hidden bg-secondary p-8 rounded-3xl text-on-secondary flex items-center justify-between group">
+<div class="relative z-10 max-w-[60%]">
+<span class="inline-block px-3 py-1 rounded bg-primary-container text-on-primary-container text-[10px] font-bold uppercase tracking-widest mb-4">New Home Owner</span>
+<h4 class="text-2xl font-bold mb-4">$500 Legal Credit</h4>
+<p class="text-on-secondary/80 mb-6">Receive $500 credit towards your conveyancing fees with our legal partners.</p>
+<button class="px-6 py-2 bg-white text-secondary rounded-full font-bold hover:bg-primary-container hover:text-white transition-colors">Learn More</button>
+</div>
+<span class="material-symbols-outlined text-[120px] opacity-10 absolute -right-4 -bottom-4 -rotate-12 group-hover:rotate-0 transition-transform duration-500">gavel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<h2 class="font-display-lg text-headline-md text-primary mb-2">What Our Clients Say</h2>
+<p class="text-on-surface-variant">Real stories from Sydney's property owners.</p>
+</div>
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-outline-variant/30 shadow-sm">
+<img alt="Google" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBufdv4ddkdZvjRXWa9YZDqsFQ3sovXvXZeBux91eyi8MZL5q2hkAvVZgZpU2qE7CknjVJH5gQQG1Vlo2uzId_TfWuoigGpJcYy70DXukhPIkcYlRMzsZNOabGB84dEl0q9IUufH0W3yA6MmpHmjuXJNWB4tiR-axMVyI0sWH44c2sF2jpjazNs3Yrhvlsx5jHT17d_aC7zLgrzLj-2gJjsE3K32mXadjB7cnlH0S6nVwGHCi2ugIQBFoViNSMUE2rIIcpFpUJqIaWU"/>
+<div class="flex text-[#FBBC05]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-bold text-primary">4.9/5</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 shadow-sm italic">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-6 leading-relaxed">"The team at LoanBridge made our first home purchase so smooth. Being able to discuss details in Mandarin made us feel so much more comfortable with the process."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">WC</div>
+<div>
+<div class="font-bold text-primary not-italic">Wei Chen</div>
+<div class="text-label-sm text-on-surface-variant not-italic">Hurstville, NSW</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 shadow-sm italic">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-6 leading-relaxed">"Great service for my investment property portfolio. Their understanding of the Vietnamese community's specific financial goals is unmatched in Sydney."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">LN</div>
+<div>
+<div class="font-bold text-primary not-italic">Linh Nguyen</div>
+<div class="text-label-sm text-on-surface-variant not-italic">Cabramatta, NSW</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/20 shadow-sm italic">
+<div class="flex text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant mb-6 leading-relaxed">"Professional, transparent, and efficient. They saved us thousands on our refinance. Highly recommended to anyone looking for a broker they can actually trust."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">AY</div>
+<div>
+<div class="font-bold text-primary not-italic">Andrew Young</div>
+<div class="text-label-sm text-on-surface-variant not-italic">Chatswood, NSW</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer with Contact Form -->
+<footer class="w-full pt-20 pb-12 bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-20">
+<!-- Contact Info -->
+<div class="space-y-8">
+<h2 class="font-display-lg text-headline-md font-bold">LoanBridge</h2>
+<p class="text-on-primary/80 text-lg leading-relaxed max-w-md">
+                        Expert financial guidance for the Sydney Chinese and Vietnamese communities. Start your property journey with us today.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">call</span>
+<span>1300 LOAN BRIDGE</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">mail</span>
+<span>hello@loanbridge.com.au</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+<span>Suite 201, 88 Castlereagh St, Sydney NSW 2000</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface rounded-2xl p-8 text-on-surface">
+<h3 class="text-2xl font-bold text-primary mb-6">Request a Consultation</h3>
+<form class="grid grid-cols-2 gap-4">
+<div class="col-span-1">
+<label class="block text-label-sm mb-1">Name</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text"/>
+</div>
+<div class="col-span-1">
+<label class="block text-label-sm mb-1">Phone</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel"/>
+</div>
+<div class="col-span-2">
+<label class="block text-label-sm mb-1">Email</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email"/>
+</div>
+<div class="col-span-1">
+<label class="block text-label-sm mb-1">Preferred Language</label>
+<select class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5">
+<option>English</option>
+<option>Mandarin</option>
+<option>Cantonese</option>
+<option>Vietnamese</option>
+</select>
+</div>
+<div class="col-span-1">
+<label class="block text-label-sm mb-1">Loan Amount</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" placeholder="$" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block text-label-sm mb-1">How can we help?</label>
+<textarea class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" rows="3"></textarea>
+</div>
+<div class="col-span-2 pt-2">
+<button class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-opacity">Submit Request</button>
+</div>
+</form>
+</div>
+</div>
+<div class="border-t border-white/10 pt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="font-label-sm text-on-primary/80 mb-4 uppercase tracking-widest">Company</div>
+<ul class="space-y-2">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Our History</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Our Team</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Office Locations</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Career Opportunities</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-1">
+<div class="font-label-sm text-on-primary/80 mb-4 uppercase tracking-widest">Legal</div>
+<ul class="space-y-2">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Financial Services Guide</a></li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-2 text-right self-end">
+<p class="text-on-primary/60 text-sm">© 2026 LoanBridge. Auspicious Professionalism in Mortgage Services.</p>
+<p class="text-on-primary/40 text-[10px] mt-2">Australian Credit Licence: XXXXXX. Member of MFAA.</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<a href="mobile.html" style="position:fixed;right:20px;bottom:20px;z-index:100;background:#003441;color:#fff;padding:12px 20px;border-radius:9999px;font-family:Inter,sans-serif;font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 4px 20px rgba(15,76,92,0.25);display:flex;align-items:center;gap:8px;">📱 Mobile view</a>
+<script>
+        // Micro-interaction for range inputs to update text
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            input.addEventListener('mousedown', () => {
+                input.style.transform = 'scaleY(1.2)';
+                input.style.transition = 'transform 0.2s ease';
+            });
+            input.addEventListener('mouseup', () => {
+                input.style.transform = 'scaleY(1)';
+            });
+        });
+
+        // Simple smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LoanBridge | Auspicious Professionalism in Mortgage Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        /* Mobile specific card adjustments */
+        @media (max-width: 768px) {
+            .mobile-touch-target {
+                min-height: 48px;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#c9c6c0",
+                      "surface-container": "#efeded",
+                      "inverse-surface": "#303030",
+                      "primary-fixed": "#b6ebfe",
+                      "surface-container-low": "#f5f3f3",
+                      "on-error": "#ffffff",
+                      "secondary": "#735c00",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#30302b",
+                      "inverse-on-surface": "#f2f0f0",
+                      "primary": "#003441",
+                      "on-primary-fixed-variant": "#114d5d",
+                      "on-tertiary-container": "#b6b4ad",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#241a00",
+                      "on-secondary-container": "#745c00",
+                      "outline": "#70787c",
+                      "on-background": "#1b1c1c",
+                      "secondary-fixed": "#ffe088",
+                      "tertiary-fixed": "#e5e2db",
+                      "on-secondary-fixed-variant": "#574500",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#9acee1",
+                      "surface-container-highest": "#e4e2e2",
+                      "outline-variant": "#c0c8cb",
+                      "surface-bright": "#fbf9f8",
+                      "primary-container": "#0f4c5c",
+                      "on-tertiary-fixed-variant": "#474742",
+                      "on-tertiary-fixed": "#1c1c18",
+                      "on-primary-container": "#87bbce",
+                      "surface-tint": "#306576",
+                      "surface-container-high": "#eae8e7",
+                      "secondary-container": "#fed65b",
+                      "tertiary-container": "#464641",
+                      "surface-variant": "#e4e2e2",
+                      "surface-dim": "#dbd9d9",
+                      "surface": "#fbf9f8",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-surface": "#1b1c1c",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#40484b",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#9acee1",
+                      "background": "#fbf9f8",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#001f28"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "40px",
+                      "unit": "8px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Be Vietnam Pro"],
+                      "display-lg": ["Be Vietnam Pro"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Be Vietnam Pro"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-header bg-surface/80 border-b border-outline-variant/30 h-20" id="header">
+<nav class="flex justify-between items-center w-full px-margin-mobile h-full">
+<div class="font-display-lg text-headline-md font-bold text-primary">LoanBridge</div>
+<div class="flex items-center gap-4">
+<button aria-label="Switch Language" class="p-2 text-primary">
+<span class="material-symbols-outlined text-headline-md" data-icon="language">language</span>
+</button>
+<button aria-label="Open Menu" class="p-2 text-primary" id="menu-toggle">
+<span class="material-symbols-outlined text-headline-md" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- Mobile Drawer (Overlay) -->
+<div class="fixed inset-0 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer">
+<div class="absolute inset-0 bg-on-background/20 backdrop-blur-sm" id="drawer-overlay"></div>
+<div class="absolute right-0 top-0 bottom-0 w-4/5 bg-surface shadow-2xl flex flex-col p-8">
+<div class="flex justify-end mb-8">
+<button class="p-2 text-primary" id="close-menu">
+<span class="material-symbols-outlined text-headline-md" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<a class="font-label-sm text-label-sm text-primary font-bold border-b-2 border-secondary pb-1 self-start" href="#">Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Find a Broker</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Loan Types</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Calculators</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Knowledge Hub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Reviews</a>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<button class="w-full bg-primary text-on-primary py-4 px-6 rounded-lg font-label-sm shadow-sm active:scale-95 transition-transform">Free Consultation</button>
+<button class="w-full border border-primary text-primary py-4 px-6 rounded-lg font-label-sm active:scale-95 transition-transform">Match Me with a Broker</button>
+</div>
+</div>
+</div>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile py-12 bg-surface-bright overflow-hidden">
+<div class="relative z-10 space-y-6">
+<div class="inline-flex items-center gap-2 bg-secondary-container/30 px-4 py-1 rounded-full text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    Trusted by 5,000+ Families
+                </div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">
+                    Your Bridge to a <span class="text-secondary">Prosperous</span> Home.
+                </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[90%]">
+                    Bespoke mortgage solutions designed for the Chinese and Vietnamese community in Sydney. Professionalism you can trust, warmth you can feel.
+                </p>
+<div class="flex flex-col gap-4 pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-all">
+                        Get Started
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full bg-surface-container-low text-primary py-4 rounded-xl font-label-sm flex items-center justify-center gap-2 border border-outline-variant/30 active:scale-95 transition-all">
+                        View Success Stories
+                    </button>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl"></div>
+</section>
+<!-- Smart Broker Match (Prominent Component) -->
+<section class="px-margin-mobile py-8">
+<div class="bg-primary p-8 rounded-[2rem] shadow-xl relative overflow-hidden">
+<!-- Decorative pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #fff 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative z-10 space-y-6">
+<div class="w-12 h-12 bg-secondary-container rounded-2xl flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-primary mb-2">Smart Broker Match</h2>
+<p class="font-body-md text-on-primary-container">Tell us your goals and we'll pair you with a local expert who speaks your language.</p>
+</div>
+<div class="space-y-4 pt-4">
+<div class="grid grid-cols-2 gap-3">
+<button class="p-4 bg-white/10 border border-white/20 rounded-xl flex flex-col items-center gap-2 text-on-primary active:bg-white/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-xs font-semibold">First Home</span>
+</button>
+<button class="p-4 bg-white/10 border border-white/20 rounded-xl flex flex-col items-center gap-2 text-on-primary active:bg-white/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-semibold">Investment</span>
+</button>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-5 rounded-2xl font-bold text-lg shadow-md active:scale-95 transition-transform">
+                            Match Me Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Layout Services -->
+<section class="px-margin-mobile py-8 space-y-8">
+<div class="text-center space-y-2">
+<h2 class="font-headline-md text-headline-md text-primary">Specialized Solutions</h2>
+<div class="w-12 h-1 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Large Card -->
+<div class="bg-surface p-6 rounded-3xl border border-outline-variant/30 shadow-sm">
+<img class="w-full h-48 object-cover rounded-2xl mb-4" data-alt="A bright, sunlit modern interior of a luxury apartment in Sydney, featuring floor-to-ceiling windows with a view of the harbor. The design is elegant and professional, with soft teal accents and warm wood textures. The atmosphere is peaceful, embodying the security and prosperity of a successful property investment in a prime location." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVHS87TUtaaE5OLw-SQjhHSqjHJAtLWo6LKyz1ANt7VNbpG1gesE4AG7dQk7IBVxsgrLzEXorEFUpXvuVNTBEk1eRU3VKD6ZpBUfToexHX0xvtdsMOcSIC_ZSbwo0Bn9k5iuOIK58RhIEi0AowkL6Hx-22cB3jSGVsOz0rzKlWExRDsyR1al77ujqeE1Hf4O81tesI0_SbGeDqpjDGFVyjRFTcEWI1YXgIGlFUsq3sCuWahcctqu_ERbOCBvn01pWgaPIlSrQ8deMJ"/>
+<h3 class="font-headline-md text-primary mb-2">Residential Mortgages</h3>
+<p class="font-body-md text-on-surface-variant">Competitive rates for owners and occupiers across Sydney's metro area.</p>
+</div>
+<!-- Two Column Stack -->
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-low p-6 rounded-3xl border border-outline-variant/20 flex items-start gap-4">
+<div class="bg-primary/5 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h4 class="font-label-sm text-primary">Refinancing</h4>
+<p class="text-sm text-on-surface-variant">Lower your monthly payments with our health check.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl border border-outline-variant/20 flex items-start gap-4">
+<div class="bg-primary/5 p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="business">business</span>
+</div>
+<div>
+<h4 class="font-label-sm text-primary">Commercial</h4>
+<p class="text-sm text-on-surface-variant">Growth-focused lending for your business expansion.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculator Teaser -->
+<section class="px-margin-mobile py-8">
+<div class="bg-surface-bright border border-outline-variant/40 rounded-3xl p-8 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-primary">Repayment Tool</h3>
+<span class="material-symbols-outlined text-secondary" data-icon="calculate">calculate</span>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between font-label-sm text-on-surface-variant">
+<span>Loan Amount</span>
+<span class="text-primary font-bold">$750,000</span>
+</div>
+<input class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-secondary" type="range"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label-sm text-on-surface-variant">
+<span>Interest Rate</span>
+<span class="text-primary font-bold">5.84%</span>
+</div>
+<input class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-secondary" type="range"/>
+</div>
+<div class="pt-4 p-6 bg-primary-container/10 rounded-2xl text-center">
+<div class="text-on-primary-container font-label-sm mb-1 uppercase tracking-wider">Estimated Monthly</div>
+<div class="text-3xl font-bold text-primary">$4,419</div>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary py-4 rounded-xl font-bold flex items-center justify-center gap-2">
+                    Full Calculator
+                    <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="px-margin-mobile py-8">
+<div class="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant/30 italic text-on-surface-variant relative">
+<span class="material-symbols-outlined absolute top-4 left-4 text-primary/10 text-6xl" data-icon="format_quote">format_quote</span>
+<p class="relative z-10 text-lg mb-6">"LoanBridge helped our family secure our first home in Hurstville. Their understanding of our cultural background made the entire process seamless."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">TL</div>
+<div>
+<div class="font-bold text-primary">The Luu Family</div>
+<div class="text-xs text-outline">Verified Client • Hurstville</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-12 px-margin-mobile mt-8 safe-bottom">
+<div class="space-y-12">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-md font-bold text-on-primary">LoanBridge</div>
+<p class="font-body-md text-on-primary/80">Premium mortgage solutions bridging communities and opportunities in New South Wales.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-sm text-secondary-fixed uppercase">Quick Links</h4>
+<ul class="space-y-2 font-body-md text-on-primary/70">
+<li><a class="hover:text-white transition-colors" href="#">Find a Broker</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Loan Types</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Calculators</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-secondary-fixed uppercase">Support</h4>
+<ul class="space-y-2 font-body-md text-on-primary/70">
+<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Office Locations</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-on-primary/10 flex flex-col gap-4 items-center text-center">
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center" href="#"><span class="material-symbols-outlined text-sm" data-icon="facebook">face_nod</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center" href="#"><span class="material-symbols-outlined text-sm" data-icon="share">share</span></a>
+</div>
+<p class="font-label-sm text-label-sm text-on-primary/60">
+                    © 2024 LoanBridge. Auspicious Professionalism in Mortgage Services.
+                </p>
+<div class="flex flex-wrap justify-center gap-4 font-label-sm text-label-sm text-on-primary/40">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+<a href="#">FSG</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB for quick contact (Mobile optimized) -->
+<button class="fixed bottom-6 right-6 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center z-40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const header = document.getElementById('header');
+
+        function toggleMenu() {
+            drawer.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-lg', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-lg', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+
+        // Simple range input visual sync
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            input.addEventListener('input', (e) => {
+                const value = e.target.value;
+                // Interaction logic could go here
+            });
+        });
+    </script>
+<a href="index.html" style="position:fixed;right:16px;bottom:16px;z-index:100;background:#003441;color:#fff;padding:10px 16px;border-radius:9999px;font-family:Inter,sans-serif;font-weight:600;font-size:13px;text-decoration:none;box-shadow:0 4px 20px rgba(15,76,92,0.25);">🖥 Desktop view</a>
+</body></html>
