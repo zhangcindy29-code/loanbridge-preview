@@ -129,21 +129,13 @@
 </div>
 </div>
 <div class="flex items-center gap-6">
-<!-- Language Switcher -->
-<div class="relative group">
-<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-sm text-label-sm py-2">
-<span class="material-symbols-outlined">language</span>
-<span>English</span>
-<span class="material-symbols-outlined text-sm">expand_more</span>
+<!-- Language Switch (EN / 中文) -->
+<button data-noi18n="true" id="lang-toggle" onclick="toggleLang()" class="flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-label-sm">
+<span class="material-symbols-outlined text-sm">translate</span>
+<span id="lang-toggle-label">中文</span>
 </button>
-<div class="absolute right-0 top-full mt-1 hidden group-hover:block bg-surface border border-outline-variant/30 rounded-lg shadow-lg py-2 min-w-[140px]">
-<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">简体中文</a>
-<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">繁體中文</a>
-<a class="block px-4 py-2 hover:bg-surface-container text-label-sm" href="#">Tiếng Việt</a>
-</div>
-</div>
-<button class="hidden lg:block px-6 py-2.5 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-label-sm">Match Me with a Broker</button>
-<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition-all scale-95 active:scale-90 text-label-sm">Free Consultation</button>
+<button class="hidden lg:block whitespace-nowrap px-6 py-2.5 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-label-sm">Match Me with a Broker</button>
+<button class="whitespace-nowrap px-6 py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition-all active:scale-95 text-label-sm">Free Consultation</button>
 </div>
 </nav>
 </header>
@@ -566,5 +558,134 @@
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
+    </script>
+<script>
+        // ===== Bilingual (EN / 中文) toggle =====
+        (function () {
+            const I18N = {
+                "Home": "首页",
+                "Find a Broker": "找顾问",
+                "Loan Types": "贷款类型",
+                "Calculators": "计算器",
+                "Knowledge Hub": "知识中心",
+                "Match Me with a Broker": "帮我匹配顾问",
+                "Free Consultation": "免费咨询",
+                "Trusted by Sydney's Chinese & Vietnamese communities": "深受悉尼华人与越南裔社区信赖",
+                "Home Loans Made Simple in": "用母语,轻松办好",
+                "Your Own Language.": "你的房贷。",
+                "Sydney's trusted mortgage and property partner. We speak your language and understand your goals, helping you navigate the Australian property market with absolute confidence.": "悉尼值得信赖的房贷与置业伙伴。我们讲你的语言、懂你的目标,陪你从容走好澳洲置业的每一步。",
+                "Families Assisted": "已服务家庭",
+                "Find Your Perfect Broker": "找到最适合你的贷款顾问",
+                "Tell us a bit about your needs and we'll match you with an expert who speaks your language and understands your local market.": "告诉我们你的需求,我们帮你匹配一位讲你语言、懂本地市场的专业顾问。",
+                "Location": "地区",
+                "Select Sydney Region": "选择悉尼地区",
+                "North Shore": "北岸",
+                "Western Sydney": "西悉尼",
+                "South Sydney": "南悉尼",
+                "Eastern Suburbs": "东区",
+                "Hills District": "山区(Hills)",
+                "Preferred Language": "首选语言",
+                "Select Language": "选择语言",
+                "English": "英语",
+                "Mandarin (普通话)": "普通话",
+                "Cantonese (粵語)": "粤语",
+                "Vietnamese (Tiếng Việt)": "越南语",
+                "Loan Type": "贷款类型",
+                "Select Type": "选择类型",
+                "Owner Occupier": "自住房",
+                "Investment": "投资房",
+                "Refinance": "转贷",
+                "First Home Buyer": "首次置业",
+                "Construction": "建房贷款",
+                "Commercial": "商业贷款",
+                "Loan Amount": "贷款金额",
+                "Match Now": "立即匹配",
+                "Why Sydney Communities Choose LoanBridge": "为什么悉尼社区选择 LoanBridge",
+                "Providing a bridge between your financial goals and institutional success with a personalized local touch.": "在你的财务目标与机构资源之间架起桥梁,提供本地化的贴心服务。",
+                "Full Native-Language Support": "全程母语服务",
+                "Communicate comfortably in Mandarin, Cantonese, or Vietnamese. We ensure you understand every clause of your mortgage contract.": "用普通话、粤语或越南语轻松沟通,确保你看懂贷款合同的每一个条款。",
+                "One-Stop Investment Package": "投资置业一站式",
+                "Beyond just loans, we offer property management and legal referral services to streamline your entire property investment journey.": "不止是贷款,我们还提供物业管理与律师转介,让你的整个投资置业流程更省心。",
+                "Trusted Local Presence": "深耕本地、值得信赖",
+                "With deep roots in the Sydney and NSW property markets, we provide insights that only a long-term local partner can offer.": "深耕悉尼及新州房产市场,为你提供只有本地长期伙伴才懂的洞察。",
+                "Plan Your Future": "规划你的未来",
+                "Simple, transparent tools to help you budget for your new home.": "简单透明的工具,帮你为新家做好预算。",
+                "Borrowing Power": "借贷能力",
+                "Annual Household Income": "家庭年收入",
+                "Monthly Expenses": "每月支出",
+                "Estimated Borrowing Power": "预估借贷能力",
+                "Mortgage Repayment": "房贷还款",
+                "Interest Rate (p.a.)": "年利率",
+                "Monthly Repayments": "每月还款",
+                "$3,830 / month": "$3,830 / 月",
+                "Investor Exclusive": "投资客专享",
+                "Free Property Management": "免费物业管理",
+                "Up to 12 months free property management for new investment loan clients.": "新投资房贷客户可享最长 12 个月免费物业管理。",
+                "Claim Offer": "领取优惠",
+                "New Home Owner": "新房主专享",
+                "$500 Legal Credit": "$500 律师费抵扣",
+                "Receive $500 credit towards your conveyancing fees with our legal partners.": "通过我们的合作律师,可获 $500 过户费用抵扣。",
+                "Learn More": "了解更多",
+                "What Our Clients Say": "客户怎么说",
+                "Real stories from Sydney's property owners.": "来自悉尼业主的真实故事。",
+                "\"The team at LoanBridge made our first home purchase so smooth. Being able to discuss details in Mandarin made us feel so much more comfortable with the process.\"": "「LoanBridge 团队让我们第一次买房特别顺利。能用普通话沟通每个细节,整个过程安心多了。」",
+                "\"Great service for my investment property portfolio. Their understanding of the Vietnamese community's specific financial goals is unmatched in Sydney.\"": "「他们对我投资房组合的服务非常好,对越南裔社区财务目标的理解,在悉尼无人能及。」",
+                "\"Professional, transparent, and efficient. They saved us thousands on our refinance. Highly recommended to anyone looking for a broker they can actually trust.\"": "「专业、透明、高效。转贷帮我们省下好几千。强烈推荐给想找一个真正可信顾问的人。」",
+                "Expert financial guidance for the Sydney Chinese and Vietnamese communities. Start your property journey with us today.": "为悉尼华人与越南裔社区提供专业的财务指导。今天就和我们开启你的置业之旅。",
+                "Request a Consultation": "预约咨询",
+                "Name": "姓名",
+                "Phone": "电话",
+                "Email": "邮箱",
+                "How can we help?": "我们能帮你什么?",
+                "Mandarin": "普通话",
+                "Cantonese": "粤语",
+                "Vietnamese": "越南语",
+                "Submit Request": "提交申请",
+                "Company": "公司",
+                "Our History": "公司历程",
+                "Our Team": "我们的团队",
+                "Office Locations": "办公地点",
+                "Career Opportunities": "招聘机会",
+                "Legal": "法律",
+                "Privacy Policy": "隐私政策",
+                "Terms of Service": "服务条款",
+                "Financial Services Guide": "金融服务指南",
+                "© 2026 LoanBridge. Auspicious Professionalism in Mortgage Services.": "© 2026 LoanBridge. 专业贷款,安心置业。",
+                "Australian Credit Licence: XXXXXX. Member of MFAA.": "澳大利亚信贷牌照:XXXXXX。MFAA 会员。",
+                "📱 Mobile view": "📱 手机版"
+            };
+            const SKIP_TAGS = ["SCRIPT", "STYLE", "NOSCRIPT"];
+            const reg = [];
+            function walk(node) {
+                for (const child of node.childNodes) {
+                    if (child.nodeType === 3) {
+                        if (child.nodeValue.trim()) reg.push({ node: child, en: child.nodeValue, key: child.nodeValue.trim() });
+                    } else if (child.nodeType === 1) {
+                        if (SKIP_TAGS.includes(child.tagName)) continue;
+                        if (child.hasAttribute("data-noi18n")) continue;
+                        const cls = child.getAttribute("class") || "";
+                        if (cls.indexOf("material-symbols") !== -1) continue;
+                        walk(child);
+                    }
+                }
+            }
+            walk(document.body);
+            window.setLang = function (lang) {
+                reg.forEach(function (r) {
+                    r.node.nodeValue = (lang === "zh" && I18N[r.key] !== undefined) ? I18N[r.key] : r.en;
+                });
+                document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+                const lbl = document.getElementById("lang-toggle-label");
+                if (lbl) lbl.textContent = lang === "zh" ? "EN" : "中文";
+                try { localStorage.setItem("lb_lang", lang); } catch (e) {}
+            };
+            window.toggleLang = function () {
+                const cur = document.documentElement.lang === "zh-CN" ? "zh" : "en";
+                window.setLang(cur === "zh" ? "en" : "zh");
+            };
+            let saved = "en";
+            try { saved = localStorage.getItem("lb_lang") || "en"; } catch (e) {}
+            window.setLang(saved);
+        })();
     </script>
 </body></html>
