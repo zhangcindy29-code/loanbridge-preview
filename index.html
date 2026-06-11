@@ -125,8 +125,7 @@
 <a class="font-display-lg text-headline-md font-bold text-primary whitespace-nowrap" href="#">LoanBridge</a>
 <div class="hidden lg:flex items-center gap-5">
 <a class="whitespace-nowrap text-primary border-b-2 border-secondary font-bold pb-1 font-label-sm text-label-sm" href="#home">Home</a>
-<a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#find-broker">Find a Broker</a>
-<a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#brokers">Our Brokers</a>
+<a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#find-broker">Get Matched</a>
 <a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Loan Types</a>
 <a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#calculators">Calculators</a>
 <a class="whitespace-nowrap text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Knowledge Hub</a>
@@ -182,15 +181,43 @@
 </div>
 </div>
 </section>
+<!-- 12-Month Property Management Banner -->
+<section class="py-12 md:py-16">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-8 md:p-14">
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-widest mb-5">RARELY OFFERED IN AUSTRALIA</span>
+<h2 class="font-display-lg text-3xl md:text-5xl font-bold leading-tight mb-5">Up to <span class="text-secondary-fixed">12 Months Free</span> Property Management</h2>
+<p class="text-on-primary/80 text-base md:text-lg leading-relaxed mb-8">Buy your investment property through us and have it professionally managed — completely free for up to a year. An offer almost unheard of in the Australian market.</p>
+<div class="grid sm:grid-cols-3 gap-4 mb-8">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span class="text-sm">Professional tenant management</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span class="text-sm">Rent collection &amp; routine inspections</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span class="text-sm">Worth thousands in saved fees</span></div>
+</div>
+<a href="#find-broker" class="inline-block px-8 py-3.5 rounded-xl bg-secondary-container text-on-secondary-container font-bold shadow-lg hover:opacity-90 transition">Claim This Offer</a>
+</div>
+<span class="material-symbols-outlined absolute -right-6 -bottom-10 opacity-10 select-none" style="font-size:320px;line-height:1;">apartment</span>
+</div>
+</div>
+</section>
 <!-- Smart Broker Match (Centerpiece) -->
 <section class="py-16 bg-surface-container-low" id="find-broker">
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="bg-surface rounded-3xl p-8 md:p-12 shadow-xl border border-outline-variant/20">
 <div class="text-center max-w-2xl mx-auto mb-12">
-<h2 class="font-display-lg text-headline-md text-primary mb-4">Find Your Perfect Broker</h2>
-<p class="text-on-surface-variant">Tell us a bit about your needs and we'll match you with an expert who speaks your language and understands your local market.</p>
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Get Matched With a Broker</h2>
+<p class="text-on-surface-variant">Tell us about your needs and a matched specialist will call you back — within 12 hours.</p>
+<div class="mt-5 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-sm">schedule</span>Callback within 12 hours</div>
 </div>
-<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end" onsubmit="event.preventDefault();document.getElementById('brokers').scrollIntoView({behavior:'smooth'});">
+<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end" onsubmit="event.preventDefault();this.querySelector('button[type=submit]').textContent='✓ Thanks! A specialist will call you within 12 hours.';">
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="Your name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-sm text-on-surface-variant">Phone Number</label>
+<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="04xx xxx xxx" type="tel"/>
+</div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Location</label>
 <select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
@@ -230,7 +257,7 @@
 </div>
 <div class="lg:col-span-4 mt-4 flex justify-center">
 <button class="w-full md:w-auto px-12 py-4 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]" type="submit">
-                                Match Now
+                                Get My Free Match
                             </button>
 </div>
 </form>
@@ -244,7 +271,7 @@
 <h2 class="font-display-lg text-headline-md text-primary mb-4">Why Sydney Communities Choose LoanBridge</h2>
 <p class="text-on-surface-variant max-w-2xl mx-auto">Providing a bridge between your financial goals and institutional success with a personalized local touch.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- Card 1 -->
 <div class="bg-surface p-8 rounded-2xl card-shadow border border-outline-variant/10">
 <div class="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
@@ -269,49 +296,14 @@
 <h3 class="font-headline-md text-xl mb-4 text-primary">Trusted Local Presence</h3>
 <p class="text-on-surface-variant leading-relaxed">With deep roots in the Sydney and NSW property markets, we provide insights that only a long-term local partner can offer.</p>
 </div>
+<!-- Card 4 -->
+<div class="bg-surface p-8 rounded-2xl card-shadow border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-4xl">schedule</span>
 </div>
+<h3 class="font-headline-md text-xl mb-4 text-primary">Reply Within 12 Hours</h3>
+<p class="text-on-surface-variant leading-relaxed">In a market known for slow responses, a specialist gets back to you within 12 hours — fast, reliable service you can count on.</p>
 </div>
-</section>
-<!-- Our Brokers -->
-<section class="py-24" id="brokers">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-display-lg text-headline-md text-primary mb-4">Meet Our Brokers</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Matched to your language and your goals — choose the specialist who fits you best.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<a href="broker-1.html" class="group bg-surface rounded-2xl p-6 card-shadow border border-outline-variant/10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full flex items-center justify-center font-display-lg text-2xl font-bold text-on-primary shadow-lg mb-4" style="background:linear-gradient(135deg,#0f4c5c,#003441);">MH</div>
-<h3 class="font-headline-md text-lg text-primary">Michael Harris</h3>
-<p class="text-on-surface-variant text-label-sm mt-1">English Specialist</p>
-<span class="mt-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">English</span>
-<span class="mt-2 text-on-surface-variant text-sm">First Home Buyer</span>
-<span class="mt-4 inline-flex items-center gap-1 text-primary font-bold text-label-sm group-hover:gap-2 transition-all">View Profile<span class="material-symbols-outlined text-base">arrow_forward</span></span>
-</a>
-<a href="broker-2.html" class="group bg-surface rounded-2xl p-6 card-shadow border border-outline-variant/10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full flex items-center justify-center font-display-lg text-2xl font-bold text-on-primary shadow-lg mb-4" style="background:linear-gradient(135deg,#0f4c5c,#003441);">WZ</div>
-<h3 class="font-headline-md text-lg text-primary">Wei Zhang 张伟</h3>
-<p class="text-on-surface-variant text-label-sm mt-1">Mandarin Specialist</p>
-<span class="mt-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Mandarin (普通话)</span>
-<span class="mt-2 text-on-surface-variant text-sm">Investment</span>
-<span class="mt-4 inline-flex items-center gap-1 text-primary font-bold text-label-sm group-hover:gap-2 transition-all">View Profile<span class="material-symbols-outlined text-base">arrow_forward</span></span>
-</a>
-<a href="broker-3.html" class="group bg-surface rounded-2xl p-6 card-shadow border border-outline-variant/10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full flex items-center justify-center font-display-lg text-2xl font-bold text-on-primary shadow-lg mb-4" style="background:linear-gradient(135deg,#0f4c5c,#003441);">KL</div>
-<h3 class="font-headline-md text-lg text-primary">Kelvin Lau 刘家豪</h3>
-<p class="text-on-surface-variant text-label-sm mt-1">Cantonese Specialist</p>
-<span class="mt-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Cantonese (粵語)</span>
-<span class="mt-2 text-on-surface-variant text-sm">Refinance</span>
-<span class="mt-4 inline-flex items-center gap-1 text-primary font-bold text-label-sm group-hover:gap-2 transition-all">View Profile<span class="material-symbols-outlined text-base">arrow_forward</span></span>
-</a>
-<a href="broker-4.html" class="group bg-surface rounded-2xl p-6 card-shadow border border-outline-variant/10 flex flex-col items-center text-center">
-<div class="w-24 h-24 rounded-full flex items-center justify-center font-display-lg text-2xl font-bold text-on-primary shadow-lg mb-4" style="background:linear-gradient(135deg,#0f4c5c,#003441);">AN</div>
-<h3 class="font-headline-md text-lg text-primary">Anna Nguyễn</h3>
-<p class="text-on-surface-variant text-label-sm mt-1">Vietnamese Specialist</p>
-<span class="mt-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">Vietnamese (Tiếng Việt)</span>
-<span class="mt-2 text-on-surface-variant text-sm">Self-Employed Loans</span>
-<span class="mt-4 inline-flex items-center gap-1 text-primary font-bold text-label-sm group-hover:gap-2 transition-all">View Profile<span class="material-symbols-outlined text-base">arrow_forward</span></span>
-</a>
 </div>
 </div>
 </section>
@@ -387,12 +379,12 @@
 <!-- Promo 1 -->
 <div class="relative overflow-hidden bg-primary p-8 rounded-3xl text-on-primary flex items-center justify-between group">
 <div class="relative z-10 max-w-[60%]">
-<span class="inline-block px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest mb-4">Investor Exclusive</span>
-<h4 class="text-2xl font-bold mb-4">Free Property Management</h4>
-<p class="text-on-primary/80 mb-6">Up to 12 months free property management for new investment loan clients.</p>
-<a href="#contact" class="inline-block px-6 py-2 bg-white text-primary rounded-full font-bold hover:bg-secondary-container transition-colors">Claim Offer</a>
+<span class="inline-block px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest mb-4">Fast Response</span>
+<h4 class="text-2xl font-bold mb-4">12-Hour Callback</h4>
+<p class="text-on-primary/80 mb-6">Submit your details and a matched specialist will call you back within 12 hours.</p>
+<a href="#find-broker" class="inline-block px-6 py-2 bg-white text-primary rounded-full font-bold hover:bg-secondary-container transition-colors">Get Started</a>
 </div>
-<span class="material-symbols-outlined text-[120px] opacity-10 absolute -right-4 -bottom-4 rotate-12 group-hover:rotate-0 transition-transform duration-500">real_estate_agent</span>
+<span class="material-symbols-outlined text-[120px] opacity-10 absolute -right-4 -bottom-4 rotate-12 group-hover:rotate-0 transition-transform duration-500">schedule</span>
 </div>
 <!-- Promo 2 -->
 <div class="relative overflow-hidden bg-secondary p-8 rounded-3xl text-on-secondary flex items-center justify-between group">
@@ -403,6 +395,36 @@
 <a href="#contact" class="inline-block px-6 py-2 bg-white text-secondary rounded-full font-bold hover:bg-primary-container hover:text-white transition-colors">Learn More</a>
 </div>
 <span class="material-symbols-outlined text-[120px] opacity-10 absolute -right-4 -bottom-4 -rotate-12 group-hover:rotate-0 transition-transform duration-500">gavel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-24 bg-surface-container-low" id="stories">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-4">
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Success Stories</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Real client scenarios — structured, approved, settled.</p>
+</div>
+<p class="text-center text-on-surface-variant/70 text-label-sm mb-12">Client details have been anonymised for privacy.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface rounded-2xl p-8 card-shadow border border-outline-variant/10 flex flex-col">
+<span class="self-start px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-4">First Home Buyer</span>
+<h3 class="font-headline-md text-xl text-primary mb-4">First Home Buyer — Fast Approval for a Medical Professional</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">A PAYG client in the medical industry needed finance secured within a tight timeframe to buy their first home to live in. Our specialist guided them through the approval process, structured the application clearly and efficiently, and helped them understand and claim the First Home Buyer Grant to reduce upfront costs.</p>
+<div class="mt-auto p-4 rounded-xl bg-primary/5 border-l-4 border-secondary">
+<div class="text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Outcome</div>
+<p class="text-on-surface font-medium">The client secured the property they wanted and moved into their first home with confidence.</p>
+</div>
+</div>
+<div class="bg-surface rounded-2xl p-8 card-shadow border border-outline-variant/10 flex flex-col">
+<span class="self-start px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-4">Self-Employed</span>
+<h3 class="font-headline-md text-xl text-primary mb-4">Self-Employed — Land, Subdivision &amp; Construction Finance</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">A self-employed client was purchasing land under a non-trading company structure, aiming to settle the land, complete a subdivision, then move into construction finance. Our specialist structured the lending application appropriately, supported the land settlement, and after subdivision helped prepare and progress the construction loan approval.</p>
+<div class="mt-auto p-4 rounded-xl bg-primary/5 border-l-4 border-secondary">
+<div class="text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Outcome</div>
+<p class="text-on-surface font-medium">The client moved smoothly through every stage — land acquisition, subdivision and construction finance.</p>
+</div>
 </div>
 </div>
 </div>
@@ -621,8 +643,12 @@
                 "Expertly Financed.": "专业护航。",
                 "Sydney's trusted mortgage and property partner. We speak your language and understand your goals, helping you navigate the Australian property market with absolute confidence.": "悉尼值得信赖的房贷与置业伙伴。我们讲你的语言、懂你的目标,陪你从容走好澳洲置业的每一步。",
                 "Families Assisted": "已服务家庭",
-                "Find Your Perfect Broker": "找到最适合你的贷款顾问",
-                "Tell us a bit about your needs and we'll match you with an expert who speaks your language and understands your local market.": "告诉我们你的需求,我们帮你匹配一位讲你语言、懂本地市场的专业顾问。",
+                "Get Matched": "智能匹配",
+                "Get Matched With a Broker": "为你智能匹配贷款顾问",
+                "Tell us about your needs and a matched specialist will call you back — within 12 hours.": "填写你的需求,匹配到的专属顾问会在 12 小时内主动致电你。",
+                "Callback within 12 hours": "12 小时内回电",
+                "Full Name": "姓名",
+                "Phone Number": "手机号码",
                 "Location": "地区",
                 "Select Sydney Region": "选择悉尼地区",
                 "North Shore": "北岸",
@@ -645,16 +671,33 @@
                 "Construction": "建房贷款",
                 "Commercial": "商业贷款",
                 "Loan Amount": "贷款金额",
-                "Match Now": "立即匹配",
-                "Our Brokers": "顾问团队",
-                "Meet Our Brokers": "认识我们的顾问",
-                "Matched to your language and your goals — choose the specialist who fits you best.": "按你的语言与目标匹配——选择最适合你的专属顾问。",
-                "English Specialist": "英语专家",
-                "Mandarin Specialist": "普通话专家",
-                "Cantonese Specialist": "粤语专家",
-                "Vietnamese Specialist": "越南语专家",
-                "Self-Employed Loans": "自雇人士贷款",
-                "View Profile": "查看详情",
+                "Get My Free Match": "免费匹配并回电",
+                "Reply Within 12 Hours": "12 小时内回复",
+                "In a market known for slow responses, a specialist gets back to you within 12 hours — fast, reliable service you can count on.": "在以回复慢著称的市场里,我们的顾问会在 12 小时内回复你——快速、可靠,值得信赖。",
+                "RARELY OFFERED IN AUSTRALIA": "澳洲市场极为罕见",
+                "Up to": "最长",
+                "12 Months Free": "12 个月免费",
+                "Property Management": "物业管理",
+                "Buy your investment property through us and have it professionally managed — completely free for up to a year. An offer almost unheard of in the Australian market.": "通过我们购买投资房,即可享受最长一年的专业物业管理——完全免费。这样的优惠在澳洲市场几乎前所未见。",
+                "Professional tenant management": "专业租客管理",
+                "Rent collection & routine inspections": "租金代收与定期检查",
+                "Worth thousands in saved fees": "为你省下数千澳元费用",
+                "Claim This Offer": "领取此优惠",
+                "Fast Response": "快速响应",
+                "12-Hour Callback": "12 小时内回电",
+                "Submit your details and a matched specialist will call you back within 12 hours.": "提交资料,匹配到的专属顾问会在 12 小时内回电你。",
+                "Get Started": "立即开始",
+                "Success Stories": "成功案例",
+                "Real client scenarios — structured, approved, settled.": "真实客户案例——结构清晰、顺利获批、成功交割。",
+                "Client details have been anonymised for privacy.": "为保护隐私,客户身份信息已隐去。",
+                "Self-Employed": "自雇人士",
+                "First Home Buyer — Fast Approval for a Medical Professional": "首次置业 — 为医疗行业客户快速批贷",
+                "A PAYG client in the medical industry needed finance secured within a tight timeframe to buy their first home to live in. Our specialist guided them through the approval process, structured the application clearly and efficiently, and helped them understand and claim the First Home Buyer Grant to reduce upfront costs.": "一位在医疗行业工作的 PAYG(固定薪资)客户,需要在很短时间内拿到贷款,购买用于自住的第一套房。我们的顾问全程指导审批流程,把申请结构梳理得清晰高效,并协助客户了解并申领首次置业补助金(First Home Buyer Grant),降低前期成本。",
+                "Outcome": "结果",
+                "The client secured the property they wanted and moved into their first home with confidence.": "客户顺利买下心仪房产,满怀信心地搬进了自己的第一个家。",
+                "Self-Employed — Land, Subdivision & Construction Finance": "自雇人士 — 土地、分割与建房融资",
+                "A self-employed client was purchasing land under a non-trading company structure, aiming to settle the land, complete a subdivision, then move into construction finance. Our specialist structured the lending application appropriately, supported the land settlement, and after subdivision helped prepare and progress the construction loan approval.": "一位自雇客户以非经营性公司架构购买土地,目标是先完成土地交割、再完成土地分割申请,待分割完成后进入建房融资。我们的顾问为其合理设计贷款申请结构,协助完成土地交割;在分割阶段后,又帮助客户准备并推进建房贷款审批。",
+                "The client moved smoothly through every stage — land acquisition, subdivision and construction finance.": "客户顺利走完了从购地、分割到建房融资的每一个阶段。",
                 "Why Sydney Communities Choose LoanBridge": "为什么悉尼社区选择 LoanBridge",
                 "Providing a bridge between your financial goals and institutional success with a personalized local touch.": "在你的财务目标与机构资源之间架起桥梁,提供本地化的贴心服务。",
                 "Full Native-Language Support": "全程母语服务",
