@@ -209,18 +209,19 @@
 <p class="text-on-surface-variant">Tell us about your needs and a matched specialist will call you back — within 12 hours.</p>
 <div class="mt-5 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-sm">schedule</span>Callback within 12 hours</div>
 </div>
-<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end" onsubmit="event.preventDefault();this.querySelector('button[type=submit]').textContent='✓ Thanks! A specialist will call you within 12 hours.';">
+<form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end" data-lead-form="New Broker Match request" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到!顾问将在12小时内与你联系。">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Full Name</label>
-<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="Your name" type="text"/>
+<input name="Full Name" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="Your name" type="text" required/>
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Phone Number</label>
-<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="04xx xxx xxx" type="tel"/>
+<input name="Phone" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="04xx xxx xxx" type="tel" required/>
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Location</label>
-<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
+<select name="Location" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
 <option>Select Sydney Region</option>
 <option>North Shore</option>
 <option>Western Sydney</option>
@@ -231,7 +232,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Preferred Language</label>
-<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<select name="Preferred Language" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
 <option>Select Language</option>
 <option>English</option>
 <option>Mandarin (普通话)</option>
@@ -241,7 +242,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Loan Type</label>
-<select class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<select name="Loan Type" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
 <option>Select Type</option>
 <option>Owner Occupier</option>
 <option>Investment</option>
@@ -253,7 +254,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Loan Amount</label>
-<input class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="$0.00" type="text"/>
+<input name="Loan Amount" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="$0.00" type="text"/>
 </div>
 <div class="lg:col-span-4 mt-4 flex justify-center">
 <button class="w-full md:w-auto px-12 py-4 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]" type="submit">
@@ -507,6 +508,44 @@
 </div>
 </div>
 </section>
+<!-- Lead Magnet: Free Buying Guide -->
+<section class="py-16" id="free-guide">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="rounded-3xl bg-primary text-on-primary p-8 md:p-12 grid lg:grid-cols-2 gap-10 items-center">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-widest mb-5">Free download</span>
+<h2 class="font-display-lg text-3xl md:text-4xl font-bold leading-tight mb-4">The Sydney Home Buying &amp; Loan Pitfalls Guide</h2>
+<p class="text-on-primary/80 text-lg leading-relaxed mb-6">The 10 most common — and most expensive — mistakes Sydney buyers make on their loan, and how to avoid them. Free, in your language.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span>10 costly pitfalls, in plain language</span></li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span>What to do instead — practical tips</span></li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span>Read online or save as PDF</span></li>
+</ul>
+</div>
+<div class="bg-surface rounded-2xl p-8 text-on-surface">
+<h3 class="text-xl font-bold text-primary mb-2">Get the free guide</h3>
+<p class="text-on-surface-variant mb-6">Enter your details and we'll take you straight to the guide.</p>
+<form class="space-y-4" data-lead-form="New guide download (lead magnet)" data-redirect="buying-guide.html" data-success-en="✓ Thanks! Opening your guide…" data-success-zh="✓ 谢谢!正在为你打开指南…">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
+<div class="space-y-2">
+<label class="block text-label-sm text-on-surface-variant">Full Name</label>
+<input name="Full Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm text-on-surface-variant">Email</label>
+<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm text-on-surface-variant">Phone (optional)</label>
+<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel"/>
+</div>
+<button type="submit" class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-opacity">Send Me the Guide</button>
+<p class="text-on-surface-variant/70 text-[11px] text-center">No spam. Unsubscribe anytime.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
 </main>
 <!-- Knowledge Hub -->
 <section class="py-24 bg-surface-container" id="knowledge">
@@ -587,22 +626,23 @@
 <!-- Contact Form -->
 <div class="bg-surface rounded-2xl p-8 text-on-surface">
 <h3 class="text-2xl font-bold text-primary mb-6">Request a Consultation</h3>
-<form class="grid grid-cols-2 gap-4" onsubmit="event.preventDefault();this.querySelector('button[type=submit],button').textContent='✓ Thank you! We will be in touch.';">
+<form class="grid grid-cols-2 gap-4" data-lead-form="New consultation request" data-success-en="✓ Thank you! We will be in touch." data-success-zh="✓ 谢谢!我们会尽快与你联系。">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Name</label>
-<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text"/>
+<input name="Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required/>
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Phone</label>
-<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel"/>
+<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel" required/>
 </div>
 <div class="col-span-2">
 <label class="block text-label-sm mb-1">Email</label>
-<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email"/>
+<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email"/>
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Preferred Language</label>
-<select class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5">
+<select name="Preferred Language" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5">
 <option>English</option>
 <option>Mandarin</option>
 <option>Cantonese</option>
@@ -611,11 +651,11 @@
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Loan Amount</label>
-<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" placeholder="$" type="text"/>
+<input name="Loan Amount" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" placeholder="$" type="text"/>
 </div>
 <div class="col-span-2">
 <label class="block text-label-sm mb-1">How can we help?</label>
-<textarea class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" rows="3"></textarea>
+<textarea name="Message" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" rows="3"></textarea>
 </div>
 <div class="col-span-2 pt-2">
 <button class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-opacity">Submit Request</button>
@@ -750,6 +790,18 @@
                 "Read Article": "阅读文章",
                 "Costs": "购房成本",
                 "First Home Buyer's Guide to Buying in NSW": "新州首次置业完全指南",
+                "Free download": "免费下载",
+                "The Sydney Home Buying & Loan Pitfalls Guide": "《悉尼买房 & 贷款避坑指南》",
+                "The 10 most common — and most expensive — mistakes Sydney buyers make on their loan, and how to avoid them. Free, in your language.": "悉尼买房者在贷款上最常踩、也最烧钱的10个坑,以及如何避开。免费,用你的语言。",
+                "10 costly pitfalls, in plain language": "10个烧钱大坑,大白话讲清",
+                "What to do instead — practical tips": "该怎么做——实用建议",
+                "Read online or save as PDF": "在线阅读或保存为 PDF",
+                "Get the free guide": "领取免费指南",
+                "Enter your details and we'll take you straight to the guide.": "留下你的信息,我们立刻带你打开指南。",
+                "Email": "邮箱",
+                "Phone (optional)": "电话(选填)",
+                "Send Me the Guide": "把指南发给我",
+                "No spam. Unsubscribe anytime.": "不发垃圾信息,可随时退订。",
                 "Deposits, grants, stamp duty concessions and how to get approved.": "首付、补助、印花税减免,以及如何获批。",
                 "Investment vs Owner-Occupier Loans": "投资房 vs 自住房贷款",
                 "Rates, repayment types and how to structure each.": "利率、还款方式,以及各自如何架构。",
@@ -849,4 +901,5 @@
             window.setLang(saved);
         })();
     </script>
+<script src="forms.js"></script>
 </body></html>
