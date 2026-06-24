@@ -12,7 +12,7 @@
 (function () {
   "use strict";
 
-  var ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY"; // <-- 在这里粘贴你的 key
+  var ACCESS_KEY = "30b94e92-6cb2-46f9-b0be-b61f348c22a4"; // Web3Forms → leads go to zhangcindy29@gmail.com
   var ENDPOINT = "https://api.web3forms.com/submit";
 
   function isZh() { return document.documentElement.lang === "zh-CN"; }
@@ -42,6 +42,9 @@
         var okEn = form.getAttribute("data-success-en") || "✓ Thanks! A specialist will call you within 12 hours.";
         var okZh = form.getAttribute("data-success-zh") || "✓ 已收到!顾问将在12小时内与你联系。";
         btn.textContent = isZh() ? okZh : okEn;
+        if (typeof window.trackLead === "function") {
+          window.trackLead(form.getAttribute("data-lead-form") || "form");
+        }
         form.reset();
         if (form.hasAttribute("data-redirect")) {
           setTimeout(function () { location.href = form.getAttribute("data-redirect"); }, 800);
