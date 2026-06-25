@@ -454,104 +454,58 @@
 <h2 class="font-display-lg text-headline-md text-primary mb-2">Plan Your Future</h2>
 <p class="text-on-surface-variant">Simple, transparent tools to help you budget for your new home.</p>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<!-- Borrowing Power -->
-<div class="bg-surface p-8 rounded-3xl shadow-lg border border-outline-variant/20">
+<div class="bg-surface p-6 md:p-10 rounded-3xl shadow-lg border border-outline-variant/20 max-w-4xl mx-auto">
 <h3 class="font-headline-md text-xl mb-8 flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined text-secondary">calculate</span>
-                            Borrowing Power
-                        </h3>
-<div class="space-y-5">
+<span class="material-symbols-outlined text-secondary">payments</span>Mortgage Repayment Calculator</h3>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+<!-- Inputs -->
+<div class="space-y-6">
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Annual Household Income</label>
-<span class="text-primary font-bold" id="bp-income-val">$120,000</span>
-</div>
-<input id="bp-income" class="w-full accent-secondary" max="500000" min="50000" step="5000" type="range" value="120000"/>
+<div class="flex justify-between mb-2"><label class="text-label-sm font-semibold">Loan Amount</label><span class="text-primary font-bold" id="rc-amount-val">$650,000</span></div>
+<input id="rc-amount" class="w-full accent-secondary" type="range" min="100000" max="2000000" step="10000" value="650000"/>
 </div>
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Household</label>
-<span class="text-primary font-bold" id="bp-expense-val">≈ $3,300/mo</span>
-</div>
-<select id="bp-household" class="w-full h-11 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
-<option data-exp="2300">Single</option>
-<option data-exp="3300" selected>Couple (no children)</option>
-<option data-exp="4000">Couple + 1 child</option>
-<option data-exp="4600">Couple + 2 children</option>
-<option data-exp="5300">Couple + 3+ children</option>
-<option data-exp="3100">Single parent + 1 child</option>
-</select>
-<p class="text-on-surface-variant/70 text-xs mt-2">Lenders estimate living costs from your household (HEM) — no exact figure needed.</p>
-<details class="mt-3">
-<summary class="cursor-pointer select-none text-xs text-primary font-semibold">Itemise my expenses (optional)</summary>
-<div class="grid grid-cols-2 gap-3 mt-3">
-<div><label class="block text-xs text-on-surface-variant mb-1">Groceries &amp; daily</label><input id="exp-food" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-<div><label class="block text-xs text-on-surface-variant mb-1">Utilities &amp; internet</label><input id="exp-util" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-<div><label class="block text-xs text-on-surface-variant mb-1">Transport</label><input id="exp-transport" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-<div><label class="block text-xs text-on-surface-variant mb-1">Insurance</label><input id="exp-insurance" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-<div><label class="block text-xs text-on-surface-variant mb-1">Phone &amp; subscriptions</label><input id="exp-phone" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-<div><label class="block text-xs text-on-surface-variant mb-1">Other</label><input id="exp-other" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
-</div>
-<p class="text-on-surface-variant/70 text-xs mt-2">If you itemise, we use your total instead of the household estimate.</p>
-</details>
+<div class="flex justify-between mb-2"><label class="text-label-sm font-semibold">Loan Term (years)</label><span class="text-primary font-bold" id="rc-term-val">30</span></div>
+<input id="rc-term" class="w-full accent-secondary" type="range" min="1" max="30" step="1" value="30"/>
 </div>
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Credit Card Limit (total)</label>
-<span class="text-primary font-bold" id="bp-cc-val">$0</span>
-</div>
-<input id="bp-cc" class="w-full accent-secondary" max="100000" min="0" step="1000" type="range" value="0"/>
+<div class="flex justify-between mb-2"><label class="text-label-sm font-semibold">Interest Rate (p.a.)</label><span class="text-primary font-bold" id="rc-rate-val">6.00%</span></div>
+<input id="rc-rate" class="w-full accent-secondary" type="range" min="1" max="12" step="0.05" value="6.00"/>
 </div>
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Other Monthly Repayments</label>
-<span class="text-primary font-bold" id="bp-debt-val">$0</span>
+<div class="text-label-sm font-semibold mb-2">Repayment Frequency</div>
+<div class="flex gap-2" id="rc-freq">
+<label class="flex-1 cursor-pointer"><input type="radio" name="rc-freq" value="12" checked class="peer sr-only"/><span class="block text-center py-2 rounded-lg border border-outline-variant text-sm peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">Monthly</span></label>
+<label class="flex-1 cursor-pointer"><input type="radio" name="rc-freq" value="26" class="peer sr-only"/><span class="block text-center py-2 rounded-lg border border-outline-variant text-sm peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">Fortnightly</span></label>
+<label class="flex-1 cursor-pointer"><input type="radio" name="rc-freq" value="52" class="peer sr-only"/><span class="block text-center py-2 rounded-lg border border-outline-variant text-sm peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">Weekly</span></label>
 </div>
-<input id="bp-debt" class="w-full accent-secondary" max="5000" min="0" step="50" type="range" value="0"/>
-</div>
-<div class="mt-8 p-6 bg-primary-container rounded-2xl text-center">
-<p class="text-on-primary-container text-sm uppercase tracking-wider mb-2">Estimated Borrowing Power</p>
-<div class="text-2xl md:text-3xl font-bold text-on-primary" id="bp-result">$780,000 – $850,000</div>
-</div>
-<p class="text-on-surface-variant/70 text-xs leading-relaxed">Estimate only (30-yr term, +3% APRA buffer, 6× income cap, HEM living costs). Want an exact figure and a loan strategy built for you? <a href="#find-broker" class="text-primary font-semibold underline">Contact us — we'll reply fast.</a></p>
-</div>
-</div>
-<!-- Mortgage Repayment -->
-<div class="bg-surface p-8 rounded-3xl shadow-lg border border-outline-variant/20">
-<h3 class="font-headline-md text-xl mb-8 flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined text-secondary">payments</span>
-                            Mortgage Repayment
-                        </h3>
-<div class="space-y-5">
-<div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Loan Amount</label>
-<span class="text-primary font-bold" id="mr-loan-val">$650,000</span>
-</div>
-<input id="mr-loan" class="w-full accent-secondary" max="2000000" min="100000" step="10000" type="range" value="650000"/>
 </div>
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Interest Rate (p.a.)</label>
-<span class="text-primary font-bold" id="mr-rate-val">5.85%</span>
+<div class="text-label-sm font-semibold mb-2">Repayment Type</div>
+<div class="flex gap-2" id="rc-type">
+<label class="flex-1 cursor-pointer"><input type="radio" name="rc-type" value="pi" checked class="peer sr-only"/><span class="block text-center py-2 rounded-lg border border-outline-variant text-sm peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">Principal &amp; Interest</span></label>
+<label class="flex-1 cursor-pointer"><input type="radio" name="rc-type" value="io" class="peer sr-only"/><span class="block text-center py-2 rounded-lg border border-outline-variant text-sm peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">Interest Only</span></label>
 </div>
-<input id="mr-rate" class="w-full accent-secondary" max="10" min="1" step="0.05" type="range" value="5.85"/>
+</div>
+</div>
+<!-- Result + chart -->
+<div class="flex flex-col">
+<div class="p-6 bg-secondary-container rounded-2xl text-center mb-5">
+<p class="text-on-secondary-container text-sm uppercase tracking-wider mb-1" id="rc-repay-label">Monthly repayment</p>
+<div class="text-3xl md:text-4xl font-bold text-on-secondary-container" id="rc-repay">$3,898</div>
+<p class="text-on-secondary-container/80 text-sm mt-2">Total interest: <span class="font-bold" id="rc-interest">$0</span></p>
 </div>
 <div>
-<div class="flex justify-between mb-2">
-<label class="text-label-sm font-semibold">Loan Term (years)</label>
-<span class="text-primary font-bold" id="mr-term-val">30</span>
+<div class="flex items-center gap-4 mb-2 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm inline-block" style="background:#003441"></span>Balance owing</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm inline-block" style="background:#735c00"></span>Principal paid</span>
 </div>
-<input id="mr-term" class="w-full accent-secondary" max="30" min="10" step="1" type="range" value="30"/>
-</div>
-<div class="mt-8 p-6 bg-secondary-container rounded-2xl text-center">
-<p class="text-on-secondary-container text-sm uppercase tracking-wider mb-2">Monthly Repayments</p>
-<div class="text-2xl md:text-3xl font-bold text-on-secondary-container" id="mr-result">$3,830</div>
-</div>
-<p class="text-on-surface-variant/70 text-xs leading-relaxed">Principal &amp; interest, estimate only. Your actual repayment depends on your rate and loan structure.</p>
+<div id="rc-chart" class="rounded-lg overflow-hidden border border-outline-variant/20"></div>
+<div class="flex justify-between text-[10px] text-on-surface-variant/70 mt-1"><span>0</span><span id="rc-axis-mid"></span><span id="rc-axis-end">30 yrs</span></div>
 </div>
 </div>
+</div>
+<p class="text-on-surface-variant/70 text-xs leading-relaxed mt-6">Estimate only — actual repayments depend on your rate, fees and loan structure. <a href="#find-broker" class="text-primary font-semibold underline">Talk to us for an exact quote.</a></p>
 </div>
 </div>
 </section>
@@ -1026,6 +980,20 @@
                 "Leads complex and investment lending, including land, construction and multi-property structures.": "主理复杂与投资类贷款,涵盖土地、建房及多套房结构。",
                 "English": "英语",
                 "Plan Your Future": "规划你的未来",
+                "Mortgage Repayment Calculator": "房贷还款计算器",
+                "Repayment Frequency": "还款频率",
+                "Monthly": "每月",
+                "Fortnightly": "每两周",
+                "Weekly": "每周",
+                "Repayment Type": "还款方式",
+                "Principal & Interest": "本息同还",
+                "Interest Only": "只还利息",
+                "Monthly repayment": "每月还款",
+                "Total interest:": "总利息:",
+                "Balance owing": "剩余欠款",
+                "Principal paid": "已还本金",
+                "Estimate only — actual repayments depend on your rate, fees and loan structure.": "仅为估算——实际还款取决于你的利率、费用与贷款结构。",
+                "Talk to us for an exact quote.": "联系我们获取精确报价。",
                 "Simple, transparent tools to help you budget for your new home.": "简单透明的工具,帮你为新家做好预算。",
                 "Borrowing Power": "借贷能力",
                 "Annual Household Income": "家庭年收入",
@@ -1123,69 +1091,62 @@
         })();
     </script>
 <script>
-        // ===== Live calculators =====
+        // ===== Repayment calculator (ING-style) + chart =====
         (function () {
             function $(id) { return document.getElementById(id); }
             function fmt(n) { return "$" + Math.round(n).toLocaleString(); }
-            // AU resident income tax 2024-25 + 2% Medicare (simplified, single-earner basis)
-            function tax(g) {
-                var t = 0;
-                if (g > 190000) t = 51638 + (g - 190000) * 0.45;
-                else if (g > 135000) t = 31288 + (g - 135000) * 0.37;
-                else if (g > 45000) t = 4288 + (g - 45000) * 0.30;
-                else if (g > 18200) t = (g - 18200) * 0.16;
-                return t + g * 0.02;
-            }
-            var ASSESS = 0.09, TERM_BP = 30; // ~6% rate + 3% APRA buffer; 30-year term
+            function isZh() { return document.documentElement.lang === "zh-CN"; }
+            if (!$("rc-amount")) return;
+            var FLABEL = {
+                12: { en: "Monthly repayment", zh: "每月还款" },
+                26: { en: "Fortnightly repayment", zh: "每两周还款" },
+                52: { en: "Weekly repayment", zh: "每周还款" }
+            };
+            function freqVal() { var r = document.querySelector('input[name=rc-freq]:checked'); return r ? +r.value : 12; }
+            function typeVal() { var r = document.querySelector('input[name=rc-type]:checked'); return r ? r.value : "pi"; }
 
-            function calcBP() {
-                var hh = $("bp-household");
-                var hhExp = +hh.options[hh.selectedIndex].getAttribute("data-exp");
-                var items = ["exp-food", "exp-util", "exp-transport", "exp-insurance", "exp-phone", "exp-other"];
-                var sum = 0, any = false;
-                items.forEach(function (id) {
-                    var el = $(id);
-                    if (el && el.value !== "") { sum += (+el.value || 0); any = true; }
-                });
-                var exp = any ? sum : hhExp;     // itemised total overrides the household estimate
-                var inc = +$("bp-income").value, cc = +$("bp-cc").value, debt = +$("bp-debt").value;
-                $("bp-income-val").innerText = fmt(inc);
-                $("bp-expense-val").innerText = "≈ " + fmt(exp) + "/mo";
-                $("bp-cc-val").innerText = fmt(cc);
-                $("bp-debt-val").innerText = fmt(debt);
-                var netM = (inc - tax(inc)) / 12;
-                var ccM = cc * 0.038 / 12;          // credit cards assessed at 3.8% of limit/yr
-                var surplus = netM - exp - debt - ccM;
-                var i = ASSESS / 12, n = TERM_BP * 12;
-                var serv = surplus > 0 ? surplus * (1 - Math.pow(1 + i, -n)) / i : 0;
-                var dti = inc * 6;                  // APRA DTI cap ~6x income
-                var max = Math.max(0, Math.min(serv, dti));
-                if (max < 10000) { $("bp-result").innerText = fmt(max); return; }
-                var high = Math.round(max / 10000) * 10000;
-                var low = Math.round(max * 0.92 / 10000) * 10000;
-                $("bp-result").innerText = fmt(low) + " – " + fmt(high);
+            function drawChart(pts, P) {
+                var W = 360, H = 180, n = pts.length - 1; if (n < 1) n = 1;
+                var bnd = pts.map(function (bal, k) { return [(k / n) * W, (bal / P) * H]; });
+                var owe = "M0,0 L" + W + ",0";
+                var pri = "M0," + H + " L" + W + "," + H;
+                for (var k = n; k >= 0; k--) {
+                    owe += " L" + bnd[k][0].toFixed(1) + "," + bnd[k][1].toFixed(1);
+                    pri += " L" + bnd[k][0].toFixed(1) + "," + bnd[k][1].toFixed(1);
+                }
+                owe += " Z"; pri += " Z";
+                $("rc-chart").innerHTML =
+                    '<svg viewBox="0 0 ' + W + ' ' + H + '" class="w-full" style="display:block;height:auto;background:#f5f3f3">'
+                    + '<path d="' + pri + '" fill="#735c00" opacity="0.85"/>'
+                    + '<path d="' + owe + '" fill="#003441" opacity="0.92"/>'
+                    + '</svg>';
             }
-            function calcMR() {
-                var P = +$("mr-loan").value, r = +$("mr-rate").value, y = +$("mr-term").value;
-                $("mr-loan-val").innerText = fmt(P);
-                $("mr-rate-val").innerText = r.toFixed(2) + "%";
-                $("mr-term-val").innerText = y;
-                var i = r / 100 / 12, n = y * 12;
-                var m = i > 0 ? P * i / (1 - Math.pow(1 + i, -n)) : P / n;
-                $("mr-result").innerText = fmt(m);
+
+            function calc() {
+                var P = +$("rc-amount").value, years = +$("rc-term").value, annual = +$("rc-rate").value / 100;
+                var f = freqVal(), type = typeVal();
+                $("rc-amount-val").innerText = fmt(P);
+                $("rc-term-val").innerText = years;
+                $("rc-rate-val").innerText = (+$("rc-rate").value).toFixed(2) + "%";
+                var ir = annual / f, n = years * f;
+                var pay = (type === "io") ? P * ir : (ir > 0 ? P * ir / (1 - Math.pow(1 + ir, -n)) : P / n);
+                var totalPaid = (type === "io") ? pay * n + P : pay * n;
+                $("rc-repay").innerText = fmt(pay);
+                $("rc-interest").innerText = fmt(Math.max(0, totalPaid - P));
+                $("rc-repay-label").innerText = isZh() ? FLABEL[f].zh : FLABEL[f].en;
+                // yearly balance series
+                var series = [], b = P;
+                for (var k = 0; k <= years; k++) {
+                    series.push(b);
+                    for (var p = 0; p < f; p++) { var interest = b * ir; var prin = (type === "io") ? 0 : (pay - interest); b -= prin; if (b < 0) b = 0; }
+                }
+                drawChart(series, P);
+                $("rc-axis-end").innerText = years + (isZh() ? " 年" : " yrs");
+                $("rc-axis-mid").innerText = Math.round(years / 2) + (isZh() ? " 年" : " yr");
             }
-            ["bp-income", "bp-cc", "bp-debt"].forEach(function (id) {
-                var e = $(id); if (e) e.addEventListener("input", calcBP);
-            });
-            if ($("bp-household")) $("bp-household").addEventListener("change", calcBP);
-            ["exp-food", "exp-util", "exp-transport", "exp-insurance", "exp-phone", "exp-other"].forEach(function (id) {
-                var e = $(id); if (e) e.addEventListener("input", calcBP);
-            });
-            ["mr-loan", "mr-rate", "mr-term"].forEach(function (id) {
-                var e = $(id); if (e) e.addEventListener("input", calcMR);
-            });
-            if ($("bp-income")) calcBP();
-            if ($("mr-loan")) calcMR();
+            ["rc-amount", "rc-term", "rc-rate"].forEach(function (id) { $(id).addEventListener("input", calc); });
+            document.querySelectorAll('input[name=rc-freq], input[name=rc-type]').forEach(function (r) { r.addEventListener("change", calc); });
+            calc();
         })();
     </script>
 <script src="forms.js"></script>
