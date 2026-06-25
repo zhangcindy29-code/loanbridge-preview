@@ -506,7 +506,7 @@
 <div id="rc-panel-graph">
 <div class="flex items-center gap-4 mb-2 text-xs text-on-surface-variant">
 <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm inline-block" style="background:#003441"></span>Balance owing</span>
-<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm inline-block" style="background:#735c00"></span>Principal paid</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm inline-block" style="background:#dcb43b"></span>Principal paid</span>
 </div>
 <div id="rc-chartwrap" class="relative">
 <div id="rc-chart"></div>
@@ -1162,11 +1162,13 @@
                     pri += " L" + bnd[k][0].toFixed(1) + "," + bnd[k][1].toFixed(1);
                 }
                 owe += " Z"; pri += " Z";
-                var grid = "";
+                var bline = "M" + bnd[0][0].toFixed(1) + "," + bnd[0][1].toFixed(1);
+                for (var j = 1; j <= NYRS; j++) { bline += " L" + bnd[j][0].toFixed(1) + "," + bnd[j][1].toFixed(1); }
+                var ylab = "", grid = "";
                 [0, 0.5, 1].forEach(function (fr) {
                     var y = padT + (1 - fr) * plotH;
-                    grid += '<line x1="' + padL + '" y1="' + y + '" x2="' + (padL + plotW) + '" y2="' + y + '" stroke="#c0c8cb" stroke-width="0.5" opacity="0.6"/>'
-                        + '<text x="' + (padL - 4) + '" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="#70787c">' + kfmt(LOANP * fr) + '</text>';
+                    grid += '<line x1="' + padL + '" y1="' + y + '" x2="' + (padL + plotW) + '" y2="' + y + '" stroke="#ffffff" stroke-width="0.5" opacity="0.18"/>';
+                    ylab += '<text x="' + (padL - 6) + '" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="#70787c">' + kfmt(LOANP * fr) + '</text>';
                 });
                 var xt = "";
                 [0, 0.5, 1].forEach(function (fr) {
@@ -1174,11 +1176,15 @@
                 });
                 $("rc-chart").innerHTML =
                     '<svg viewBox="0 0 ' + VW + ' ' + VH + '" class="w-full" style="display:block;height:auto">'
-                    + '<rect x="' + padL + '" y="' + padT + '" width="' + plotW + '" height="' + plotH + '" fill="#f5f3f3"/>'
-                    + grid
-                    + '<path d="' + pri + '" fill="#735c00" opacity="0.85"/>'
-                    + '<path d="' + owe + '" fill="#003441" opacity="0.92"/>'
-                    + xt + '</svg>';
+                    + '<defs>'
+                    + '<linearGradient id="gOwe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d5567"/><stop offset="1" stop-color="#00303c"/></linearGradient>'
+                    + '<linearGradient id="gPri" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d375"/><stop offset="1" stop-color="#dcb43b"/></linearGradient>'
+                    + '</defs>'
+                    + '<rect x="' + padL + '" y="' + padT + '" width="' + plotW + '" height="' + plotH + '" rx="6" fill="#eef0f1"/>'
+                    + '<path d="' + pri + '" fill="url(#gPri)"/>'
+                    + '<path d="' + owe + '" fill="url(#gOwe)"/>'
+                    + '<path d="' + bline + '" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.85"/>'
+                    + grid + ylab + xt + '</svg>';
             }
 
             function buildTable() {
