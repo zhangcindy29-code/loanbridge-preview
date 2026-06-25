@@ -483,6 +483,18 @@
 <option data-exp="3100">Single parent + 1 child</option>
 </select>
 <p class="text-on-surface-variant/70 text-xs mt-2">Lenders estimate living costs from your household (HEM) — no exact figure needed.</p>
+<details class="mt-3">
+<summary class="cursor-pointer select-none text-xs text-primary font-semibold">Itemise my expenses (optional)</summary>
+<div class="grid grid-cols-2 gap-3 mt-3">
+<div><label class="block text-xs text-on-surface-variant mb-1">Groceries &amp; daily</label><input id="exp-food" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+<div><label class="block text-xs text-on-surface-variant mb-1">Utilities &amp; internet</label><input id="exp-util" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+<div><label class="block text-xs text-on-surface-variant mb-1">Transport</label><input id="exp-transport" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+<div><label class="block text-xs text-on-surface-variant mb-1">Insurance</label><input id="exp-insurance" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+<div><label class="block text-xs text-on-surface-variant mb-1">Phone &amp; subscriptions</label><input id="exp-phone" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+<div><label class="block text-xs text-on-surface-variant mb-1">Other</label><input id="exp-other" type="number" min="0" placeholder="$/mo" class="w-full h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm"/></div>
+</div>
+<p class="text-on-surface-variant/70 text-xs mt-2">If you itemise, we use your total instead of the household estimate.</p>
+</details>
 </div>
 <div>
 <div class="flex justify-between mb-2">
@@ -722,7 +734,7 @@
 <div class="max-w-container-max mx-auto px-margin-desktop">
 <div class="text-center mb-16">
 <h2 class="font-display-lg text-headline-md text-primary mb-4">Knowledge Hub</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Clear, practical guides to home loans and buying property in Sydney — in your language.</p>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Real answers to the questions Sydney buyers actually ask — deposits, grants, approvals and the costly traps — in plain language, in yours.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 <a href="article-first-home-buyer-nsw.html" class="group bg-surface rounded-2xl card-shadow border border-outline-variant/10 flex flex-col p-6">
@@ -971,7 +983,7 @@
                 "A self-employed client was purchasing land under a non-trading company structure, aiming to settle the land, complete a subdivision, then move into construction finance. Our specialist structured the lending application appropriately, supported the land settlement, and after subdivision helped prepare and progress the construction loan approval.": "一位自雇客户以非经营性公司架构购买土地,目标是先完成土地交割、再完成土地分割申请,待分割完成后进入建房融资。我们的顾问为其合理设计贷款申请结构,协助完成土地交割;在分割阶段后,又帮助客户准备并推进建房贷款审批。",
                 "The client moved smoothly through every stage — land acquisition, subdivision and construction finance.": "客户顺利走完了从购地、分割到建房融资的每一个阶段。",
                 "Knowledge Hub": "知识中心",
-                "Clear, practical guides to home loans and buying property in Sydney — in your language.": "清晰实用的房贷与悉尼买房指南——用你的语言。",
+                "Real answers to the questions Sydney buyers actually ask — deposits, grants, approvals and the costly traps — in plain language, in yours.": "悉尼买房人最常问的那些问题——首付、补助、获批、最烧钱的坑——大白话讲清,还用你的语言。",
                 "Read Article": "阅读文章",
                 "Costs": "购房成本",
                 "First Home Buyer's Guide to Buying in NSW": "新州首次置业完全指南",
@@ -1033,6 +1045,14 @@
                 "Couple + 3+ children": "夫妻 + 3个及以上孩子",
                 "Single parent + 1 child": "单亲 + 1个孩子",
                 "Lenders estimate living costs from your household (HEM) — no exact figure needed.": "银行会按你的家庭情况(HEM基准)估算生活开支,你无需填精确数字。",
+                "Itemise my expenses (optional)": "分项详细填写(可选)",
+                "Groceries & daily": "食品与日常",
+                "Utilities & internet": "水电与网络",
+                "Transport": "交通出行",
+                "Insurance": "保险",
+                "Phone & subscriptions": "通讯与订阅",
+                "Other": "其他",
+                "If you itemise, we use your total instead of the household estimate.": "若分项填写,我们按你的合计计算,替代家庭情况的估算。",
                 "Estimate only (30-yr term, +3% APRA buffer, 6× income cap, HEM living costs). Want an exact figure and a loan strategy built for you?": "仅为估算(30年期、+3% APRA缓冲、6倍收入上限、HEM生活开支)。想要精确额度和为你量身定制的贷款策略?",
                 "Contact us — we'll reply fast.": "联系我们,第一时间回复你。",
                 "Principal & interest, estimate only. Your actual repayment depends on your rate and loan structure.": "本息合计,仅为估算。实际还款取决于你的利率与贷款结构。",
@@ -1128,7 +1148,14 @@
 
             function calcBP() {
                 var hh = $("bp-household");
-                var exp = +hh.options[hh.selectedIndex].getAttribute("data-exp");
+                var hhExp = +hh.options[hh.selectedIndex].getAttribute("data-exp");
+                var items = ["exp-food", "exp-util", "exp-transport", "exp-insurance", "exp-phone", "exp-other"];
+                var sum = 0, any = false;
+                items.forEach(function (id) {
+                    var el = $(id);
+                    if (el && el.value !== "") { sum += (+el.value || 0); any = true; }
+                });
+                var exp = any ? sum : hhExp;     // itemised total overrides the household estimate
                 var inc = +$("bp-income").value, cc = +$("bp-cc").value, debt = +$("bp-debt").value;
                 $("bp-income-val").innerText = fmt(inc);
                 $("bp-expense-val").innerText = "≈ " + fmt(exp) + "/mo";
@@ -1159,6 +1186,9 @@
                 var e = $(id); if (e) e.addEventListener("input", calcBP);
             });
             if ($("bp-household")) $("bp-household").addEventListener("change", calcBP);
+            ["exp-food", "exp-util", "exp-transport", "exp-insurance", "exp-phone", "exp-other"].forEach(function (id) {
+                var e = $(id); if (e) e.addEventListener("input", calcBP);
+            });
             ["mr-loan", "mr-rate", "mr-term"].forEach(function (id) {
                 var e = $(id); if (e) e.addEventListener("input", calcMR);
             });
