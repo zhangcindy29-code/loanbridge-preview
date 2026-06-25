@@ -1249,6 +1249,9 @@
             });
             wrap.addEventListener("mouseleave", function () { tip.classList.add("hidden"); });
 
+            // keep JS-managed labels in sync when language is toggled
+            if (window.setLang) { var _sl = window.setLang; window.setLang = function (l) { _sl(l); calc(); }; }
+
             calc();
         })();
     </script>
