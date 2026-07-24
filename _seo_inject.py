@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-off SEO head injector for Broker Gateway static pages.
+"""One-off SEO head injector for Mortgage Bridge static pages.
 Inserts analytics.js, canonical, OpenGraph/Twitter, and JSON-LD after <title>.
 Idempotent: skips files that already contain the marker."""
 import re, html
@@ -7,7 +7,7 @@ import re, html
 BASE = "https://zhangcindy29-code.github.io/loanbridge-preview/"
 OG_IMAGE = BASE + "assets/broker1.jpg"
 MARKER = "<!-- seo:start -->"
-ORG = "Broker Gateway"
+ORG = "Mortgage Bridge"
 
 # Organization block reused as publisher/provider
 ORG_LD = {

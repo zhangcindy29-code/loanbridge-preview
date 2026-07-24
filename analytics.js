@@ -1,5 +1,5 @@
 /* =====================================================================
-   Analytics & conversion tracking  —  Broker Gateway
+   Analytics & conversion tracking  —  Mortgage Bridge
    ---------------------------------------------------------------------
    一处填 ID,全站生效。上线追踪只需做这三步:
 

@@ -1,5 +1,5 @@
 /* =====================================================================
-   Lead form backend  —  Broker Gateway
+   Lead form backend  —  Mortgage Bridge
    ---------------------------------------------------------------------
    一次性设置 (约2分钟):
    1. 打开 https://web3forms.com
@@ -33,7 +33,7 @@
       if (!fd.get("subject")) {
         fd.append("subject", form.getAttribute("data-lead-form") || "New website lead");
       }
-      fd.append("from_name", "Broker Gateway Website");
+      fd.append("from_name", "Mortgage Bridge Website");
       fd.append("page_url", location.href);
 
       var notConfigured = ACCESS_KEY.indexOf("REPLACE_") === 0;

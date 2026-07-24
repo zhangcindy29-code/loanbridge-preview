@@ -1,3 +1,3 @@
-# Broker Gateway — Landing Page Preview
+# Mortgage Bridge — Landing Page Preview
 
 Client mockup for the multilingual Sydney mortgage platform.
