@@ -4,7 +4,7 @@ Inserts analytics.js, canonical, OpenGraph/Twitter, and JSON-LD after <title>.
 Idempotent: skips files that already contain the marker."""
 import re, html
 
-BASE = "https://zhangcindy29-code.github.io/loanbridge-preview/"
+BASE = "https://mortgagebrg.com.au/"
 OG_IMAGE = BASE + "assets/broker1.jpg"
 MARKER = "<!-- seo:start -->"
 ORG = "Mortgage Bridge"

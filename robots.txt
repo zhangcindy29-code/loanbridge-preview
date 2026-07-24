@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 
 # mobile.html 是早期手机版 mockup,避免与首页重复内容
-Disallow: /loanbridge-preview/mobile.html
+Disallow: /mobile.html
 
-Sitemap: https://zhangcindy29-code.github.io/loanbridge-preview/sitemap.xml
+Sitemap: https://mortgagebrg.com.au/sitemap.xml

@@ -5,7 +5,7 @@
 
    1) GA4 (网站流量分析,免费,必做)
       - 打开 https://analytics.google.com → 管理 → 创建"媒体资源"
-      - 选"网站",数据流地址填: zhangcindy29-code.github.io
+      - 选"网站",数据流地址填: mortgagebrg.com.au
       - 拿到的"衡量 ID"长这样 G-XXXXXXXXXX,粘到下面 GA4_ID
 
    2) Google Ads 转化 (跑 SEM 时才需要,可先留空)
