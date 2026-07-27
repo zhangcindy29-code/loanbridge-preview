@@ -5,7 +5,7 @@ Idempotent: skips files that already contain the marker."""
 import re, html
 
 BASE = "https://mortgagebrg.com.au/"
-OG_IMAGE = BASE + "assets/broker1.jpg"
+OG_IMAGE = BASE + "assets/og-share.jpg"
 MARKER = "<!-- seo:start -->"
 ORG = "Mortgage Bridge"
 
