@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mortgagebrg.com.au/</loc>
     <changefreq>weekly</changefreq>
@@ -34,6 +34,15 @@
     <loc>https://mortgagebrg.com.au/article-self-employed-home-loans.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mortgagebrg.com.au/article-self-employed-home-loans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mortgagebrg.com.au/article-self-employed-home-loans-zh.html"/>
+  </url>
+  <url>
+    <loc>https://mortgagebrg.com.au/article-self-employed-home-loans-zh.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mortgagebrg.com.au/article-self-employed-home-loans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mortgagebrg.com.au/article-self-employed-home-loans-zh.html"/>
   </url>
   <url>
     <loc>https://mortgagebrg.com.au/article-stamp-duty-lmi.html</loc>
