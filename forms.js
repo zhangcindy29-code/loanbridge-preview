@@ -12,7 +12,7 @@
 (function () {
   "use strict";
 
-  var ACCESS_KEY = "30b94e92-6cb2-46f9-b0be-b61f348c22a4"; // Web3Forms → leads go to zhangcindy29@gmail.com
+  var ACCESS_KEY = "30b94e92-6cb2-46f9-b0be-b61f348c22a4"; // Web3Forms → leads go to service@mortgagebrg.com.au (verified via live form submit 2026-07)
   var ENDPOINT = "https://api.web3forms.com/submit";
 
   function isZh() { return document.documentElement.lang === "zh-CN"; }
