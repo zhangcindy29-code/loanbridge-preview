@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Borrowing Power Calculator 2026 — How Much Can I Borrow? | Mortgage Bridge</title>
+<!-- seo:start -->
+<link rel="canonical" href="https://mortgagebrg.com.au/borrowing-power-calculator.html"/>
+<meta property="og:site_name" content="Mortgage Bridge"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Borrowing Power Calculator — How Much Can I Borrow?"/>
+<meta property="og:description" content="Estimate how much you can borrow for a home loan in Australia. Free borrowing power calculator using current tax rates and the APRA serviceability buffer, plus income, expenses, debts and dependants."/>
+<meta property="og:url" content="https://mortgagebrg.com.au/borrowing-power-calculator.html"/>
+<meta property="og:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Borrowing Power Calculator — How Much Can I Borrow?"/>
+<meta name="twitter:description" content="Estimate how much you can borrow for a home loan in Australia — free calculator with income, expenses, debts and the APRA buffer."/>
+<meta name="twitter:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<script src="analytics.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Borrowing Power Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "url": "https://mortgagebrg.com.au/borrowing-power-calculator.html",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "provider": { "@type": "FinancialService", "name": "Mortgage Bridge", "url": "https://mortgagebrg.com.au/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How much can I borrow for a home loan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "As a rough guide, many borrowers can access around 5 to 6 times their gross annual income, but the real figure depends on your after-tax income minus living expenses, existing debts and credit-card limits. Lenders also test you at your interest rate plus a buffer (usually 3%), so your assessed repayment must fit your surplus income. Every lender uses a different formula, which is why two people on the same income can borrow very different amounts." } },
+    { "@type": "Question", "name": "What is the APRA serviceability buffer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Australian lenders are required to assess whether you could still repay your loan if interest rates rose. Under APRA guidance they add a buffer — typically 3% — to your actual interest rate and check you can afford repayments at that higher assessment rate. This is the single biggest reason your borrowing power is lower than a simple repayment calculation suggests." } },
+    { "@type": "Question", "name": "How can I increase my borrowing power?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The fastest levers are usually reducing or closing credit-card limits (lenders count the full limit, not the balance), paying off car or personal loans, cutting discretionary spending before you apply, and choosing a lender whose policy suits your situation. A broker can also select a lender that assesses your income type — bonuses, overtime, rental or self-employed income — more generously." } },
+    { "@type": "Question", "name": "Do credit card limits affect how much I can borrow?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, a lot. Lenders assess your total credit-card limit, not what you actually owe, usually as a monthly commitment of around 3 to 3.8% of the limit. A $20,000 limit you never use can still cut your borrowing power by tens of thousands of dollars, so closing or reducing unused cards before applying often helps." } }
+  ]
+}
+</script>
+<!-- seo:end -->
+<meta name="description" content="Estimate how much you can borrow for a home loan in Australia. Free borrowing power calculator using current tax rates and the APRA serviceability buffer, plus income, expenses, debts and dependants."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = { darkMode: "class", theme: { extend: { colors: {
+"surface":"#fbf9f8","surface-container-low":"#f5f3f3","surface-container":"#efeded","surface-container-lowest":"#ffffff",
+"on-surface":"#1b1c1c","on-surface-variant":"#40484b","outline":"#70787c","outline-variant":"#c0c8cb",
+"primary":"#003441","on-primary":"#ffffff","primary-container":"#0f4c5c","on-primary-container":"#87bbce",
+"secondary":"#735c00","on-secondary":"#ffffff","secondary-container":"#fed65b","on-secondary-container":"#745c00",
+"secondary-fixed":"#ffe088","background":"#fbf9f8" } } } };
+</script>
+<style>
+body{font-family:'Inter','PingFang SC',sans-serif;}
+.font-display{font-family:'Be Vietnam Pro','PingFang SC',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.glass-header{background:rgba(251,249,248,0.85);backdrop-filter:blur(8px);}
+.prose-body p{margin-bottom:1rem;line-height:1.8;}
+.fld{width:100%;border:1px solid #c0c8cb;border-radius:12px;padding:0.7rem 0.9rem;font-size:1rem;font-weight:600;color:#1b1c1c;background:#fff;}
+.fld:focus{outline:2px solid #003441;outline-offset:1px;}
+.fld-money{padding-left:1.9rem;}
+.seg{cursor:pointer;}
+.seg input{position:absolute;opacity:0;pointer-events:none;}
+.seg span{display:block;text-align:center;padding:0.55rem 0.4rem;border-radius:0.65rem;border:1px solid #c0c8cb;font-weight:600;font-size:0.85rem;color:#40484b;transition:all .15s;}
+.seg input:checked + span{background:#003441;color:#fff;border-color:#003441;}
+.lbl{display:block;font-weight:700;color:#003441;margin-bottom:0.35rem;font-size:0.92rem;}
+</style>
+</head>
+<body class="bg-background text-on-surface">
+<header class="sticky top-0 z-50 glass-header border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-5 md:px-10 max-w-4xl mx-auto h-16 md:h-20">
+<a class="font-display text-base sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap" href="index.html">Mortgage Bridge</a>
+<div class="flex items-center gap-3 md:gap-5">
+<a class="hidden md:inline-flex items-center gap-1 text-on-surface-variant hover:text-primary text-sm font-semibold" href="index.html">
+<span class="material-symbols-outlined text-base">arrow_back</span>Home</a>
+<a href="stamp-duty-calculator-nsw.html" class="hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap px-3 md:px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-sm">
+<span class="material-symbols-outlined text-sm">calculate</span>Stamp duty calc</a>
+<a href="#lead" class="inline-flex whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm">Talk to a broker</a>
+</div>
+</nav>
+</header>
+<main class="max-w-4xl mx-auto px-5 md:px-10 py-10 md:py-14">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-4">Australia · 2026</span>
+<h1 class="font-display text-3xl md:text-5xl font-bold text-primary leading-tight mb-3">Borrowing Power Calculator</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl">How much can you borrow for a home loan? Get an instant estimate based on your income, expenses and debts — using current tax rates and the <strong>APRA serviceability buffer</strong> that lenders actually apply.</p>
+
+<div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+<!-- Inputs -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/20 shadow-sm space-y-5">
+<div>
+<label class="lbl">Applicants</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="seg"><input type="radio" name="app" value="single" checked/><span>Single</span></label>
+<label class="seg"><input type="radio" name="app" value="couple"/><span>Couple</span></label>
+</div>
+</div>
+<div>
+<label class="lbl" for="income">Household gross annual income</label>
+<div class="relative"><span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input id="income" type="text" inputmode="numeric" value="150,000" class="fld fld-money"/></div>
+</div>
+<div>
+<label class="lbl">Dependants</label>
+<div class="grid grid-cols-4 gap-2">
+<label class="seg"><input type="radio" name="dep" value="0" checked/><span>0</span></label>
+<label class="seg"><input type="radio" name="dep" value="1"/><span>1</span></label>
+<label class="seg"><input type="radio" name="dep" value="2"/><span>2</span></label>
+<label class="seg"><input type="radio" name="dep" value="3"/><span>3+</span></label>
+</div>
+</div>
+<div>
+<label class="lbl" for="expenses">Monthly living expenses <span class="font-normal text-on-surface-variant">(leave blank to estimate)</span></label>
+<div class="relative"><span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input id="expenses" type="text" inputmode="numeric" placeholder="estimated" class="fld fld-money"/></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="lbl" for="debts">Other loan repayments <span class="font-normal text-on-surface-variant">/mo</span></label>
+<div class="relative"><span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input id="debts" type="text" inputmode="numeric" value="0" class="fld fld-money"/></div>
+</div>
+<div>
+<label class="lbl" for="cards">Credit card limits</label>
+<div class="relative"><span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">$</span>
+<input id="cards" type="text" inputmode="numeric" value="0" class="fld fld-money"/></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="lbl" for="rate">Interest rate</label>
+<div class="relative"><input id="rate" type="text" inputmode="decimal" value="6.0" class="fld pr-7"/><span class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant">%</span></div>
+</div>
+<div>
+<label class="lbl">Loan term</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="seg"><input type="radio" name="term" value="25"/><span>25 yr</span></label>
+<label class="seg"><input type="radio" name="term" value="30" checked/><span>30 yr</span></label>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Result -->
+<div class="p-6 rounded-2xl bg-primary text-on-primary shadow-lg md:sticky md:top-24">
+<p class="text-on-primary/70 text-sm font-semibold mb-1">You could borrow approximately</p>
+<p id="borrowOut" class="font-display text-4xl md:text-5xl font-bold mb-1">$892,365</p>
+<p id="borrowNote" class="text-secondary-fixed text-sm font-semibold mb-4">Estimate only — your lender's figure will vary</p>
+<div class="border-t border-white/15 pt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span class="text-on-primary/70">Est. monthly repayment</span><span id="repayOut" class="font-semibold">$5,351</span></div>
+<div class="flex justify-between"><span class="text-on-primary/70">Assessed at (rate + 3% buffer)</span><span id="assessOut" class="font-semibold">9.0%</span></div>
+<div class="flex justify-between"><span class="text-on-primary/70">Monthly surplus used</span><span id="surplusOut" class="font-semibold">$7,180</span></div>
+</div>
+<a href="#lead" class="mt-5 inline-flex w-full justify-center items-center px-6 py-3 rounded-xl bg-secondary-fixed text-on-secondary-container font-bold hover:shadow-xl transition">Get my real borrowing power →</a>
+</div>
+</div>
+<p class="text-on-surface-variant/60 text-xs mt-3">This is a general estimate only. It assumes even income splitting for couples and a standard living-expense floor, and does not reflect any specific lender's policy, your credit history, or all income types. A broker can give you an accurate figure and pre-approval.</p>
+
+<!-- Lead capture -->
+<section id="lead" class="my-12 p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/20 scroll-mt-24">
+<h2 class="font-display text-2xl font-bold text-primary mb-2">Want your real number — and a lender who'll approve it?</h2>
+<p class="text-on-surface-variant mb-6 text-sm md:text-base">This estimate uses one generic formula. A broker compares 30+ lenders to find the one that lends you the most for your situation — free, with a call back within 12 hours. <span class="text-on-surface-variant/80">我们提供普通话/粤语服务。</span></p>
+<form data-lead-form="Borrowing power calculator lead" data-success-en="✓ Thanks! A broker will call you within 12 hours." data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
+<input required name="Name" placeholder="Your name / 称呼" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
+<input required name="Phone/WeChat" placeholder="Phone or WeChat / 电话或微信" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
+<select name="Buyer stage" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary">
+<option value="First home buyer">First home buyer</option>
+<option value="Next home / upgrader">Next home / upgrader</option>
+<option value="Investor">Investor</option>
+<option value="Refinancing">Refinancing</option>
+</select>
+<input name="Income type" placeholder="Income type — PAYG / self-employed (optional)" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
+<button type="submit" class="sm:col-span-2 w-full px-8 py-3.5 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition">Get my free assessment →</button>
+</form>
+</section>
+
+<!-- SEO content -->
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">How is borrowing power calculated?</h2>
+<div class="prose-body text-on-surface-variant">
+<p>Your borrowing power isn't just a multiple of your salary. Lenders work out your <strong>after-tax income</strong>, subtract your <strong>living expenses</strong> and any <strong>existing debts</strong> (including credit-card limits), and see how much monthly surplus is left. They then check you could still afford the loan at your interest rate <strong>plus a buffer of around 3%</strong> — the APRA serviceability buffer. Whatever loan size that surplus supports at the buffered rate is roughly your maximum.</p>
+<p>Because every lender uses a slightly different formula and treats income types (bonus, overtime, rental, self-employed) differently, two people on identical incomes can be approved for very different amounts. That's exactly where a broker adds value.</p>
+</div>
+
+<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-4">5 ways to increase your borrowing power</h2>
+<div class="prose-body text-on-surface-variant">
+<ul class="list-disc pl-5 space-y-1">
+<li><strong>Reduce or close credit-card limits</strong> — lenders count the full limit, not the balance.</li>
+<li><strong>Pay off car and personal loans</strong> — each monthly repayment directly lowers your surplus.</li>
+<li><strong>Trim discretionary spending</strong> for a few months before applying.</li>
+<li><strong>Choose the right lender</strong> — policies on overtime, bonuses and self-employed income vary widely.</li>
+<li><strong>Extend the loan term</strong> — a 30-year term lowers the assessed repayment (though you pay more interest overall).</li>
+</ul>
+</div>
+
+<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-4">Frequently asked questions</h2>
+<div class="space-y-4">
+<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<summary class="font-bold text-primary cursor-pointer">How much can I borrow for a home loan?</summary>
+<p class="text-on-surface-variant mt-3 leading-relaxed">As a rough guide, around 5–6 times your gross income, but the real figure depends on your after-tax income minus expenses, debts and credit-card limits, tested at your rate plus a ~3% buffer. Use the calculator above for an estimate, then confirm with a broker.</p>
+</details>
+<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<summary class="font-bold text-primary cursor-pointer">Do credit card limits affect how much I can borrow?</summary>
+<p class="text-on-surface-variant mt-3 leading-relaxed">Yes — a lot. Lenders assess your total limit (not the balance), usually as ~3–3.8% of the limit per month. A $20,000 unused card can cut your borrowing power by tens of thousands, so closing unused cards before applying helps.</p>
+</details>
+<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
+<summary class="font-bold text-primary cursor-pointer">What is the APRA serviceability buffer?</summary>
+<p class="text-on-surface-variant mt-3 leading-relaxed">Lenders must check you could still repay if rates rose, so they add a buffer — typically 3% — to your actual rate and assess your repayments at that higher rate. It's the main reason your borrowing power is lower than a simple repayment sum suggests.</p>
+</details>
+</div>
+
+<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This page is general information only and is not credit advice. Estimates are based on current Australian tax rates and a standard 3% assessment buffer, and may not reflect your lender's policy or your circumstances. Speak with a licensed mortgage broker for an accurate assessment.</p>
+
+<!-- Related -->
+<div class="mt-12 pt-8 border-t border-outline-variant/30">
+<h3 class="font-display text-lg font-bold text-primary mb-4">Helpful tools &amp; guides</h3>
+<div class="grid sm:grid-cols-2 gap-4">
+<a href="stamp-duty-calculator-nsw.html" class="block p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/40 transition">
+<p class="font-bold text-primary">NSW Stamp Duty Calculator</p>
+<p class="text-on-surface-variant text-sm mt-1">Work out your duty and first-home concession.</p></a>
+<a href="first-home-buyer-grants-nsw.html" class="block p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/40 transition">
+<p class="font-bold text-primary">First Home Buyer Grants NSW</p>
+<p class="text-on-surface-variant text-sm mt-1">The $10k grant, stamp duty exemption and 5% deposit.</p></a>
+</div>
+</div>
+</main>
+<footer class="bg-primary text-on-primary py-10">
+<div class="max-w-4xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-display text-xl font-bold">Mortgage Bridge</div>
+<p class="text-on-primary/60 text-sm text-center">© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.</p>
+</div>
+</footer>
+<script>
+(function(){
+  function fmt(n){ return "$" + Math.round(n).toLocaleString("en-AU"); }
+  function num(id){ return parseFloat((document.getElementById(id).value||"").replace(/[^0-9.]/g,""))||0; }
+  function val(name){ return (document.querySelector('input[name="'+name+'"]:checked')||{}).value; }
+  // Australian income tax 2024-25/2025-26 + 2% Medicare (simplified)
+  function tax(g){
+    var t=0;
+    if(g>190000) t=51638+(g-190000)*0.45;
+    else if(g>135000) t=31288+(g-135000)*0.37;
+    else if(g>45000) t=4288+(g-45000)*0.30;
+    else if(g>18200) t=(g-18200)*0.16;
+    var med = g>26000 ? g*0.02 : 0;
+    return t+med;
+  }
+  function netAnnual(gross, couple){
+    if(couple){ var h=gross/2; return 2*(h-tax(h)); }
+    return gross - tax(gross);
+  }
+  var els=["income","expenses","debts","cards","rate"];
+  function calc(){
+    var couple = val("app")==="couple";
+    var gross = num("income");
+    var deps = parseInt(val("dep"))||0;
+    var term = parseInt(val("term"))||30;
+    var rate = num("rate")||6;
+    var netMonthly = netAnnual(gross, couple)/12;
+    // living expense floor estimate (HEM-style) if blank
+    var expInput = num("expenses");
+    var estExp = (couple?3100:2000) + deps*450;
+    var expenses = expInput>0 ? expInput : estExp;
+    var commitments = num("debts") + num("cards")*0.038;
+    var surplus = netMonthly - expenses - commitments;
+    if(surplus<0) surplus=0;
+    var assess = rate + 3;
+    var i = assess/1200, n = term*12;
+    var maxLoan = i>0 ? surplus*(1-Math.pow(1+i,-n))/i : surplus*n;
+    // repayment at ACTUAL rate on that loan
+    var ia = rate/1200;
+    var repay = ia>0 ? maxLoan*ia/(1-Math.pow(1+ia,-n)) : maxLoan/n;
+    document.getElementById("borrowOut").textContent = fmt(maxLoan);
+    document.getElementById("repayOut").textContent = fmt(repay);
+    document.getElementById("assessOut").textContent = assess.toFixed(1)+"%";
+    document.getElementById("surplusOut").textContent = fmt(surplus);
+    document.getElementById("expenses").placeholder = "≈ "+fmt(estExp);
+    document.getElementById("borrowNote").textContent = surplus<=0
+      ? "Expenses exceed income on these inputs" : "Estimate only — your lender's figure will vary";
+  }
+  els.forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener("input", function(){
+      if(id!=="rate"){ var d=(el.value||"").replace(/[^0-9]/g,""); el.value=d?parseInt(d,10).toLocaleString("en-AU"):""; }
+      calc();
+    });
+  });
+  document.querySelectorAll('input[name="app"],input[name="dep"],input[name="term"]').forEach(function(e){ e.addEventListener("change",calc); });
+  calc();
+})();
+</script>
+<script src="forms.js"></script>
+</body></html>
