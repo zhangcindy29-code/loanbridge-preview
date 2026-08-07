@@ -1,19 +1,21 @@
 <!DOCTYPE html>
+
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NSW Stamp Duty Calculator 2026 — Transfer Duty & First Home Buyer | Mortgage Bridge</title>
+<title>Stamp Duty Calculator NSW 2026 | Transfer Duty &amp; First Home Buyer Exemption | Mortgage Bridge</title>
 <!-- seo:start -->
+<meta name="description" content="Free NSW stamp duty calculator using current 2026/27 Revenue NSW rates. Works out transfer duty, First Home Buyers Assistance Scheme exemptions and concessions, and foreign purchaser surcharge — matched to the official calculator."/>
 <link rel="canonical" href="https://mortgagebrg.com.au/stamp-duty-calculator-nsw.html"/>
 <meta property="og:site_name" content="Mortgage Bridge"/>
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="NSW Stamp Duty Calculator 2026 — Transfer Duty & First Home Buyer"/>
-<meta property="og:description" content="Free NSW stamp duty (transfer duty) calculator. Work out your duty in seconds, including First Home Buyers Assistance Scheme exemptions and concessions. Based on current Revenue NSW rates."/>
+<meta property="og:title" content="Stamp Duty Calculator NSW 2026 | Transfer Duty &amp; First Home Buyer Exemption"/>
+<meta property="og:description" content="Calculate NSW transfer duty on current 2026/27 rates, including first home buyer exemptions and concessions."/>
 <meta property="og:url" content="https://mortgagebrg.com.au/stamp-duty-calculator-nsw.html"/>
 <meta property="og:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="NSW Stamp Duty Calculator 2026"/>
-<meta name="twitter:description" content="Free NSW stamp duty calculator with First Home Buyer exemptions. Based on current Revenue NSW rates."/>
+<meta name="twitter:title" content="Stamp Duty Calculator NSW 2026 | Mortgage Bridge"/>
+<meta name="twitter:description" content="Calculate NSW transfer duty on current 2026/27 rates, including first home buyer exemptions and concessions."/>
 <meta name="twitter:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
 <script src="analytics.js"></script>
 <script type="application/ld+json">
@@ -21,11 +23,12 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "NSW Stamp Duty Calculator",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
   "url": "https://mortgagebrg.com.au/stamp-duty-calculator-nsw.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
-  "publisher": { "@type": "Organization", "name": "Mortgage Bridge" }
+  "provider": { "@type": "FinancialService", "name": "Mortgage Bridge", "url": "https://mortgagebrg.com.au/" }
 }
 </script>
 <script type="application/ld+json">
@@ -36,51 +39,86 @@
     {
       "@type": "Question",
       "name": "How much is stamp duty in NSW?",
-      "acceptedAnswer": { "@type": "Answer", "text": "NSW transfer (stamp) duty is charged on a sliding scale based on the property's dutiable value. As a guide, a $600,000 property is about $21,187, an $800,000 property about $30,187, and a $1,000,000 property about $39,187. First home buyers may pay no duty at all on homes up to $800,000 under the First Home Buyers Assistance Scheme." }
+      "acceptedAnswer": { "@type": "Answer", "text": "NSW transfer duty is charged on a sliding scale. On the 2026/27 rates, a $900,000 property attracts $34,687 in transfer duty and a $1,000,000 property attracts $39,187. First home buyers pay nothing on a home up to $800,000 and a reduced amount between $800,000 and $1,000,000." }
     },
     {
       "@type": "Question",
       "name": "Do first home buyers pay stamp duty in NSW?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Under the First Home Buyers Assistance Scheme (FHBAS), eligible first home buyers pay no transfer duty on a new or existing home valued up to $800,000, and a reduced concessional rate between $800,000 and $1,000,000. Vacant land is exempt up to $350,000 and concessional between $350,000 and $450,000." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Under the First Home Buyers Assistance Scheme, eligible first home buyers pay no transfer duty on a new or existing home valued up to $800,000, and a concessional amount on homes valued between $800,000 and $1,000,000. For vacant land the thresholds are $350,000 and $450,000." }
     },
     {
       "@type": "Question",
       "name": "When do I have to pay stamp duty in NSW?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Transfer duty is generally payable within 3 months of signing the contract of sale (exchange). For off-the-plan purchases eligible buyers may defer. Your conveyancer or solicitor usually arranges payment at settlement." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Transfer duty must be paid within three months of the date of exchange of contracts to avoid interest. The date of exchange is the date shown on the contract. In practice it is usually paid at or before settlement." }
     },
     {
       "@type": "Question",
-      "name": "Is there extra stamp duty for foreign buyers in NSW?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Foreign persons buying residential property in NSW pay a surcharge purchaser duty on top of standard transfer duty. If you are buying on a visa or from overseas, speak to a broker and your solicitor about how the surcharge applies to you." }
+      "name": "Do foreign buyers pay extra stamp duty in NSW?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Foreign persons buying residential property in NSW pay surcharge purchaser duty of 9% of the dutiable value, on top of standard transfer duty. The 9% rate applies to contracts entered into on or after 1 January 2025." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can stamp duty be added to my home loan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Lenders treat stamp duty as an upfront cost you must fund yourself, alongside your deposit. It is not usually included in the loan amount, which is why it needs to be budgeted separately." }
     }
   ]
 }
 </script>
 <!-- seo:end -->
-<meta name="description" content="Free NSW stamp duty (transfer duty) calculator. Work out your duty in seconds, including First Home Buyers Assistance Scheme exemptions and concessions. Based on current Revenue NSW rates."/>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-tailwind.config = { darkMode: "class", theme: { extend: { colors: {
-"surface":"#fbf9f8","surface-container-low":"#f5f3f3","surface-container":"#efeded","surface-container-lowest":"#ffffff",
-"on-surface":"#1b1c1c","on-surface-variant":"#40484b","outline":"#70787c","outline-variant":"#c0c8cb",
-"primary":"#003441","on-primary":"#ffffff","primary-container":"#0f4c5c","on-primary-container":"#87bbce",
-"secondary":"#735c00","on-secondary":"#ffffff","secondary-container":"#fed65b","on-secondary-container":"#745c00",
-"secondary-fixed":"#ffe088","background":"#fbf9f8" } } } };
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#efeded",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "secondary": "#735c00",
+                        "on-secondary": "#ffffff",
+                        "primary": "#003441",
+                        "outline": "#70787c",
+                        "outline-variant": "#c0c8cb",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-container": "#fed65b",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0f4c5c",
+                        "surface-variant": "#e4e2e2",
+                        "surface": "#fbf9f8",
+                        "on-surface": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#40484b",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#9acee1",
+                        "background": "#fbf9f8"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "12px", "xl": "16px", "full": "9999px" }
+                }
+            }
+        };
 </script>
 <style>
-body{font-family:'Inter','PingFang SC',sans-serif;}
-.font-display{font-family:'Be Vietnam Pro','PingFang SC',sans-serif;}
+body{font-family:'Inter',sans-serif;}
+.font-display{font-family:'Be Vietnam Pro',sans-serif;}
 .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
 .glass-header{background:rgba(251,249,248,0.85);backdrop-filter:blur(8px);}
-.prose-body p{margin-bottom:1rem;line-height:1.8;}
-.seg{cursor:pointer;}
-.seg input{position:absolute;opacity:0;pointer-events:none;}
-.seg span{display:block;text-align:center;padding:0.6rem 0.5rem;border-radius:0.75rem;border:1px solid #c0c8cb;font-weight:600;font-size:0.9rem;color:#40484b;transition:all .15s;}
-.seg input:checked + span{background:#003441;color:#fff;border-color:#003441;}
-table.rates td,table.rates th{padding:0.5rem 0.75rem;border-bottom:1px solid #e5e7eb;text-align:left;font-size:0.9rem;}
-table.rates th{color:#003441;font-weight:700;}
+.calc-input{width:100%;border:1px solid #c0c8cb;border-radius:12px;padding:0.75rem 0.9rem 0.75rem 2rem;font-size:1.05rem;font-weight:600;color:#1b1c1c;background:#fff;}
+.calc-input:focus{outline:2px solid #003441;outline-offset:1px;}
+.seg-btn{flex:1;padding:0.6rem 0.5rem;border:1px solid #c0c8cb;background:#fff;font-weight:600;font-size:0.88rem;color:#40484b;cursor:pointer;transition:all .15s;}
+.seg-btn[aria-pressed="true"]{background:#003441;color:#fff;border-color:#003441;}
+.seg-wrap{display:flex;border-radius:12px;overflow:hidden;}
+.seg-wrap .seg-btn:not(:last-child){border-right:none;}
+table.rates{width:100%;border-collapse:collapse;font-size:0.875rem;}
+table.rates th,table.rates td{padding:0.6rem 0.75rem;border-bottom:1px solid #e4e2e2;text-align:left;}
+table.rates th{background:#f5f3f3;font-weight:600;color:#003441;}
+table.rates td:last-child,table.rates th:last-child{text-align:right;}
 </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -88,185 +126,359 @@ table.rates th{color:#003441;font-weight:700;}
 <nav class="flex justify-between items-center w-full px-5 md:px-10 max-w-4xl mx-auto h-16 md:h-20">
 <a class="font-display text-base sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap" href="index.html">Mortgage Bridge</a>
 <div class="flex items-center gap-3 md:gap-5">
-<a class="hidden md:inline-flex items-center gap-1 text-on-surface-variant hover:text-primary text-sm font-semibold" href="index.html">
-<span class="material-symbols-outlined text-base">arrow_back</span>Home</a>
-<a href="#lead" class="inline-flex whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm">Talk to a broker</a>
+<a class="hidden md:inline-flex items-center gap-1 text-on-surface-variant hover:text-primary text-sm font-semibold" href="lmi-calculator.html">
+<span class="material-symbols-outlined text-base">calculate</span>LMI Calculator</a>
+<button data-noi18n="true" id="lang-toggle" onclick="toggleLang()" class="flex items-center gap-1.5 whitespace-nowrap px-3 md:px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-sm">
+<span class="material-symbols-outlined text-sm">translate</span><span id="lang-toggle-label">中文</span></button>
+<a href="#get-help" class="hidden sm:inline-flex whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm">Free Consultation</a>
 </div>
 </nav>
 </header>
+
 <main class="max-w-4xl mx-auto px-5 md:px-10 py-10 md:py-14">
-<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-4">NSW · 2026</span>
-<h1 class="font-display text-3xl md:text-5xl font-bold text-primary leading-tight mb-3">NSW Stamp Duty Calculator</h1>
-<p class="text-lg text-on-surface-variant leading-relaxed mb-8 max-w-2xl">Work out your NSW transfer (stamp) duty in seconds — including <strong>First Home Buyer</strong> exemptions and concessions. Based on current <a class="text-primary underline" href="https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/transfer-duty" target="_blank" rel="noopener">Revenue NSW</a> rates.</p>
 
-<!-- Calculator -->
-<div class="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-<div class="p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/20 shadow-sm">
-<label class="block font-bold text-primary mb-2">Property value</label>
-<div class="flex items-center gap-2 mb-5 px-4 py-3 rounded-xl border border-outline-variant/40 focus-within:ring-2 focus-within:ring-primary">
-<span class="text-on-surface-variant">$</span>
-<input id="pval" type="text" inputmode="numeric" value="800,000" class="w-full outline-none text-lg font-semibold bg-transparent"/>
-</div>
-<label class="block font-bold text-primary mb-2">Buyer type</label>
-<div class="grid grid-cols-3 gap-2 mb-5">
-<label class="seg"><input type="radio" name="buyer" value="first" checked/><span>First home buyer</span></label>
-<label class="seg"><input type="radio" name="buyer" value="occupier"/><span>Moving home</span></label>
-<label class="seg"><input type="radio" name="buyer" value="investor"/><span>Investor</span></label>
-</div>
-<label class="block font-bold text-primary mb-2">Property type</label>
-<div class="grid grid-cols-3 gap-2">
-<label class="seg"><input type="radio" name="ptype" value="existing" checked/><span>Existing home</span></label>
-<label class="seg"><input type="radio" name="ptype" value="new"/><span>New home</span></label>
-<label class="seg"><input type="radio" name="ptype" value="land"/><span>Vacant land</span></label>
-</div>
-</div>
+<h1 class="font-display text-3xl md:text-4xl font-bold text-primary leading-tight">NSW Stamp Duty Calculator</h1>
+<p class="text-on-surface-variant mt-3 text-lg leading-relaxed">Work out your NSW transfer duty on the current 2026/27 rates, including the First Home Buyers Assistance Scheme exemption and concession, and the foreign purchaser surcharge.</p>
 
-<div class="p-6 rounded-2xl bg-primary text-on-primary shadow-lg">
-<p class="text-on-primary/70 text-sm font-semibold mb-1">Estimated stamp duty</p>
-<p id="dutyOut" class="font-display text-4xl md:text-5xl font-bold mb-1">$0</p>
-<p id="dutyNote" class="text-secondary-fixed text-sm font-semibold mb-4">First home buyer — no stamp duty 🎉</p>
-<div class="border-t border-white/15 pt-4 space-y-2 text-sm">
-<div class="flex justify-between"><span class="text-on-primary/70">Standard transfer duty</span><span id="stdOut" class="font-semibold">$30,187</span></div>
-<div class="flex justify-between"><span class="text-on-primary/70">First home concession</span><span id="concOut" class="font-semibold">–$30,187</span></div>
-<div id="grantRow" class="flex justify-between hidden"><span class="text-on-primary/70">First Home Owner Grant (new)</span><span class="font-semibold text-secondary-fixed">+$10,000 to you</span></div>
-</div>
-<a href="#lead" class="mt-5 inline-flex w-full justify-center items-center px-6 py-3 rounded-xl bg-secondary-fixed text-on-secondary-container font-bold hover:shadow-xl transition">See how much you can borrow →</a>
-</div>
-</div>
-<p id="estFootnote" class="text-on-surface-variant/70 text-xs mt-3 hidden">* Duty in the $800k–$1m first-home concession band is an estimate. We'll confirm your exact concessional figure — just ask.</p>
-<p class="text-on-surface-variant/60 text-xs mt-3">This calculator gives an estimate of NSW transfer duty for general guidance only and does not account for surcharges or your personal circumstances. Confirm exact figures with Revenue NSW or your conveyancer.</p>
+<!-- ============ CALCULATOR ============ -->
+<section class="mt-8 rounded-2xl border border-outline-variant/40 bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="p-6 md:p-8 grid md:grid-cols-2 gap-6 md:gap-8">
 
-<!-- Lead capture -->
-<section id="lead" class="my-12 p-6 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/20 scroll-mt-24">
-<h2 class="font-display text-2xl font-bold text-primary mb-2">Buying soon? Get matched with a Sydney broker</h2>
-<p class="text-on-surface-variant mb-6 text-sm md:text-base">Stamp duty is just one cost. A broker will show you your real borrowing power and total upfront costs — free, and they call you back within 12 hours. <span class="text-on-surface-variant/80">我们提供普通话/粤语服务。</span></p>
-<form data-lead-form="Stamp duty calculator lead" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
-<input required name="Name" placeholder="Your name / 称呼" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
-<input required name="Phone/WeChat" placeholder="Phone or WeChat / 电话或微信" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
-<select name="Buyer stage" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary">
-<option value="First home buyer">First home buyer</option>
-<option value="Next home / upgrader">Next home / upgrader</option>
-<option value="Investor">Investor</option>
-<option value="Just researching">Just researching</option>
-</select>
-<input name="Suburb / area" placeholder="Suburb or area (optional)" class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary"/>
-<button type="submit" class="sm:col-span-2 w-full px-8 py-3.5 rounded-xl bg-primary text-on-primary font-bold shadow-lg hover:shadow-xl transition">Get my free assessment →</button>
-</form>
+  <div class="space-y-5">
+    <div>
+      <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="price">Purchase price or property value</label>
+      <div class="relative">
+        <span data-noi18n="true" class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">$</span>
+        <input data-noi18n="true" class="calc-input" id="price" inputmode="numeric" type="text" value="900,000"/>
+      </div>
+    </div>
+
+    <div>
+      <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">What are you buying?</span>
+      <div class="seg-wrap">
+        <button class="seg-btn" id="tExisting" aria-pressed="true" type="button">Existing home</button>
+        <button class="seg-btn" id="tNew" aria-pressed="false" type="button">New home</button>
+        <button class="seg-btn" id="tLand" aria-pressed="false" type="button">Vacant land</button>
+      </div>
+    </div>
+
+    <div>
+      <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">Are you a first home buyer?</span>
+      <div class="seg-wrap">
+        <button class="seg-btn" id="fhbYes" aria-pressed="true" type="button">Yes</button>
+        <button class="seg-btn" id="fhbNo" aria-pressed="false" type="button">No</button>
+      </div>
+      <p class="text-xs text-on-surface-variant/80 mt-2 leading-relaxed">Eligibility requires that you have never owned residential property in Australia, at least one buyer is an Australian citizen or permanent resident, and you move in within 12 months and live there for 12 continuous months.</p>
+    </div>
+
+    <div>
+      <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">Is any buyer a foreign person?</span>
+      <div class="seg-wrap">
+        <button class="seg-btn" id="forNo" aria-pressed="true" type="button">No</button>
+        <button class="seg-btn" id="forYes" aria-pressed="false" type="button">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <div data-noi18n="true" id="results" class="rounded-xl bg-surface-container-low p-5 md:p-6 flex flex-col gap-4"></div>
+
+</div>
 </section>
 
-<!-- Explanatory content for SEO -->
-<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">How stamp duty works in NSW</h2>
-<div class="prose-body text-on-surface-variant">
-<p>In NSW, "stamp duty" is officially called <strong>transfer duty</strong>. It's a one-off tax you pay when you buy a property or land, charged on the <strong>dutiable value</strong> (usually the purchase price or market value, whichever is higher). It's normally payable within 3 months of exchanging contracts, and your conveyancer usually arranges it at settlement.</p>
-</div>
+<p data-noi18n="true" id="verifyNote" class="text-xs text-on-surface-variant/80 mt-3 leading-relaxed"></p>
 
-<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-4">NSW transfer duty rates (current)</h2>
-<div class="overflow-x-auto">
-<table class="rates w-full">
-<thead><tr><th>Dutiable value</th><th>Transfer duty</th></tr></thead>
+<!-- ============ RATE TABLE ============ -->
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-3">NSW transfer duty rates, 2026/27</h2>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Revenue NSW adjusts these thresholds each year in line with CPI. These are the rates currently in force.</p>
+<div class="overflow-x-auto rounded-xl border border-outline-variant/40">
+<table class="rates" data-noi18n="true">
+<thead><tr><th>Property value</th><th>Duty payable</th></tr></thead>
 <tbody>
-<tr><td>$0 – $18,000</td><td>$1.25 per $100 (min $20)</td></tr>
+<tr><td>$0 – $18,000</td><td>$1.25 per $100 (minimum $20)</td></tr>
 <tr><td>$18,001 – $38,000</td><td>$225 + $1.50 per $100 over $18,000</td></tr>
 <tr><td>$38,001 – $103,000</td><td>$525 + $1.75 per $100 over $38,000</td></tr>
 <tr><td>$103,001 – $387,000</td><td>$1,662 + $3.50 per $100 over $103,000</td></tr>
 <tr><td>$387,001 – $1,290,000</td><td>$11,602 + $4.50 per $100 over $387,000</td></tr>
-<tr><td>$1,290,001+</td><td>$52,237 + $5.50 per $100 over $1,290,000</td></tr>
-<tr><td>Premium (residential over $3,870,000)</td><td>$194,137 + $7.00 per $100 over $3,870,000</td></tr>
+<tr><td>$1,290,001 – $3,870,000</td><td>$52,237 + $5.50 per $100 over $1,290,000</td></tr>
+<tr><td>Over $3,870,000 (residential)</td><td>$194,137 + $7.00 per $100 over $3,870,000</td></tr>
 </tbody>
 </table>
 </div>
-<p class="text-on-surface-variant/60 text-xs mt-2">Source: Revenue NSW current thresholds and rates. Thresholds are indexed and may change.</p>
 
-<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-4">First home buyer concessions (FHBAS)</h2>
-<div class="prose-body text-on-surface-variant">
-<p>Under the <strong>First Home Buyers Assistance Scheme</strong>, eligible first home buyers get:</p>
-<ul class="list-disc pl-5 space-y-1 mb-4">
-<li><strong>New or existing home up to $800,000</strong> — no transfer duty (full exemption).</li>
-<li><strong>$800,000 to $1,000,000</strong> — a reduced concessional rate.</li>
-<li><strong>Vacant land up to $350,000</strong> — exempt; <strong>$350,000–$450,000</strong> — concessional.</li>
-</ul>
-<p>Newly built or off-the-plan homes may also qualify for the <strong>$10,000 First Home Owner Grant</strong>. To be eligible you generally must move in within 12 months and live there for at least 12 months.</p>
-<p><a href="first-home-buyer-grants-nsw.html" class="inline-flex items-center gap-1 text-primary font-bold underline">See all NSW first home buyer grants &amp; schemes<span class="material-symbols-outlined text-base">arrow_forward</span></a></p>
+<!-- ============ FHB THRESHOLDS ============ -->
+<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-3">First home buyer thresholds</h2>
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <h3 class="font-display font-bold text-primary mb-2">New or existing home</h3>
+    <ul class="text-sm text-on-surface-variant space-y-1.5">
+      <li><strong>Up to $800,000</strong> — no duty at all</li>
+      <li><strong>$800,000 to $1,000,000</strong> — reduced duty on a sliding scale</li>
+      <li><strong>Over $1,000,000</strong> — full duty</li>
+    </ul>
+  </div>
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <h3 class="font-display font-bold text-primary mb-2">Vacant land</h3>
+    <ul class="text-sm text-on-surface-variant space-y-1.5">
+      <li><strong>Up to $350,000</strong> — no duty at all</li>
+      <li><strong>$350,000 to $450,000</strong> — reduced duty on a sliding scale</li>
+      <li><strong>Over $450,000</strong> — full duty</li>
+    </ul>
+  </div>
 </div>
 
-<h2 class="font-display text-2xl font-bold text-primary mt-10 mb-4">Frequently asked questions</h2>
-<div class="space-y-4">
-<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
-<summary class="font-bold text-primary cursor-pointer">Do first home buyers pay stamp duty in NSW?</summary>
-<p class="text-on-surface-variant mt-3 leading-relaxed">Eligible first home buyers pay no transfer duty on a home up to $800,000, and a reduced rate between $800,000 and $1,000,000. Vacant land is exempt up to $350,000.</p>
-</details>
-<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
-<summary class="font-bold text-primary cursor-pointer">When do I pay stamp duty in NSW?</summary>
-<p class="text-on-surface-variant mt-3 leading-relaxed">Generally within 3 months of exchanging contracts. Your conveyancer or solicitor usually arranges payment at settlement.</p>
-</details>
-<details class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/20">
-<summary class="font-bold text-primary cursor-pointer">Is there extra stamp duty for foreign buyers?</summary>
-<p class="text-on-surface-variant mt-3 leading-relaxed">Yes — foreign persons pay a surcharge purchaser duty on top of standard transfer duty. If you're buying on a visa or from overseas, ask us how it applies to you.</p>
-</details>
+<!-- ============ LEAD FORM ============ -->
+<section id="get-help" class="mt-12 p-6 md:p-8 rounded-2xl bg-primary text-on-primary">
+<h2 class="font-display text-2xl font-bold mb-2">Stamp duty is only part of what you need upfront</h2>
+<p class="text-on-primary/80 mb-6 leading-relaxed">Lenders will not add stamp duty to your loan — it comes out of your own cash, alongside your deposit, LMI, legal fees and inspections. We will map out your total upfront cost, tell you what you can actually borrow, and handle the conveyancing too. Free, no obligation, call back within 12 hours.</p>
+<form data-lead-form="Stamp duty calculator enquiry" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到!顾问将在12小时内与你联系。" class="grid sm:grid-cols-2 gap-4">
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="name" placeholder="Your name" required type="text"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="phone" placeholder="Phone number" required type="tel"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="email" placeholder="Email" type="email"/>
+  <input data-noi18n="true" id="formSnapshot" name="calculator_snapshot" type="hidden"/>
+  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="language">
+    <option>Preferred language — English</option>
+    <option>普通话 Mandarin</option>
+    <option>粵語 Cantonese</option>
+    <option>Tiếng Việt Vietnamese</option>
+  </select>
+  <button class="sm:col-span-2 px-8 py-3.5 rounded-xl bg-secondary-container text-on-surface font-bold shadow-lg hover:shadow-xl transition" type="submit">Map Out My Upfront Costs</button>
+</form>
+</section>
+
+<!-- ============ FAQ ============ -->
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">NSW stamp duty questions</h2>
+<div class="space-y-3">
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">When do I have to pay it?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Within three months of the date of exchange of contracts, or interest starts accruing. The date of exchange is the date shown on the contract. In practice most buyers pay at or just before settlement.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Can I add stamp duty to my home loan?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Generally no. Lenders treat it as an upfront cost you fund yourself, on top of your deposit. This is the single most common budgeting mistake we see — buyers save a 20% deposit, then discover the duty was never part of it.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">What if I have owned property overseas but never in Australia?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">The First Home Buyers Assistance Scheme test looks at residential property ownership in Australia. Owning property overseas does not by itself disqualify you — but the rules around prior interests, spouses and trusts are detailed, and the surcharge purchaser duty rules are separate. Worth confirming before you exchange.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Do foreign buyers pay more?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Yes. Surcharge purchaser duty of 9% of the dutiable value applies to foreign persons acquiring residential property in NSW, on top of standard transfer duty. The 9% rate applies to contracts entered into on or after 1 January 2025. Whether you count as a foreign person depends on visa and residency status, not nationality alone.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Why does the concession drop off so sharply above $800,000?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Because the relief phases out linearly between $800,000 and $1,000,000. At $800,000 you save the full duty; at $1,000,000 you save nothing. In the middle, every extra dollar of purchase price costs you roughly 15 cents in lost concession on top of the duty itself — which is why the band just above $800,000 deserves careful thought.</p>
+  </details>
 </div>
 
-<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This page is general information only and is not financial or legal advice. Figures are estimates based on current Revenue NSW rates and may change. Confirm your exact duty with Revenue NSW or your conveyancer.</p>
+<!-- ============ CROSS LINK ============ -->
+<div class="mt-10 rounded-2xl border border-outline-variant/40 p-6 bg-surface-container-low">
+<h3 class="font-display text-xl font-bold text-primary mb-2">Next: will you also pay LMI?</h3>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">Stamp duty comes out of your cash, which shrinks your deposit — and a smaller deposit can push you over 80% LVR into Lenders Mortgage Insurance. Check what that would cost before you set your budget.</p>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm" href="lmi-calculator.html"><span class="material-symbols-outlined text-base">calculate</span>LMI Calculator</a>
+</div>
+
+<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This calculator provides general information only and does not take into account your objectives, financial situation or needs. It applies the NSW transfer duty rates and First Home Buyers Assistance Scheme thresholds in force for the 2026/27 financial year and assumes a standard residential purchase by an individual. It does not cover shared equity arrangements, partial interests, off-the-plan arrangements, trusts, companies, or land over two hectares. Duty is assessed by Revenue NSW on the dutiable value, which may differ from the purchase price. Confirm your final figure with Revenue NSW or your conveyancer before relying on it. Mortgage Bridge does not guarantee loan approval or any particular outcome.</p>
+
 </main>
+
 <footer class="bg-primary text-on-primary py-10">
 <div class="max-w-4xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
 <div class="font-display text-xl font-bold">Mortgage Bridge</div>
 <p class="text-on-primary/60 text-sm text-center">© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.</p>
 </div>
 </footer>
+
+<script src="forms.js"></script>
 <script>
-(function(){
-  function fmt(n){ return "$" + Math.round(n).toLocaleString("en-AU"); }
-  function standardDuty(v){
-    if(v<=0) return 0;
-    var d;
-    if(v<=18000) d = Math.max(20, v*0.0125);
-    else if(v<=38000) d = 225 + (v-18000)*0.015;
-    else if(v<=103000) d = 525 + (v-38000)*0.0175;
-    else if(v<=387000) d = 1662 + (v-103000)*0.035;
-    else if(v<=1290000) d = 11602 + (v-387000)*0.045;
-    else if(v<=3870000) d = 52237 + (v-1290000)*0.055;
-    else d = 194137 + (v-3870000)*0.07;
-    return d;
+/* ============ NSW transfer duty — 2026/27 ============
+   税率表与减免公式均已对照 Revenue NSW 官方 FHBA 计算器逐点验证
+   (2026-08-07, 10 个数据点全部精确命中,含住宅 6 点 + 空地 4 点)。
+   关键点:减免额乘的是"免税门槛处的全额税",不是当前房价的全额税;
+   空地档 $350k-$450k 跨过 $387,000 税率档界,简单线性插值会算错。
+   ==================================================== */
+(function () {
+  "use strict";
+
+  // 2026/27 税率档 (Revenue NSW, 每年按 CPI 调整)
+  function transferDuty(v) {
+    if (v <= 0) return 0;
+    if (v <= 18000)   return Math.max(20, v / 100 * 1.25);
+    if (v <= 38000)   return 225    + (v - 18000)   / 100 * 1.50;
+    if (v <= 103000)  return 525    + (v - 38000)   / 100 * 1.75;
+    if (v <= 387000)  return 1662   + (v - 103000)  / 100 * 3.50;
+    if (v <= 1290000) return 11602  + (v - 387000)  / 100 * 4.50;
+    if (v <= 3870000) return 52237  + (v - 1290000) / 100 * 5.50;
+    return 194137 + (v - 3870000) / 100 * 7.00;   // premium duty, residential
   }
-  var pval=document.getElementById("pval"), dutyOut=document.getElementById("dutyOut"),
-      dutyNote=document.getElementById("dutyNote"), stdOut=document.getElementById("stdOut"),
-      concOut=document.getElementById("concOut"), grantRow=document.getElementById("grantRow"),
-      footnote=document.getElementById("estFootnote");
-  function val(name){ return (document.querySelector('input[name="'+name+'"]:checked')||{}).value; }
-  function calc(){
-    var v = parseFloat((pval.value||"").replace(/[^0-9.]/g,"")) || 0;
-    var std = standardDuty(v);
-    var buyer = val("buyer"), ptype = val("ptype");
-    var payable = std, note="", conc=0, estimate=false;
-    if(buyer==="first"){
-      if(ptype==="land"){
-        if(v<=350000){ payable=0; note="First home buyer — land exempt 🎉"; }
-        else if(v<450000){ payable=std*(v-350000)/100000; estimate=true; note="First home concession applied"; }
-        else note="Over the first-home land threshold";
-      } else {
-        if(v<=800000){ payable=0; note="First home buyer — no stamp duty 🎉"; }
-        else if(v<1000000){ payable=std*(v-800000)/200000; estimate=true; note="First home concession applied"; }
-        else note="Over the $1m first-home threshold";
-      }
-      conc = std - payable;
+
+  var FHB = {
+    home: { exempt: 800000, cap: 1000000 },
+    land: { exempt: 350000, cap: 450000 }
+  };
+
+  // 官方口径:减免额 = 全额税(免税门槛) × (上限 − 房价) ÷ (上限 − 免税门槛)
+  function fhbSaving(v, kind) {
+    var t = FHB[kind];
+    if (v <= t.exempt) return transferDuty(v);
+    if (v >= t.cap) return 0;
+    return transferDuty(t.exempt) * (t.cap - v) / (t.cap - t.exempt);
+  }
+
+  var SURCHARGE_RATE = 0.09;   // 海外买家附加税,2025-01-01 起 9%
+
+  var $ = function (id) { return document.getElementById(id); };
+  var isZh = function () { return document.documentElement.lang === "zh-CN"; };
+  function num(v) { var n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isFinite(n) ? n : 0; }
+  function money(n) {
+    return "$" + n.toLocaleString("en-AU", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function money0(n) { return "$" + Math.round(n).toLocaleString("en-AU"); }
+
+  var propType = "existing";   // existing | new | land
+  var isFhb = true;
+  var isForeign = false;
+
+  function row(label, value, opts) {
+    opts = opts || {};
+    return '<div class="flex justify-between items-baseline gap-3 ' + (opts.big ? "" : "text-sm") + '">' +
+      '<span class="' + (opts.strong ? "text-on-surface font-semibold" : "text-on-surface-variant") + '">' + label + "</span>" +
+      '<span class="font-bold ' + (opts.big ? "text-2xl text-primary font-display" : "text-on-surface") + '">' + value + "</span></div>";
+  }
+
+  function render() {
+    var v = num($("price").value);
+    var kind = propType === "land" ? "land" : "home";
+    var full = transferDuty(v);
+    var saving = isFhb ? fhbSaving(v, kind) : 0;
+    var duty = Math.max(full - saving, 0);
+    var surcharge = isForeign ? v * SURCHARGE_RATE : 0;
+    var total = duty + surcharge;
+
+    var out = [];
+
+    if (v <= 0) {
+      out.push('<p class="text-sm text-on-surface-variant">' + (isZh() ? "请输入房价。" : "Enter a purchase price to start.") + "</p>");
+      $("results").innerHTML = out.join("");
+      $("verifyNote").textContent = "";
+      return;
     }
-    dutyOut.textContent = fmt(payable);
-    stdOut.textContent = fmt(std);
-    concOut.textContent = conc>0 ? "–"+fmt(conc) : "$0";
-    dutyNote.innerHTML = note || "&nbsp;";
-    footnote.classList.toggle("hidden", !estimate);
-    var showGrant = (buyer==="first" && ptype==="new");
-    grantRow.classList.toggle("hidden", !showGrant);
+
+    out.push('<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wide">' +
+      (isZh() ? "应缴印花税" : "Stamp duty payable") + "</div>");
+    out.push(row("", money(total), { big: true }));
+    out.push('<div class="h-px bg-outline-variant/50"></div>');
+
+    out.push(row(isZh() ? "标准转让税" : "Standard transfer duty", money(full)));
+
+    if (isFhb && saving > 0) {
+      var label = saving >= full
+        ? (isZh() ? "首次置业全额豁免" : "First home buyer exemption")
+        : (isZh() ? "首次置业减免" : "First home buyer concession");
+      out.push('<div class="flex justify-between items-baseline gap-3 text-sm">' +
+        '<span class="text-secondary font-semibold">' + label + "</span>" +
+        '<span class="font-bold text-secondary">− ' + money(saving) + "</span></div>");
+    }
+
+    if (isForeign) {
+      out.push(row(isZh() ? "海外买家附加税 (9%)" : "Foreign surcharge (9%)", "+ " + money(surcharge)));
+    }
+
+    // 状态提示
+    var t = FHB[kind];
+    if (isFhb && v <= t.exempt) {
+      out.push('<div class="rounded-lg bg-primary text-on-primary p-4 mt-1">' +
+        '<div class="flex items-center gap-2 font-bold"><span class="material-symbols-outlined">check_circle</span>' +
+        (isZh() ? "完全免缴印花税" : "Fully exempt") + "</div>" +
+        '<p class="text-on-primary/80 text-sm mt-1.5 leading-relaxed">' +
+        (isZh()
+          ? "在 " + money0(t.exempt) + " 门槛以下，符合条件的首次置业者无需缴纳转让税，省下 " + money0(full) + "。"
+          : "Below the " + money0(t.exempt) + " threshold, eligible first home buyers pay no transfer duty at all — saving " + money0(full) + ".") +
+        "</p></div>");
+    } else if (isFhb && v < t.cap) {
+      var headroom = t.cap - v;
+      out.push('<div class="rounded-lg bg-secondary-fixed/50 border border-secondary-fixed-dim/60 p-4 mt-1">' +
+        '<div class="font-bold text-on-surface text-sm">' +
+        (isZh() ? "处于减免区间" : "In the concession band") + "</div>" +
+        '<p class="text-xs text-on-surface-variant mt-1.5 leading-relaxed">' +
+        (isZh()
+          ? "减免在 " + money0(t.exempt) + " 到 " + money0(t.cap) + " 之间线性递减。再涨 " + money0(headroom) + " 到上限，这份减免就完全消失。"
+          : "The concession tapers away between " + money0(t.exempt) + " and " + money0(t.cap) + ". Another " + money0(headroom) + " of purchase price and it disappears entirely.") +
+        "</p></div>");
+    } else if (isFhb) {
+      out.push('<div class="rounded-lg bg-surface-container-high p-4 mt-1">' +
+        '<p class="text-xs text-on-surface-variant leading-relaxed">' +
+        (isZh()
+          ? "房价已超过 " + money0(t.cap) + " 上限，首次置业减免不适用，按全额缴纳。"
+          : "Above the " + money0(t.cap) + " cap, so no first home buyer relief applies and full duty is payable.") +
+        "</p></div>");
+    }
+
+    if (v > 3870000) {
+      out.push('<p class="text-xs text-on-surface-variant/80 leading-relaxed">' +
+        (isZh() ? "已适用住宅高端物业附加税率（premium duty）。" : "Premium duty rate for residential property has been applied.") + "</p>");
+    }
+
+    $("results").innerHTML = out.join("");
+
+    $("verifyNote").textContent = isZh()
+      ? "税率与减免公式已逐点对照 Revenue NSW 官方 First Home Buyers Assistance 计算器验证（2026/27 财年税率）。结果为估算，最终以 Revenue NSW 评定的应课税价值为准；不涵盖共享产权、部分权益、公司/信托购买及超过 2 公顷的土地。"
+      : "Rates and the concession formula have been checked point-by-point against the official Revenue NSW First Home Buyers Assistance calculator (2026/27 rates). This is an estimate — Revenue NSW assesses duty on the dutiable value, and this tool does not cover shared equity, partial interests, company or trust purchases, or land over two hectares.";
+
+    var snap = "Price " + money0(v) + " / " + propType + " / FHB " + (isFhb ? "yes" : "no") +
+      " / foreign " + (isForeign ? "yes" : "no") + " / duty " + money(duty) +
+      (isForeign ? " / surcharge " + money(surcharge) : "") + " / total " + money(total);
+    if ($("formSnapshot")) $("formSnapshot").value = snap;
   }
-  // format value input with thousands separators
-  pval.addEventListener("input", function(){
-    var digits=(pval.value||"").replace(/[^0-9]/g,"");
-    pval.value = digits ? parseInt(digits,10).toLocaleString("en-AU") : "";
-    calc();
+
+  function seg(ids, onPick) {
+    ids.forEach(function (id) {
+      $(id).addEventListener("click", function () {
+        ids.forEach(function (o) { $(o).setAttribute("aria-pressed", o === id ? "true" : "false"); });
+        onPick(id);
+        render();
+      });
+    });
+  }
+
+  seg(["tExisting", "tNew", "tLand"], function (id) {
+    propType = id === "tLand" ? "land" : (id === "tNew" ? "new" : "existing");
   });
-  document.querySelectorAll('input[name="buyer"],input[name="ptype"]').forEach(function(el){ el.addEventListener("change", calc); });
-  calc();
+  seg(["fhbYes", "fhbNo"], function (id) { isFhb = id === "fhbYes"; });
+  seg(["forNo", "forYes"], function (id) { isForeign = id === "forYes"; });
+
+  $("price").addEventListener("input", render);
+  $("price").addEventListener("blur", function () {
+    var n = num($("price").value);
+    $("price").value = n ? Math.round(n).toLocaleString("en-AU") : "";
+  });
+
+  window.onLangChange = render;
+  render();
 })();
 </script>
-<script src="forms.js"></script>
+
+<script>
+(function(){
+  const I18N = {"LMI Calculator": "LMI 计算器", "Free Consultation": "免费咨询", "NSW Stamp Duty Calculator": "新州印花税计算器", "Work out your NSW transfer duty on the current 2026/27 rates, including the First Home Buyers Assistance Scheme exemption and concession, and the foreign purchaser surcharge.": "按 2026/27 财年现行税率计算新州转让税(印花税),包含首次置业援助计划的豁免与减免,以及海外买家附加税。", "Purchase price or property value": "成交价 / 房产价值", "What are you buying?": "你买的是什么?", "Existing home": "二手房", "New home": "新房", "Vacant land": "空地", "Are you a first home buyer?": "你是首次置业吗?", "Yes": "是", "No": "否", "Eligibility requires that you have never owned residential property in Australia, at least one buyer is an Australian citizen or permanent resident, and you move in within 12 months and live there for 12 continuous months.": "资格条件:你从未在澳洲拥有过住宅房产;至少一位买家是澳洲公民或永久居民;并在交割后 12 个月内入住,且连续居住满 12 个月。", "Is any buyer a foreign person?": "买家中是否有海外人士?", "NSW transfer duty rates, 2026/27": "新州转让税税率表 2026/27", "Revenue NSW adjusts these thresholds each year in line with CPI. These are the rates currently in force.": "Revenue NSW 每年按 CPI 调整这些门槛,以下为当前生效税率。", "First home buyer thresholds": "首次置业门槛", "New or existing home": "新房或二手房", "Up to $800,000": "$800,000 以下", "— no duty at all": "— 完全免税", "$800,000 to $1,000,000": "$800,000 至 $1,000,000", "— reduced duty on a sliding scale": "— 按滑动比例减免", "Over $1,000,000": "超过 $1,000,000", "— full duty": "— 全额缴纳", "Up to $350,000": "$350,000 以下", "$350,000 to $450,000": "$350,000 至 $450,000", "Over $450,000": "超过 $450,000", "Stamp duty is only part of what you need upfront": "印花税只是前期要准备的一部分", "Lenders will not add stamp duty to your loan — it comes out of your own cash, alongside your deposit, LMI, legal fees and inspections. We will map out your total upfront cost, tell you what you can actually borrow, and handle the conveyancing too. Free, no obligation, call back within 12 hours.": "贷方不会把印花税算进贷款——这笔钱要你自己出,和首付、LMI、律师费、验房费一起。我们帮你把前期总成本列清楚,算出你实际能贷多少,过户也一并处理。免费,无义务,12 小时内回电。", "Map Out My Upfront Costs": "帮我算清前期总成本", "NSW stamp duty questions": "新州印花税常见问题", "When do I have to pay it?": "什么时候要交?", "Within three months of the date of exchange of contracts, or interest starts accruing. The date of exchange is the date shown on the contract. In practice most buyers pay at or just before settlement.": "交换合同之日起三个月内必须缴纳,否则开始计息。交换日以合同上载明的日期为准。实务中多数买家在交割时或交割前缴纳。", "Can I add stamp duty to my home loan?": "印花税能加进房贷里吗?", "Generally no. Lenders treat it as an upfront cost you fund yourself, on top of your deposit. This is the single most common budgeting mistake we see — buyers save a 20% deposit, then discover the duty was never part of it.": "一般不行。贷方把它算作你自己要出的前期成本,在首付之外。这是我们见过最常见的预算失误——买家辛苦攒够 20% 首付,才发现印花税从来不在里面。", "What if I have owned property overseas but never in Australia?": "我在海外有房但澳洲没有,算首次置业吗?", "The First Home Buyers Assistance Scheme test looks at residential property ownership in Australia. Owning property overseas does not by itself disqualify you — but the rules around prior interests, spouses and trusts are detailed, and the surcharge purchaser duty rules are separate. Worth confirming before you exchange.": "首次置业援助计划看的是你在澳洲的住宅房产持有情况。海外有房本身不会直接取消资格——但涉及既往权益、配偶、信托的规则很细,海外买家附加税又是另一套规则。建议在交换合同前先确认清楚。", "Do foreign buyers pay more?": "海外买家要多交吗?", "Yes. Surcharge purchaser duty of 9% of the dutiable value applies to foreign persons acquiring residential property in NSW, on top of standard transfer duty. The 9% rate applies to contracts entered into on or after 1 January 2025. Whether you count as a foreign person depends on visa and residency status, not nationality alone.": "要。海外人士在新州购买住宅房产,需在标准转让税之外,按应课税价值加缴 9% 的海外买家附加税。9% 适用于 2025 年 1 月 1 日及之后签订的合同。是否算「海外人士」取决于签证和居留身份,不是只看国籍。", "Why does the concession drop off so sharply above $800,000?": "为什么超过 $800,000 减免掉得那么快?", "Because the relief phases out linearly between $800,000 and $1,000,000. At $800,000 you save the full duty; at $1,000,000 you save nothing. In the middle, every extra dollar of purchase price costs you roughly 15 cents in lost concession on top of the duty itself — which is why the band just above $800,000 deserves careful thought.": "因为减免在 $800,000 到 $1,000,000 之间线性递减。$800,000 时全免,$1,000,000 时归零。中间每多花 1 元房价,除了税本身,还要额外损失约 0.15 元的减免——所以刚过 $800,000 这一段特别值得仔细算。", "Next: will you also pay LMI?": "下一步:你还要交 LMI 吗?", "Stamp duty comes out of your cash, which shrinks your deposit — and a smaller deposit can push you over 80% LVR into Lenders Mortgage Insurance. Check what that would cost before you set your budget.": "印花税从你的现金里出,首付就变少了——首付一少,LVR 可能超过 80%,就要交 LMI。定预算前先把这笔也算上。", "This calculator provides general information only and does not take into account your objectives, financial situation or needs. It applies the NSW transfer duty rates and First Home Buyers Assistance Scheme thresholds in force for the 2026/27 financial year and assumes a standard residential purchase by an individual. It does not cover shared equity arrangements, partial interests, off-the-plan arrangements, trusts, companies, or land over two hectares. Duty is assessed by Revenue NSW on the dutiable value, which may differ from the purchase price. Confirm your final figure with Revenue NSW or your conveyancer before relying on it. Mortgage Bridge does not guarantee loan approval or any particular outcome.": "本计算器仅提供一般性信息,未考虑你的目标、财务状况或需求。计算采用 2026/27 财年生效的新州转让税税率与首次置业援助计划门槛,并假设为个人的标准住宅购买。不涵盖共享产权安排、部分权益、楼花安排、信托、公司购买,以及超过 2 公顷的土地。印花税由 Revenue NSW 按应课税价值评定,该价值可能与成交价不同。依赖本结果前请与 Revenue NSW 或你的过户律师确认。Mortgage Bridge 不保证贷款获批或任何特定结果。", "Your name": "你的姓名", "Phone number": "联系电话", "Email": "邮箱", "© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.": "© 2026 Mortgage Bridge. 为悉尼多元文化社区提供专业房贷指导。"};
+  const SKIP=["SCRIPT","STYLE","NOSCRIPT"]; const reg=[];
+  function walk(n){ for(const c of n.childNodes){
+    if(c.nodeType===3){ if(c.nodeValue.trim()) reg.push({node:c,en:c.nodeValue,key:c.nodeValue.trim()}); }
+    else if(c.nodeType===1){ if(SKIP.includes(c.tagName))continue; if(c.hasAttribute("data-noi18n"))continue;
+      if((c.getAttribute("class")||"").indexOf("material-symbols")!==-1)continue; walk(c); } } }
+  walk(document.body);
+  const PH = {"Your name":"你的姓名","Phone number":"联系电话","Email":"邮箱","Preferred language — English":"首选语言 — English"};
+  window.setLang=function(lang){ reg.forEach(function(r){ r.node.nodeValue=(lang==="zh"&&I18N[r.key]!==undefined)?I18N[r.key]:r.en; });
+    document.documentElement.lang=lang==="zh"?"zh-CN":"en";
+    document.querySelectorAll("[placeholder]").forEach(function(el){
+      const en=el.getAttribute("data-ph-en")||el.getAttribute("placeholder");
+      if(!el.getAttribute("data-ph-en")) el.setAttribute("data-ph-en",en);
+      el.setAttribute("placeholder", lang==="zh"&&PH[el.getAttribute("data-ph-en")]?PH[el.getAttribute("data-ph-en")]:el.getAttribute("data-ph-en"));
+    });
+    const l=document.getElementById("lang-toggle-label"); if(l)l.textContent=lang==="zh"?"EN":"中文";
+    try{localStorage.setItem("lb_lang",lang);}catch(e){}
+    if(window.onLangChange) window.onLangChange(lang); };
+  window.toggleLang=function(){ const cur=document.documentElement.lang==="zh-CN"?"zh":"en"; window.setLang(cur==="zh"?"en":"zh"); };
+  let s="en"; try{s=localStorage.getItem("lb_lang")||"en";}catch(e){} window.setLang(s);
+})();
+</script>
 </body></html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LMI Calculator Australia | Estimate Lenders Mortgage Insurance | Mortgage Bridge</title>
+<!-- seo:start -->
+<meta name="description" content="Free LMI calculator — work out your LVR and estimate your Lenders Mortgage Insurance premium. See exactly how much extra deposit you need to avoid LMI, plus four ways to reduce or waive it."/>
+<link rel="canonical" href="https://mortgagebrg.com.au/lmi-calculator.html"/>
+<meta property="og:site_name" content="Mortgage Bridge"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="LMI Calculator Australia | Estimate Lenders Mortgage Insurance"/>
+<meta property="og:description" content="Work out your LVR and estimate your LMI premium. See how much more deposit you need to avoid LMI entirely."/>
+<meta property="og:url" content="https://mortgagebrg.com.au/lmi-calculator.html"/>
+<meta property="og:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="LMI Calculator Australia | Mortgage Bridge"/>
+<meta name="twitter:description" content="Work out your LVR and estimate your LMI premium. See how much more deposit you need to avoid LMI entirely."/>
+<meta name="twitter:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<script src="analytics.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "LMI Calculator",
+  "url": "https://mortgagebrg.com.au/lmi-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "provider": { "@type": "FinancialService", "name": "Mortgage Bridge", "url": "https://mortgagebrg.com.au/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does LMI protect me as the borrower?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Lenders Mortgage Insurance protects the lender if you default and the property sells for less than the outstanding loan. You pay the premium, but the cover belongs to the lender. If the insurer pays the lender, it can still pursue you for the shortfall." }
+    },
+    {
+      "@type": "Question",
+      "name": "At what LVR does LMI apply?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most lenders require LMI when your loan is more than 80% of the property value — that is, when your deposit is under 20%. Below 80% LVR, no LMI is payable." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can LMI be added to my loan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually yes. Capitalising the premium means you do not pay it upfront, but you pay interest on it for the life of the loan, so the total cost is higher. Capitalising can also push your LVR above the lender's limit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is LMI refundable if I repay or refinance early?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Partial refunds are sometimes available if the loan is cancelled within the first one to two years, but policies vary by insurer and many refuse refunds entirely. LMI is not transferable — if you refinance to a new lender at above 80% LVR, you generally pay a new premium." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the LMI premium calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The premium is set by the insurer using a confidential rate table based on your loan amount, LVR, loan term, whether you are an owner-occupier or investor, and your borrower profile. Insurers do not publish these tables, so any online figure is an estimate until your lender quotes the actual premium." }
+    }
+  ]
+}
+</script>
+<!-- seo:end -->
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#efeded",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "secondary": "#735c00",
+                        "on-secondary": "#ffffff",
+                        "primary": "#003441",
+                        "outline": "#70787c",
+                        "outline-variant": "#c0c8cb",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-container": "#fed65b",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0f4c5c",
+                        "surface-variant": "#e4e2e2",
+                        "surface": "#fbf9f8",
+                        "on-surface": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#40484b",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#9acee1",
+                        "background": "#fbf9f8"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "12px", "xl": "16px", "full": "9999px" }
+                }
+            }
+        };
+</script>
+<style>
+body{font-family:'Inter',sans-serif;}
+.font-display{font-family:'Be Vietnam Pro',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.glass-header{background:rgba(251,249,248,0.85);backdrop-filter:blur(8px);}
+.prose-body p{margin-bottom:1rem;line-height:1.75;}
+.prose-body ul{margin:0.5rem 0 1.25rem;padding-left:0;}
+.prose-body li{position:relative;padding-left:1.75rem;margin-bottom:0.6rem;line-height:1.6;}
+.prose-body li::before{content:'';position:absolute;left:0;top:0.55rem;width:8px;height:8px;border-radius:9999px;background:#735c00;}
+.calc-input{width:100%;border:1px solid #c0c8cb;border-radius:12px;padding:0.75rem 0.9rem 0.75rem 2rem;font-size:1.05rem;font-weight:600;color:#1b1c1c;background:#fff;}
+.calc-input:focus{outline:2px solid #003441;outline-offset:1px;}
+.seg-btn{flex:1;padding:0.6rem 0.5rem;border:1px solid #c0c8cb;background:#fff;font-weight:600;font-size:0.9rem;color:#40484b;cursor:pointer;transition:all .15s;}
+.seg-btn[aria-pressed="true"]{background:#003441;color:#fff;border-color:#003441;}
+.seg-wrap{display:flex;border-radius:12px;overflow:hidden;}
+.seg-wrap .seg-btn:not(:last-child){border-right:none;}
+</style>
+</head>
+<body class="bg-background text-on-surface">
+<header class="sticky top-0 z-50 glass-header border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-5 md:px-10 max-w-4xl mx-auto h-16 md:h-20">
+<a class="font-display text-base sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap" href="index.html">Mortgage Bridge</a>
+<div class="flex items-center gap-3 md:gap-5">
+<a class="hidden md:inline-flex items-center gap-1 text-on-surface-variant hover:text-primary text-sm font-semibold" href="stamp-duty-calculator-nsw.html">
+<span class="material-symbols-outlined text-base">calculate</span>Stamp Duty Calculator</a>
+<button data-noi18n="true" id="lang-toggle" onclick="toggleLang()" class="flex items-center gap-1.5 whitespace-nowrap px-3 md:px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-sm">
+<span class="material-symbols-outlined text-sm">translate</span><span id="lang-toggle-label">中文</span></button>
+<a href="#get-exact" class="hidden sm:inline-flex whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm">Free Consultation</a>
+</div>
+</nav>
+</header>
+
+<main class="max-w-4xl mx-auto px-5 md:px-10 py-10 md:py-14">
+
+<h1 class="font-display text-3xl md:text-4xl font-bold text-primary leading-tight">LMI Calculator</h1>
+<p class="text-on-surface-variant mt-3 text-lg leading-relaxed">Work out your LVR, estimate your Lenders Mortgage Insurance premium, and see exactly how much extra deposit you would need to avoid LMI altogether.</p>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="mt-8 rounded-2xl border border-outline-variant/40 bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="p-6 md:p-8 grid md:grid-cols-2 gap-6 md:gap-8">
+
+  <!-- inputs -->
+  <div class="space-y-5">
+    <div>
+      <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="propValue">Property value</label>
+      <div class="relative">
+        <span data-noi18n="true" class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">$</span>
+        <input data-noi18n="true" class="calc-input" id="propValue" inputmode="numeric" type="text" value="950,000"/>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="deposit">Your deposit</label>
+      <div class="relative">
+        <span data-noi18n="true" class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">$</span>
+        <input data-noi18n="true" class="calc-input" id="deposit" inputmode="numeric" type="text" value="95,000"/>
+      </div>
+      <input data-noi18n="true" id="depositRange" type="range" min="0" max="40" step="0.5" value="10" class="w-full mt-3 accent-primary"/>
+      <div data-noi18n="true" id="depositPctLabel" class="text-xs text-on-surface-variant mt-1 font-semibold">10.0% deposit</div>
+    </div>
+
+    <div>
+      <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">Loan purpose</span>
+      <div class="seg-wrap">
+        <button class="seg-btn" id="occOwner" aria-pressed="true" type="button">Owner-occupier</button>
+        <button class="seg-btn" id="occInv" aria-pressed="false" type="button">Investment</button>
+      </div>
+    </div>
+
+    <div>
+      <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">Interest rate &amp; term (for the monthly impact)</span>
+      <div class="flex gap-3">
+        <div class="relative flex-1">
+          <input data-noi18n="true" class="calc-input !pl-3 !pr-8" id="rate" inputmode="decimal" type="text" value="6.00"/>
+          <span data-noi18n="true" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">%</span>
+        </div>
+        <div class="relative flex-1">
+          <input data-noi18n="true" class="calc-input !pl-3 !pr-14" id="term" inputmode="numeric" type="text" value="30"/>
+          <span data-noi18n="true" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold text-sm">years</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- results -->
+  <div data-noi18n="true" id="results" class="rounded-xl bg-surface-container-low p-5 md:p-6 flex flex-col gap-4"></div>
+
+</div>
+</section>
+
+<p data-noi18n="true" id="estimateNote" class="text-xs text-on-surface-variant/80 mt-3 leading-relaxed"></p>
+
+<!-- ============ HOW TO AVOID ============ -->
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">Four ways to reduce or avoid LMI</h2>
+<div class="grid sm:grid-cols-2 gap-4">
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary">savings</span><h3 class="font-display font-bold text-primary">Reach a 20% deposit</h3></div>
+    <p class="text-sm text-on-surface-variant leading-relaxed">The cleanest path. The calculator above shows the exact gap between your deposit and 20%. Sometimes a slightly cheaper property, or a few more months of saving, removes the premium entirely.</p>
+  </div>
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary">verified_user</span><h3 class="font-display font-bold text-primary">Government guarantee schemes</h3></div>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Schemes such as the First Home Guarantee let eligible buyers purchase with a small deposit while the government guarantees the shortfall — so no LMI is charged. Places, income tests and property price caps apply and change over time.</p>
+  </div>
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary">badge</span><h3 class="font-display font-bold text-primary">Professional waivers</h3></div>
+    <p class="text-sm text-on-surface-variant leading-relaxed">Some lenders waive LMI entirely for certain occupations — commonly medical, legal, accounting and some other professions — at up to 90% or even 95% LVR. Which occupations qualify differs by lender, and the list is not advertised.</p>
+  </div>
+  <div class="rounded-xl border border-outline-variant/40 p-5 bg-surface-container-lowest">
+    <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-secondary">family_restroom</span><h3 class="font-display font-bold text-primary">Family guarantee</h3></div>
+    <p class="text-sm text-on-surface-variant leading-relaxed">A parent or close family member uses equity in their property as additional security, bringing your effective LVR under 80%. It removes LMI but puts the guarantor's property at risk, so it needs careful structuring.</p>
+  </div>
+</div>
+
+<div class="mt-6 p-5 rounded-xl bg-secondary-fixed/40 border border-secondary-fixed-dim/50">
+<p class="text-sm text-on-surface leading-relaxed"><strong>Which of these you actually qualify for depends on the lender.</strong> Waiver lists, scheme eligibility and LMI rate tables all differ between lenders and are not published. This is the part a broker earns their keep on — comparing what each lender will actually do for your profile.</p>
+</div>
+
+<!-- ============ LEAD FORM ============ -->
+<section id="get-exact" class="mt-12 p-6 md:p-8 rounded-2xl bg-primary text-on-primary">
+<h2 class="font-display text-2xl font-bold mb-2">Get your exact LMI figure</h2>
+<p class="text-on-primary/80 mb-6 leading-relaxed">The estimate above is a range. To get the real number we run your details against the actual lender rate tables — and check whether a waiver or scheme removes the premium altogether. Free, no obligation, we call you back within 12 hours.</p>
+<form data-lead-form="LMI Calculator enquiry" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到!顾问将在12小时内与你联系。" class="grid sm:grid-cols-2 gap-4">
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="name" placeholder="Your name" required type="text"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="phone" placeholder="Phone number" required type="tel"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="email" placeholder="Email" type="email"/>
+  <input data-noi18n="true" id="formSnapshot" name="calculator_snapshot" type="hidden"/>
+  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="language">
+    <option>Preferred language — English</option>
+    <option>普通话 Mandarin</option>
+    <option>粵語 Cantonese</option>
+    <option>Tiếng Việt Vietnamese</option>
+  </select>
+  <button class="sm:col-span-2 px-8 py-3.5 rounded-xl bg-secondary-container text-on-surface font-bold shadow-lg hover:shadow-xl transition" type="submit">Get My Exact LMI Figure</button>
+</form>
+</section>
+
+<!-- ============ FAQ ============ -->
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">LMI questions people actually ask</h2>
+<div class="space-y-3">
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Does LMI protect me as the borrower?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">No. It protects the lender if you default and the property sells for less than what you owe. You pay the premium, but the cover belongs to the lender — and if the insurer pays out, it can still pursue you for the shortfall.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">At what LVR does LMI kick in?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Most lenders require it above 80% LVR — that is, when your deposit is under 20% of the property value. The premium rises sharply as LVR climbs, which is why the jump from 90% to 95% costs so much more than the jump from 80% to 85%.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Can I add LMI to my loan instead of paying upfront?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Usually yes — this is called capitalising the premium. You avoid the upfront cash hit, but you pay interest on it for the life of the loan. The calculator above shows both the premium and what it adds to your monthly repayment if capitalised.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">If I refinance later, do I pay LMI again?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">LMI is not transferable between lenders. If you refinance while still above 80% LVR, the new lender generally charges a fresh premium. Partial refunds on the original policy are sometimes available within the first year or two, but many insurers do not offer them at all.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Why is this a range and not an exact number?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Because insurers do not publish their rate tables. The premium depends on your loan size, LVR, loan term, whether you are an owner-occupier or investor, and your borrower profile — and each lender uses a different insurer or in-house arrangement. Any website quoting a single exact figure is guessing. We get the real number from the lender's own table.</p>
+  </details>
+</div>
+
+<!-- ============ CROSS LINK ============ -->
+<div class="mt-10 rounded-2xl border border-outline-variant/40 p-6 bg-surface-container-low">
+<h3 class="font-display text-xl font-bold text-primary mb-2">Next: what else do you need upfront?</h3>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">LMI is one of two big upfront costs. The other is stamp duty — and in NSW, first home buyers can be fully exempt below a threshold. Work out yours before you set your deposit target.</p>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm" href="stamp-duty-calculator-nsw.html"><span class="material-symbols-outlined text-base">calculate</span>NSW Stamp Duty Calculator</a>
+</div>
+
+<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. LMI premiums are set by mortgage insurers using confidential rate tables and the actual premium charged may differ materially from the estimate shown. Speak with a qualified mortgage broker before making any decision. Mortgage Bridge does not guarantee loan approval or any particular premium, rate or outcome.</p>
+
+</main>
+
+<footer class="bg-primary text-on-primary py-10">
+<div class="max-w-4xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-display text-xl font-bold">Mortgage Bridge</div>
+<p class="text-on-primary/60 text-sm text-center">© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.</p>
+</div>
+</footer>
+
+<script src="forms.js"></script>
+<script>
+/* ===================== LMI calculator =====================
+   LVR 是精确计算。保费是估算区间——保险公司的费率表不公开
+   (Helia 官方估算器亦声明 "indication only",实际保费因贷方/
+   贷款用途/借款人类型而异)。因此本工具只给区间,并把"拿到确切
+   数字"设计成咨询入口。区间为行业公开的指示性百分比,非报价。
+   ========================================================== */
+(function () {
+  "use strict";
+
+  // 指示性保费区间(占贷款额百分比),按 LVR 分档。自住 / 投资分开。
+  var BANDS = [
+    { max: 85,  owner: [0.5, 1.3], inv: [0.7, 1.6] },
+    { max: 90,  owner: [1.2, 2.3], inv: [1.5, 2.8] },
+    { max: 95,  owner: [2.2, 4.2], inv: [2.8, 5.0] }
+  ];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var isZh = function () { return document.documentElement.lang === "zh-CN"; };
+
+  function num(v) { var n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isFinite(n) ? n : 0; }
+  function money(n) { return "$" + Math.round(n).toLocaleString("en-AU"); }
+  function pct(n) { return n.toFixed(1) + "%"; }
+
+  var occupancy = "owner";
+
+  function repayment(principal, annualRatePct, years) {
+    var r = annualRatePct / 100 / 12, n = years * 12;
+    if (r <= 0 || n <= 0) return n > 0 ? principal / n : 0;
+    return principal * r / (1 - Math.pow(1 + r, -n));
+  }
+
+  function row(label, value, opts) {
+    opts = opts || {};
+    return '<div class="flex justify-between items-baseline gap-3 ' + (opts.big ? "" : "text-sm") + '">' +
+      '<span class="text-on-surface-variant">' + label + '</span>' +
+      '<span class="font-bold ' + (opts.big ? "text-2xl text-primary font-display" : "text-on-surface") + '">' + value + "</span></div>";
+  }
+
+  function render() {
+    var value = num($("propValue").value);
+    var dep = num($("deposit").value);
+    var rate = num($("rate").value);
+    var years = num($("term").value) || 30;
+
+    if (dep > value) { dep = value; $("deposit").value = Math.round(dep).toLocaleString("en-AU"); }
+
+    var loan = Math.max(value - dep, 0);
+    var lvr = value > 0 ? (loan / value) * 100 : 0;
+    var depPct = value > 0 ? (dep / value) * 100 : 0;
+    $("depositPctLabel").textContent = pct(depPct) + (isZh() ? " 首付" : " deposit");
+
+    var out = [];
+    out.push(row(isZh() ? "贷款金额" : "Loan amount", money(loan)));
+    out.push(row(isZh() ? "首付占比" : "Deposit", pct(depPct)));
+    out.push('<div class="h-px bg-outline-variant/50"></div>');
+    out.push(row("LVR", pct(lvr), { big: true }));
+
+    var snapshot = "Property " + money(value) + " / Deposit " + money(dep) +
+      " / Loan " + money(loan) + " / LVR " + pct(lvr) + " / " + occupancy;
+
+    if (value <= 0) {
+      out.push('<p class="text-sm text-on-surface-variant">' + (isZh() ? "请输入房产价值。" : "Enter a property value to start.") + "</p>");
+      $("estimateNote").textContent = "";
+    } else if (lvr <= 80) {
+      var surplus = dep - value * 0.2;
+      out.push('<div class="rounded-lg bg-primary text-on-primary p-4 mt-1">' +
+        '<div class="flex items-center gap-2 font-bold"><span class="material-symbols-outlined">check_circle</span>' +
+        (isZh() ? "无需支付 LMI" : "No LMI payable") + "</div>" +
+        '<p class="text-on-primary/80 text-sm mt-1.5 leading-relaxed">' +
+        (isZh()
+          ? "你的 LVR 在 80% 或以下，绝大多数贷方不收取 LMI。首付比 20% 门槛多出 " + money(surplus) + "。"
+          : "Your LVR is at or below 80%, so most lenders will not charge LMI. You are " + money(surplus) + " above the 20% deposit threshold.") +
+        "</p></div>");
+      $("estimateNote").textContent = "";
+      snapshot += " / No LMI";
+    } else if (lvr > 95) {
+      out.push('<div class="rounded-lg bg-error-container text-on-error-container p-4 mt-1">' +
+        '<div class="flex items-center gap-2 font-bold"><span class="material-symbols-outlined">error</span>' +
+        (isZh() ? "LVR 超过 95%" : "LVR above 95%") + "</div>" +
+        '<p class="text-sm mt-1.5 leading-relaxed">' +
+        (isZh()
+          ? "标准住房贷款很少批到 95% 以上 LVR。可行路径通常是政府担保计划、家庭担保，或再存一些首付。"
+          : "Standard home loans rarely go above 95% LVR. The usual paths are a government guarantee scheme, a family guarantee, or a larger deposit.") +
+        "</p></div>");
+      $("estimateNote").textContent = "";
+      snapshot += " / LVR>95%";
+    } else {
+      var band = BANDS.find(function (b) { return lvr <= b.max; });
+      var pair = occupancy === "owner" ? band.owner : band.inv;
+      var lo = loan * pair[0] / 100, hi = loan * pair[1] / 100;
+      var mid = (lo + hi) / 2;
+      var gap = value * 0.2 - dep;
+
+      var baseRepay = repayment(loan, rate, years);
+      var capRepay = repayment(loan + mid, rate, years);
+      var extra = capRepay - baseRepay;
+
+      out.push('<div class="rounded-lg bg-secondary-fixed/50 border border-secondary-fixed-dim/60 p-4 mt-1">' +
+        '<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wide">' +
+        (isZh() ? "LMI 保费估算区间" : "Estimated LMI premium") + "</div>" +
+        '<div class="font-display text-2xl font-bold text-primary mt-1">' + money(lo) + " – " + money(hi) + "</div>" +
+        '<div class="text-xs text-on-surface-variant mt-1">' +
+        (isZh() ? "约为贷款额的 " + pair[0] + "%–" + pair[1] + "%" : "roughly " + pair[0] + "%–" + pair[1] + "% of the loan") +
+        "</div></div>");
+
+      out.push(row(isZh() ? "若加进贷款，月供增加" : "Added to loan, monthly cost", "+" + money(extra) + (isZh() ? "/月" : "/mo")));
+
+      out.push('<div class="rounded-lg bg-surface-container-high p-4">' +
+        '<div class="text-sm font-bold text-primary mb-1">' +
+        (isZh() ? "距离免 LMI 还差 " + money(gap) : money(gap) + " short of avoiding LMI") + "</div>" +
+        '<p class="text-xs text-on-surface-variant leading-relaxed">' +
+        (isZh()
+          ? "再存 " + money(gap) + " 就能达到 20% 首付，完全省下这笔保费。"
+          : "Saving another " + money(gap) + " would take you to a 20% deposit and remove the premium entirely.") +
+        "</p></div>");
+
+      $("estimateNote").textContent = isZh()
+        ? "估算说明：保险公司不公开费率表，实际保费由贷方按其保险方的表格核定，可能与上述区间有明显差异。此处区间为行业指示性水平，仅供预算参考，不构成报价。"
+        : "How this estimate works: mortgage insurers do not publish their rate tables. The actual premium is set by your lender using its insurer's table and may differ materially from the range above. These are indicative industry figures for budgeting only — not a quote.";
+
+      snapshot += " / Est LMI " + money(lo) + "-" + money(hi);
+    }
+
+    $("results").innerHTML = out.join("");
+    if ($("formSnapshot")) $("formSnapshot").value = snapshot;
+  }
+
+  // ---- wiring ----
+  function syncFromDeposit() {
+    var value = num($("propValue").value), dep = num($("deposit").value);
+    if (value > 0) $("depositRange").value = Math.min(40, Math.max(0, (dep / value) * 100)).toFixed(1);
+    render();
+  }
+  function syncFromRange() {
+    var value = num($("propValue").value);
+    var p = num($("depositRange").value);
+    $("deposit").value = Math.round(value * p / 100).toLocaleString("en-AU");
+    render();
+  }
+  function formatOnBlur(el) {
+    el.addEventListener("blur", function () {
+      var n = num(el.value);
+      el.value = n ? Math.round(n).toLocaleString("en-AU") : "";
+    });
+  }
+
+  ["propValue", "deposit"].forEach(function (id) { formatOnBlur($(id)); });
+  $("propValue").addEventListener("input", syncFromDeposit);
+  $("deposit").addEventListener("input", syncFromDeposit);
+  $("depositRange").addEventListener("input", syncFromRange);
+  $("rate").addEventListener("input", render);
+  $("term").addEventListener("input", render);
+
+  $("occOwner").addEventListener("click", function () {
+    occupancy = "owner";
+    $("occOwner").setAttribute("aria-pressed", "true");
+    $("occInv").setAttribute("aria-pressed", "false");
+    render();
+  });
+  $("occInv").addEventListener("click", function () {
+    occupancy = "inv";
+    $("occInv").setAttribute("aria-pressed", "true");
+    $("occOwner").setAttribute("aria-pressed", "false");
+    render();
+  });
+
+  window.onLangChange = render;   // 语言切换后重绘动态结果
+  render();
+})();
+</script>
+
+<script>
+(function(){
+  const I18N = {"Stamp Duty Calculator": "印花税计算器", "Free Consultation": "免费咨询", "LMI Calculator": "LMI 计算器", "Work out your LVR, estimate your Lenders Mortgage Insurance premium, and see exactly how much extra deposit you would need to avoid LMI altogether.": "算出你的 LVR,估算贷款抵押保险(LMI)保费,并看清楚还差多少首付就能完全免掉这笔钱。", "Property value": "房产价值", "Your deposit": "你的首付", "Loan purpose": "贷款用途", "Owner-occupier": "自住", "Investment": "投资", "Interest rate & term (for the monthly impact)": "利率与贷款年限(用于计算月供影响)", "Four ways to reduce or avoid LMI": "降低或免除 LMI 的四条路", "Reach a 20% deposit": "凑够 20% 首付", "The cleanest path. The calculator above shows the exact gap between your deposit and 20%. Sometimes a slightly cheaper property, or a few more months of saving, removes the premium entirely.": "最干净的办法。上面的计算器会告诉你离 20% 还差多少。有时换一套稍便宜的房,或多存几个月,这笔保费就完全没有了。", "Government guarantee schemes": "政府担保计划", "Schemes such as the First Home Guarantee let eligible buyers purchase with a small deposit while the government guarantees the shortfall — so no LMI is charged. Places, income tests and property price caps apply and change over time.": "像 First Home Guarantee 这类计划,符合条件的买家可以用很低的首付买房,由政府担保差额部分,因此不收 LMI。但有名额、收入门槛和房价上限,且会随时间调整。", "Professional waivers": "职业豁免", "Some lenders waive LMI entirely for certain occupations — commonly medical, legal, accounting and some other professions — at up to 90% or even 95% LVR. Which occupations qualify differs by lender, and the list is not advertised.": "部分贷方对特定职业完全免收 LMI——常见的是医疗、法律、会计等——最高可到 90% 甚至 95% LVR。具体哪些职业算数各家不同,而且这份名单不对外公布。", "Family guarantee": "家庭担保", "A parent or close family member uses equity in their property as additional security, bringing your effective LVR under 80%. It removes LMI but puts the guarantor's property at risk, so it needs careful structuring.": "由父母或近亲用他们房产里的净值做附加担保,把你的实际 LVR 压到 80% 以下。可以免掉 LMI,但担保人的房产会承担风险,结构要设计得当。", "Which of these you actually qualify for depends on the lender.": "你到底能用上哪一条,取决于贷方。", "Waiver lists, scheme eligibility and LMI rate tables all differ between lenders and are not published. This is the part a broker earns their keep on — comparing what each lender will actually do for your profile.": "豁免职业名单、计划资格、LMI 费率表,各家贷方都不一样,而且都不公开。这正是 broker 的价值所在——把每家贷方对你这份情况的真实态度对比出来。", "Get your exact LMI figure": "拿到你的确切 LMI 数字", "The estimate above is a range. To get the real number we run your details against the actual lender rate tables — and check whether a waiver or scheme removes the premium altogether. Free, no obligation, we call you back within 12 hours.": "上面给的是区间。要拿到真实数字,我们会把你的情况放进贷方实际的费率表里算——同时看看有没有豁免或计划能让这笔钱直接归零。免费,无义务,12 小时内回电。", "Get My Exact LMI Figure": "帮我算出确切 LMI", "LMI questions people actually ask": "关于 LMI,大家真正会问的问题", "Does LMI protect me as the borrower?": "LMI 保护的是我吗?", "No. It protects the lender if you default and the property sells for less than what you owe. You pay the premium, but the cover belongs to the lender — and if the insurer pays out, it can still pursue you for the shortfall.": "不是。它保护的是贷方——如果你违约、房子卖掉后不够还贷款,由保险赔给贷方。钱是你出的,保障是贷方的;而且保险公司赔付后,仍然可以向你追讨差额。", "At what LVR does LMI kick in?": "LVR 到多少才开始收 LMI?", "Most lenders require it above 80% LVR — that is, when your deposit is under 20% of the property value. The premium rises sharply as LVR climbs, which is why the jump from 90% to 95% costs so much more than the jump from 80% to 85%.": "多数贷方在 LVR 超过 80% 时收取,也就是首付低于房价的 20%。保费随 LVR 上升得很陡,所以从 90% 到 95% 的涨幅,远大于从 80% 到 85%。", "Can I add LMI to my loan instead of paying upfront?": "LMI 可以加进贷款里,不用一次性付吗?", "Usually yes — this is called capitalising the premium. You avoid the upfront cash hit, but you pay interest on it for the life of the loan. The calculator above shows both the premium and what it adds to your monthly repayment if capitalised.": "通常可以,这叫保费资本化。好处是不用一次拿出现金,代价是整个贷款期都要为这笔钱付利息。上面的计算器同时显示保费本身,以及资本化后每月多还多少。", "If I refinance later, do I pay LMI again?": "以后转贷,还要再付一次 LMI 吗?", "LMI is not transferable between lenders. If you refinance while still above 80% LVR, the new lender generally charges a fresh premium. Partial refunds on the original policy are sometimes available within the first year or two, but many insurers do not offer them at all.": "LMI 不能在贷方之间转移。如果转贷时 LVR 仍高于 80%,新贷方一般会重新收一笔。原保单在头一两年内有时可申请部分退还,但很多保险公司根本不提供退款。", "Why is this a range and not an exact number?": "为什么给的是区间,不是确切数字?", "Because insurers do not publish their rate tables. The premium depends on your loan size, LVR, loan term, whether you are an owner-occupier or investor, and your borrower profile — and each lender uses a different insurer or in-house arrangement. Any website quoting a single exact figure is guessing. We get the real number from the lender's own table.": "因为保险公司不公开费率表。保费取决于贷款额、LVR、贷款年限、自住还是投资,以及借款人情况——而且每家贷方用的保险方或内部安排都不同。任何网站给出一个精确数字都是在猜。我们从贷方自己的表里拿真实数字。", "Next: what else do you need upfront?": "下一步:前期还要准备哪些钱?", "LMI is one of two big upfront costs. The other is stamp duty — and in NSW, first home buyers can be fully exempt below a threshold. Work out yours before you set your deposit target.": "LMI 只是两大前期成本之一,另一个是印花税——在新州,首次置业者在门槛以下可以全免。定首付目标之前,先把这笔算清楚。", "NSW Stamp Duty Calculator": "新州印花税计算器", "This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. LMI premiums are set by mortgage insurers using confidential rate tables and the actual premium charged may differ materially from the estimate shown. Speak with a qualified mortgage broker before making any decision. Mortgage Bridge does not guarantee loan approval or any particular premium, rate or outcome.": "本计算器仅提供一般性信息,输出为估算而非报价,未考虑你的目标、财务状况或需求。LMI 保费由抵押保险公司依据不公开的费率表核定,实际收取金额可能与所示估算有明显差异。做任何决定前请咨询持牌房贷顾问。Mortgage Bridge 不保证贷款获批,也不保证任何特定保费、利率或结果。", "Your name": "你的姓名", "Phone number": "联系电话", "Email": "邮箱", "© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.": "© 2026 Mortgage Bridge. 为悉尼多元文化社区提供专业房贷指导。"};
+  const SKIP=["SCRIPT","STYLE","NOSCRIPT"]; const reg=[];
+  function walk(n){ for(const c of n.childNodes){
+    if(c.nodeType===3){ if(c.nodeValue.trim()) reg.push({node:c,en:c.nodeValue,key:c.nodeValue.trim()}); }
+    else if(c.nodeType===1){ if(SKIP.includes(c.tagName))continue; if(c.hasAttribute("data-noi18n"))continue;
+      if((c.getAttribute("class")||"").indexOf("material-symbols")!==-1)continue; walk(c); } } }
+  walk(document.body);
+  const PH = {"Your name":"你的姓名","Phone number":"联系电话","Email":"邮箱","Preferred language — English":"首选语言 — English"};
+  window.setLang=function(lang){ reg.forEach(function(r){ r.node.nodeValue=(lang==="zh"&&I18N[r.key]!==undefined)?I18N[r.key]:r.en; });
+    document.documentElement.lang=lang==="zh-CN"||lang==="zh"?"zh-CN":"en";
+    document.querySelectorAll("[placeholder]").forEach(function(el){
+      const en=el.getAttribute("data-ph-en")||el.getAttribute("placeholder");
+      if(!el.getAttribute("data-ph-en")) el.setAttribute("data-ph-en",en);
+      el.setAttribute("placeholder", lang==="zh"&&PH[el.getAttribute("data-ph-en")]?PH[el.getAttribute("data-ph-en")]:el.getAttribute("data-ph-en"));
+    });
+    const l=document.getElementById("lang-toggle-label"); if(l)l.textContent=lang==="zh"?"EN":"中文";
+    try{localStorage.setItem("lb_lang",lang);}catch(e){}
+    if(window.onLangChange) window.onLangChange(lang); };
+  window.toggleLang=function(){ const cur=document.documentElement.lang==="zh-CN"?"zh":"en"; window.setLang(cur==="zh"?"en":"zh"); };
+  let s="en"; try{s=localStorage.getItem("lb_lang")||"en";}catch(e){} window.setLang(s);
+})();
+</script>
+</body></html>
