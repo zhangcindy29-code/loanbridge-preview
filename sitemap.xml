@@ -25,6 +25,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-chatswood.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-hurstville.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-eastwood.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-epping.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-burwood.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-parramatta.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-north-sydney.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mortgagebrg.com.au/mortgage-broker-hornsby.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url>
     <loc>https://mortgagebrg.com.au/home-loan-questions.html</loc>
     <changefreq>monthly</changefreq>
