@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refinance Calculator Australia | Mortgage Bridge</title>
+<!-- seo:start -->
+<meta name="description" content="Work out what refinancing really saves — monthly, in total interest, and how many months to recover the switching costs before you come out ahead."/>
+<link rel="canonical" href="https://mortgagebrg.com.au/refinance-calculator.html"/>
+<meta property="og:site_name" content="Mortgage Bridge"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Refinance Calculator Australia | Mortgage Bridge"/>
+<meta property="og:description" content="Work out what refinancing really saves — monthly, in total interest, and how many months to recover the switching costs before you come out ahead."/>
+<meta property="og:url" content="https://mortgagebrg.com.au/refinance-calculator.html"/>
+<meta property="og:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Refinance Calculator Australia | Mortgage Bridge"/>
+<meta name="twitter:description" content="Work out what refinancing really saves — monthly, in total interest, and how many months to recover the switching costs before you come out ahead."/>
+<meta name="twitter:image" content="https://mortgagebrg.com.au/assets/og-share.jpg"/>
+<script src="analytics.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Refinance Calculator",
+  "url": "https://mortgagebrg.com.au/refinance-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+  "provider": { "@type": "FinancialService", "name": "Mortgage Bridge", "url": "https://mortgagebrg.com.au/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a lower monthly repayment mean refinancing saved me money?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. If you refinance a loan with 22 years left onto a fresh 30-year term, the monthly repayment falls simply because the debt is spread over eight extra years. You can end up paying substantially more total interest despite the lower monthly figure. Compare on the same remaining term to see the real effect of the rate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost to refinance in Australia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Typical costs include a discharge fee from your existing lender, an application or establishment fee with the new lender, a valuation fee, and government mortgage registration and deregistration charges. Fixed-rate loans may also attract break costs, which can be significant. Some lenders waive certain fees or offer cashback." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does refinancing take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usually somewhere between two and six weeks from application to settlement, depending on the lender, how quickly the valuation is completed, and how fast your current lender processes the discharge. The discharge step is often the slowest part and is largely outside the new lender's control." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will refinancing hurt my credit score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A refinance application leaves a credit enquiry on your file, which is normal. The problem is applying to several lenders in a short period, because a cluster of enquiries can read as repeated declines to the next lender assessing you." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I refinance if my property value has fallen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on your loan-to-value ratio after the revaluation. If the fall pushes you above 80% LVR, the new lender may require Lenders Mortgage Insurance, and LMI is not transferable between lenders, so you would pay a fresh premium. That cost often outweighs the rate saving." }
+    }
+  ]
+}
+</script>
+<!-- seo:end -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = { darkMode: "class", theme: { extend: { colors: {
+"surface":"#fbf9f8","surface-container-low":"#f5f3f3","surface-container":"#efeded","surface-container-lowest":"#ffffff",
+"surface-container-high":"#eae8e7","on-surface":"#1b1c1c","on-surface-variant":"#40484b",
+"outline":"#70787c","outline-variant":"#c0c8cb","primary":"#003441","on-primary":"#ffffff",
+"primary-container":"#0f4c5c","secondary":"#735c00","on-secondary":"#ffffff",
+"secondary-container":"#fed65b","on-secondary-container":"#745c00","secondary-fixed":"#ffe088",
+"secondary-fixed-dim":"#e9c349","error-container":"#ffdad6","on-error-container":"#93000a",
+"background":"#fbf9f8" } } } };
+</script>
+<style>
+body{font-family:'Inter','PingFang SC',sans-serif;}
+.font-display{font-family:'Be Vietnam Pro','PingFang SC',sans-serif;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+.glass-header{background:rgba(251,249,248,0.85);backdrop-filter:blur(8px);}
+.calc-input{width:100%;border:1px solid #c0c8cb;border-radius:12px;padding:0.7rem 0.9rem 0.7rem 2rem;font-size:1.02rem;font-weight:600;color:#1b1c1c;background:#fff;}
+.calc-input:focus{outline:2px solid #003441;outline-offset:1px;}
+.seg-btn{flex:1;padding:0.6rem 0.5rem;border:1px solid #c0c8cb;background:#fff;font-weight:600;font-size:0.88rem;color:#40484b;cursor:pointer;transition:all .15s;}
+.seg-btn[aria-pressed="true"]{background:#003441;color:#fff;border-color:#003441;}
+.seg-wrap{display:flex;border-radius:12px;overflow:hidden;}
+.seg-wrap .seg-btn:not(:last-child){border-right:none;}
+</style>
+</head>
+<body class="bg-background text-on-surface">
+<header class="sticky top-0 z-50 glass-header border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-5 md:px-10 max-w-4xl mx-auto h-16 md:h-20">
+<a class="font-display text-base sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap" href="index.html">Mortgage Bridge</a>
+<div class="flex items-center gap-3 md:gap-5">
+<a class="hidden lg:inline-flex items-center gap-1.5 whitespace-nowrap px-3 md:px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-sm" href="lmi-calculator.html">
+<span class="material-symbols-outlined text-sm">calculate</span>LMI calc</a>
+<button data-noi18n="true" id="lang-toggle" onclick="toggleLang()" class="flex items-center gap-1.5 whitespace-nowrap px-3 md:px-4 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-colors text-sm">
+<span class="material-symbols-outlined text-sm">translate</span><span id="lang-toggle-label">中文</span></button>
+<a href="#get-review" class="inline-flex whitespace-nowrap px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm">Talk to a broker</a>
+</div>
+</nav>
+</header>
+
+<main class="max-w-4xl mx-auto px-5 md:px-10 py-10 md:py-14">
+
+<h1 class="font-display text-3xl md:text-4xl font-bold text-primary leading-tight">Refinance Calculator</h1>
+<p class="text-on-surface-variant mt-3 text-lg leading-relaxed">See what switching actually saves you — not just the monthly figure, but the total interest and how many months it takes to earn back the switching costs.</p>
+
+<section class="mt-8 rounded-2xl border border-outline-variant/40 bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="p-6 md:p-8 grid md:grid-cols-2 gap-6 md:gap-8">
+
+  <div class="space-y-5">
+    <div>
+      <h2 class="font-display font-bold text-primary mb-3">Your current loan</h2>
+      <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="balance">Loan balance remaining</label>
+      <div class="relative">
+        <span data-noi18n="true" class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">$</span>
+        <input data-noi18n="true" class="calc-input" id="balance" inputmode="numeric" type="text" value="650,000"/>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <div class="flex-1">
+        <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="rateOld">Current rate</label>
+        <div class="relative">
+          <input data-noi18n="true" class="calc-input !pl-3 !pr-8" id="rateOld" inputmode="decimal" type="text" value="6.40"/>
+          <span data-noi18n="true" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">%</span>
+        </div>
+      </div>
+      <div class="flex-1">
+        <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="termLeft">Years remaining</label>
+        <input data-noi18n="true" class="calc-input !pl-3" id="termLeft" inputmode="numeric" type="text" value="25"/>
+      </div>
+    </div>
+
+    <div class="pt-2">
+      <h2 class="font-display font-bold text-primary mb-3">The loan you are considering</h2>
+      <div class="flex gap-3">
+        <div class="flex-1">
+          <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="rateNew">New rate</label>
+          <div class="relative">
+            <input data-noi18n="true" class="calc-input !pl-3 !pr-8" id="rateNew" inputmode="decimal" type="text" value="5.75"/>
+            <span data-noi18n="true" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">%</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="termNew">New term (years)</label>
+          <input data-noi18n="true" class="calc-input !pl-3" id="termNew" inputmode="numeric" type="text" value="25"/>
+        </div>
+      </div>
+      <div class="mt-3">
+        <span class="block text-sm font-semibold text-on-surface-variant mb-1.5">Compare on</span>
+        <div class="seg-wrap">
+          <button class="seg-btn" id="cmpSame" aria-pressed="true" type="button">Same remaining term</button>
+          <button class="seg-btn" id="cmpReset" aria-pressed="false" type="button">Reset to 30 years</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold text-on-surface-variant mb-1.5" for="costs">Switching costs</label>
+      <div class="relative">
+        <span data-noi18n="true" class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant font-semibold">$</span>
+        <input data-noi18n="true" class="calc-input" id="costs" inputmode="numeric" type="text" value="1,200"/>
+      </div>
+      <p class="text-xs text-on-surface-variant/80 mt-1.5 leading-relaxed">Discharge fee, application fee, valuation and government registration charges. Fixed-rate break costs are separate and can be much larger.</p>
+    </div>
+  </div>
+
+  <div data-noi18n="true" id="results" class="rounded-xl bg-surface-container-low p-5 md:p-6 flex flex-col gap-4"></div>
+
+</div>
+</section>
+
+<p data-noi18n="true" id="note" class="text-xs text-on-surface-variant/80 mt-3 leading-relaxed"></p>
+
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">The trap in most refinance calculators</h2>
+<div class="rounded-xl border border-outline-variant/40 p-6 bg-surface-container-lowest">
+<p class="text-on-surface-variant leading-relaxed mb-3">Nearly every refinance calculator shows you a lower monthly repayment and stops there. The number is real. The conclusion usually is not.</p>
+<p class="text-on-surface-variant leading-relaxed mb-3">If you have 25 years left and refinance onto a fresh 30-year term, your repayment drops — but a good part of that drop is simply the debt being spread over five extra years, not the better rate. Over the full life of the loan you can pay <strong>more</strong> total interest while feeling like you saved money every month.</p>
+<p class="text-on-surface-variant leading-relaxed">That is why this calculator defaults to comparing on your <strong>same remaining term</strong>. Switch to the 30-year view and watch what happens to total interest — the monthly figure improves and the total gets worse. Both are true at once, and only one of them is the thing you actually care about.</p>
+</div>
+
+<section id="get-review" class="mt-12 p-6 md:p-8 rounded-2xl bg-primary text-on-primary">
+<h2 class="font-display text-2xl font-bold mb-2">Find out if switching is worth it for you</h2>
+<p class="text-on-primary/80 mb-6 leading-relaxed">The rate is only part of it. Break costs on a fixed loan, a valuation that comes in low, or an LVR above 80% can wipe out the saving entirely. We check all of it before you apply anywhere — free, no obligation, called back within 12 hours. <span class="text-on-primary/70">我们提供普通话/粤语服务。</span></p>
+<form data-lead-form="Refinance calculator enquiry" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Name" placeholder="Your name / 称呼" required type="text"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Contact" placeholder="Phone or WeChat / 电话或微信" required type="tel"/>
+  <input data-noi18n="true" id="snapshot" name="calculator_snapshot" type="hidden"/>
+  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="Situation">
+    <option>Current loan type — Variable rate</option>
+    <option>Fixed rate (may have break costs)</option>
+    <option>Split loan</option>
+    <option>Not sure</option>
+  </select>
+  <button class="sm:col-span-2 px-8 py-3.5 rounded-xl bg-secondary-container text-on-surface font-bold shadow-lg hover:shadow-xl transition" type="submit">Check if switching is worth it</button>
+</form>
+</section>
+
+<h2 class="font-display text-2xl font-bold text-primary mt-12 mb-4">Refinancing questions</h2>
+<div class="space-y-3">
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Does a lower monthly repayment mean I saved money?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Not necessarily. Refinancing 22 years of debt onto a fresh 30-year term lowers the monthly figure because the debt is spread over eight more years. You can pay substantially more total interest while the monthly number looks better. Compare on the same remaining term to isolate what the rate is actually doing.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">What does refinancing cost?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Typically a discharge fee from your current lender, an application or establishment fee with the new one, a valuation fee, and government registration charges. Fixed-rate loans can also attract break costs, which are calculated on the lender's funding position and are occasionally large enough to make switching pointless. Some lenders waive fees or offer cashback.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">How long does it take?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Usually two to six weeks. The slowest step is often your existing lender processing the discharge, which the new lender cannot speed up.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">What if my property has fallen in value?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">The new lender revalues it. If that pushes you above 80% LVR you may face LMI, and LMI does not transfer between lenders — you would pay a fresh premium. That cost frequently exceeds the rate saving, which is why the valuation should be checked before you apply rather than after.</p>
+  </details>
+  <details class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-5">
+    <summary class="font-semibold text-primary cursor-pointer">Is cashback worth chasing?</summary>
+    <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Sometimes, but run the numbers over several years rather than on the headline. A cashback attached to a slightly higher rate can cost more than it pays within two or three years. Put the cashback against the switching costs in this calculator and look at where the break-even lands.</p>
+  </details>
+</div>
+
+<div class="mt-10 rounded-2xl border border-outline-variant/40 p-6 bg-surface-container-low">
+<h3 class="font-display text-xl font-bold text-primary mb-2">Before you switch, check your LVR</h3>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">If the new lender's valuation puts you above 80%, LMI enters the picture and does not carry across from your old loan. Worth knowing before you apply.</p>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm" href="lmi-calculator.html"><span class="material-symbols-outlined text-base">calculate</span>LMI Calculator</a>
+</div>
+
+<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. It assumes principal and interest repayments at a constant rate and does not model offset accounts, redraw, fee structures, fixed-rate break costs or LMI. Actual savings depend on the loan product and lender assessment. Speak with a qualified mortgage broker before switching. Mortgage Bridge does not guarantee loan approval, any particular rate, or any particular outcome.</p>
+
+</main>
+
+<footer class="bg-primary text-on-primary py-10">
+<div class="max-w-4xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-display text-xl font-bold">Mortgage Bridge</div>
+<p class="text-on-primary/60 text-sm text-center">© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.</p>
+</div>
+</footer>
+
+<script src="forms.js"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var isZh = function () { return document.documentElement.lang === "zh-CN"; };
+  function num(v) { var n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isFinite(n) ? n : 0; }
+  function money(n) { return "$" + Math.round(n).toLocaleString("en-AU"); }
+  var mode = "same";
+
+  function repay(P, ratePct, years) {
+    var r = ratePct / 100 / 12, n = Math.round(years * 12);
+    if (n <= 0) return 0;
+    if (r <= 0) return P / n;
+    return P * r / (1 - Math.pow(1 + r, -n));
+  }
+  function row(label, value, opts) {
+    opts = opts || {};
+    return '<div class="flex justify-between items-baseline gap-3 ' + (opts.big ? "" : "text-sm") + '">' +
+      '<span class="text-on-surface-variant">' + label + '</span>' +
+      '<span class="font-bold ' + (opts.big ? "text-2xl text-primary font-display" : (opts.cls || "text-on-surface")) + '">' + value + "</span></div>";
+  }
+
+  function render() {
+    var B = num($("balance").value);
+    var r1 = num($("rateOld").value), t1 = num($("termLeft").value);
+    var r2 = num($("rateNew").value);
+    var t2;
+    if (mode === "same") { t2 = t1; $("termNew").value = t1; }
+    else if (mode === "reset") { t2 = 30; $("termNew").value = 30; }
+    else { t2 = num($("termNew").value) || t1; }
+
+    var costs = num($("costs").value);
+    var out = [];
+
+    if (B <= 0 || t1 <= 0) {
+      $("results").innerHTML = '<p class="text-sm text-on-surface-variant">' +
+        (isZh() ? "请填写贷款余额和剩余年限。" : "Enter your balance and years remaining to start.") + "</p>";
+      $("note").textContent = "";
+      return;
+    }
+
+    var m1 = repay(B, r1, t1), m2 = repay(B, r2, t2);
+    var int1 = m1 * t1 * 12 - B, int2 = m2 * t2 * 12 - B;
+    var mSave = m1 - m2, iSave = int1 - int2;
+
+    out.push('<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wide">' +
+      (isZh() ? "每月变化" : "Monthly change") + "</div>");
+    out.push(row("", (mSave >= 0 ? "−" : "+") + money(Math.abs(mSave)) + (isZh() ? "/月" : "/mo"), { big: true }));
+    out.push('<div class="h-px bg-outline-variant/50"></div>');
+    out.push(row(isZh() ? "当前月供" : "Current repayment", money(m1)));
+    out.push(row(isZh() ? "新贷款月供" : "New repayment", money(m2)));
+
+    var iCls = iSave >= 0 ? "text-primary" : "text-on-error-container";
+    out.push(row(isZh() ? "剩余期总利息（现在）" : "Total interest, current", money(int1)));
+    out.push(row(isZh() ? "总利息（新贷款）" : "Total interest, new", money(int2)));
+    out.push(row(isZh() ? "总利息差额" : "Total interest difference",
+      (iSave >= 0 ? "−" : "+") + money(Math.abs(iSave)), { cls: iCls }));
+
+    if (mSave > 0 && costs > 0) {
+      var be = costs / mSave;
+      out.push('<div class="rounded-lg bg-secondary-fixed/50 border border-secondary-fixed-dim/60 p-4 mt-1">' +
+        '<div class="text-xs font-bold text-on-surface-variant uppercase tracking-wide">' +
+        (isZh() ? "回本点" : "Break-even") + "</div>" +
+        '<div class="font-display text-2xl font-bold text-primary mt-1">' +
+        (be < 1 ? (isZh() ? "不到 1 个月" : "under a month") : Math.ceil(be) + (isZh() ? " 个月" : " months")) + "</div>" +
+        '<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">' +
+        (isZh() ? "要还清 " + money(costs) + " 的转贷成本，需要这么久。之后才算真的省下。"
+                : "How long the " + money(mSave) + "/mo saving takes to recover " + money(costs) + " in switching costs.") +
+        "</p></div>");
+    }
+
+    if (iSave < 0) {
+      out.push('<div class="rounded-lg bg-error-container p-4">' +
+        '<div class="flex items-center gap-2 font-bold text-on-error-container text-sm">' +
+        '<span class="material-symbols-outlined text-base">warning</span>' +
+        (isZh() ? "月供降了，但总利息更多" : "Lower monthly, more interest overall") + "</div>" +
+        '<p class="text-xs text-on-error-container mt-1.5 leading-relaxed">' +
+        (isZh() ? "你把债务摊到了更长的年限。月供好看了 " + money(Math.abs(mSave)) + "，但整个贷款期要多付 " + money(Math.abs(iSave)) + " 利息。"
+                : "You are spreading the debt over a longer term. The monthly figure improves by " + money(Math.abs(mSave)) + ", but you pay " + money(Math.abs(iSave)) + " more interest over the life of the loan.") +
+        "</p></div>");
+    }
+
+    $("results").innerHTML = out.join("");
+    $("note").textContent = isZh()
+      ? "估算说明：假设本息同还、利率固定不变，未计入 offset 账户、redraw、账户费用、固定利率的 break cost 以及可能触发的 LMI。实际节省取决于具体产品与贷方审核结果。"
+      : "How this estimate works: it assumes principal and interest repayments at a constant rate. It does not model offset accounts, redraw, ongoing fees, fixed-rate break costs, or LMI if your LVR exceeds 80%. Actual savings depend on the product and the lender's assessment.";
+
+    if ($("snapshot")) {
+      $("snapshot").value = "Balance " + money(B) + " / " + r1 + "% " + t1 + "y -> " + r2 + "% " + t2 + "y" +
+        " / monthly " + (mSave >= 0 ? "-" : "+") + money(Math.abs(mSave)) +
+        " / interest " + (iSave >= 0 ? "-" : "+") + money(Math.abs(iSave)) + " / costs " + money(costs);
+    }
+  }
+
+  ["balance", "rateOld", "termLeft", "rateNew", "costs"].forEach(function (id) {
+    $(id).addEventListener("input", render);
+  });
+  ["balance", "costs"].forEach(function (id) {
+    $(id).addEventListener("blur", function () {
+      var n = num($(id).value);
+      $(id).value = n ? Math.round(n).toLocaleString("en-AU") : "";
+    });
+  });
+  $("cmpSame").addEventListener("click", function () {
+    mode = "same"; $("cmpSame").setAttribute("aria-pressed", "true"); $("cmpReset").setAttribute("aria-pressed", "false"); render();
+  });
+  $("cmpReset").addEventListener("click", function () {
+    mode = "reset"; $("cmpReset").setAttribute("aria-pressed", "true"); $("cmpSame").setAttribute("aria-pressed", "false"); render();
+  });
+  $("termNew").addEventListener("input", function () {
+    mode = "custom";
+    $("cmpSame").setAttribute("aria-pressed", "false");
+    $("cmpReset").setAttribute("aria-pressed", "false");
+    render();
+  });
+  window.onLangChange = render;
+  render();
+})();
+</script>
+<script>
+(function(){
+  const I18N = {"LMI calc":"LMI 计算器","Talk to a broker":"联系顾问","Refinance Calculator":"转贷计算器","See what switching actually saves you — not just the monthly figure, but the total interest and how many months it takes to earn back the switching costs.":"看清楚转贷到底省了多少——不只是月供数字，还有总利息，以及要多少个月才能把转贷成本赚回来。","Your current loan":"你现在的贷款","Loan balance remaining":"剩余贷款余额","Current rate":"当前利率","Years remaining":"剩余年限","The loan you are considering":"你在考虑的新贷款","New rate":"新利率","New term (years)":"新贷款年限","Compare on":"对比基准","Same remaining term":"同样的剩余年限","Reset to 30 years":"重置为 30 年","Switching costs":"转贷成本","Discharge fee, application fee, valuation and government registration charges. Fixed-rate break costs are separate and can be much larger.":"解押费、申请费、估价费和政府登记费。固定利率的违约金（break cost）另算，可能大得多。","The trap in most refinance calculators":"多数转贷计算器藏着的坑","Nearly every refinance calculator shows you a lower monthly repayment and stops there. The number is real. The conclusion usually is not.":"几乎所有转贷计算器都只给你一个更低的月供，然后就没了。那个数字是真的，但由此得出的结论通常不成立。","If you have 25 years left and refinance onto a fresh 30-year term, your repayment drops — but a good part of that drop is simply the debt being spread over five extra years, not the better rate. Over the full life of the loan you can pay":"如果你还剩 25 年，转成全新的 30 年期，月供确实降了——但降下来的很大一部分只是因为债务被摊到了多出来的 5 年里，不是因为利率更好。整个贷款期算下来，你可能反而多付","more":"更多","total interest while feeling like you saved money every month.":"总利息，同时每个月都觉得自己在省钱。","That is why this calculator defaults to comparing on your":"所以这个计算器默认按","same remaining term":"同样的剩余年限",". Switch to the 30-year view and watch what happens to total interest — the monthly figure improves and the total gets worse. Both are true at once, and only one of them is the thing you actually care about.":"来对比。你可以切到 30 年那一档，看看总利息会怎么变——月供更好看了，总数更难看了。两件事同时成立，而你真正该在意的只有其中一件。","Find out if switching is worth it for you":"看看转贷对你到底划不划算","The rate is only part of it. Break costs on a fixed loan, a valuation that comes in low, or an LVR above 80% can wipe out the saving entirely. We check all of it before you apply anywhere — free, no obligation, called back within 12 hours.":"利率只是其中一环。固定利率的违约金、估价不足、或者 LVR 超过 80%，任何一条都可能把省下的钱全部抵消。我们会在你向任何一家递交申请之前，把这些全部核对一遍——免费，无义务，12 小时内回电。","Check if switching is worth it":"帮我算划不划算","Current loan type — Variable rate":"当前贷款类型 — 浮动利率","Fixed rate (may have break costs)":"固定利率（可能有违约金）","Split loan":"组合贷款","Not sure":"不确定","Refinancing questions":"转贷常见问题","Does a lower monthly repayment mean I saved money?":"月供变低就等于省钱了吗？","Not necessarily. Refinancing 22 years of debt onto a fresh 30-year term lowers the monthly figure because the debt is spread over eight more years. You can pay substantially more total interest while the monthly number looks better. Compare on the same remaining term to isolate what the rate is actually doing.":"不一定。把还剩 22 年的债务转成全新 30 年期，月供会降，因为债务被摊到了多出来的 8 年里。月供数字更好看，总利息却可能多出一大截。按同样的剩余年限对比，才能看清利率本身到底起了多大作用。","What does refinancing cost?":"转贷要花多少钱？","Typically a discharge fee from your current lender, an application or establishment fee with the new one, a valuation fee, and government registration charges. Fixed-rate loans can also attract break costs, which are calculated on the lender's funding position and are occasionally large enough to make switching pointless. Some lenders waive fees or offer cashback.":"通常包括：原贷方的解押费、新贷方的申请费或开户费、估价费，以及政府登记费。固定利率贷款还可能产生违约金（break cost），它按贷方的资金成本计算，偶尔会大到让转贷完全不划算。部分贷方会减免费用或提供现金返还。","How long does it take?":"转贷要多久？","Usually two to six weeks. The slowest step is often your existing lender processing the discharge, which the new lender cannot speed up.":"通常二到六周。最慢的环节往往是原贷方办理解押，而这一步新贷方也催不动。","What if my property has fallen in value?":"如果房子跌价了怎么办？","The new lender revalues it. If that pushes you above 80% LVR you may face LMI, and LMI does not transfer between lenders — you would pay a fresh premium. That cost frequently exceeds the rate saving, which is why the valuation should be checked before you apply rather than after.":"新贷方会重新估价。如果因此 LVR 超过 80%，你可能要交 LMI，而 LMI 不能在贷方之间转移——等于要重新交一笔。这笔钱经常超过利率省下的部分，所以估价应该在申请之前先摸清，而不是之后。","Is cashback worth chasing?":"现金返还值得追吗？","Sometimes, but run the numbers over several years rather than on the headline. A cashback attached to a slightly higher rate can cost more than it pays within two or three years. Put the cashback against the switching costs in this calculator and look at where the break-even lands.":"有时值得，但要按几年的账算，不能只看那个标题数字。一笔搭配着略高利率的现金返还，两三年内就可能倒亏。把返还金额抵扣到上面的转贷成本里，看看回本点落在哪。","Before you switch, check your LVR":"转之前，先看你的 LVR","If the new lender's valuation puts you above 80%, LMI enters the picture and does not carry across from your old loan. Worth knowing before you apply.":"如果新贷方的估价把你推到 80% 以上，LMI 就会进场，而且不会从旧贷款延续过来。这件事值得在申请前先弄清楚。","LMI Calculator":"LMI 计算器","This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. It assumes principal and interest repayments at a constant rate and does not model offset accounts, redraw, fee structures, fixed-rate break costs or LMI. Actual savings depend on the loan product and lender assessment. Speak with a qualified mortgage broker before switching. Mortgage Bridge does not guarantee loan approval, any particular rate, or any particular outcome.":"本计算器仅提供一般性信息，输出为估算而非报价，未考虑你的目标、财务状况或需求。计算假设本息同还且利率恒定，未模拟 offset 账户、redraw、账户费用结构、固定利率违约金，以及可能触发的 LMI。实际节省取决于具体贷款产品与贷方审核结果。转贷前请咨询持牌房贷顾问。Mortgage Bridge 不保证贷款获批、任何特定利率或任何特定结果。","© 2026 Mortgage Bridge. Expert mortgage guidance for Sydney's multicultural communities.":"© 2026 Mortgage Bridge. 为悉尼多元文化社区提供专业房贷指导。"};
+  const PH = {"Your name / 称呼":"你的姓名 / Your name","Phone or WeChat / 电话或微信":"电话或微信 / Phone or WeChat"};
+  const SKIP=["SCRIPT","STYLE","NOSCRIPT"]; const reg=[];
+  function walk(n){ for(const c of n.childNodes){
+    if(c.nodeType===3){ if(c.nodeValue.trim()) reg.push({node:c,en:c.nodeValue,key:c.nodeValue.trim()}); }
+    else if(c.nodeType===1){ if(SKIP.includes(c.tagName))continue; if(c.hasAttribute("data-noi18n"))continue;
+      if((c.getAttribute("class")||"").indexOf("material-symbols")!==-1)continue; walk(c); } } }
+  walk(document.body);
+  window.setLang=function(lang){
+    reg.forEach(function(r){ r.node.nodeValue=(lang==="zh"&&I18N[r.key]!==undefined)?I18N[r.key]:r.en; });
+    document.documentElement.lang=lang==="zh"?"zh-CN":"en";
+    document.querySelectorAll("[placeholder]").forEach(function(el){
+      if(!el.getAttribute("data-ph-en")) el.setAttribute("data-ph-en", el.getAttribute("placeholder"));
+      const en=el.getAttribute("data-ph-en");
+      el.setAttribute("placeholder",(lang==="zh"&&PH[en])?PH[en]:en);
+    });
+    const l=document.getElementById("lang-toggle-label"); if(l)l.textContent=lang==="zh"?"EN":"中文";
+    try{localStorage.setItem("lb_lang",lang);}catch(e){}
+    if(window.onLangChange) window.onLangChange(lang); };
+  window.toggleLang=function(){ const cur=document.documentElement.lang==="zh-CN"?"zh":"en"; window.setLang(cur==="zh"?"en":"zh"); };
+  let s="en"; try{s=localStorage.getItem("lb_lang")||"en";}catch(e){} window.setLang(s);
+})();
+</script>
+</body></html>
