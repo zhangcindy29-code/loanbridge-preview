@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-# mobile.html 是早期手机版 mockup,避免与首页重复内容
-Disallow: /mobile.html
-
 Sitemap: https://mortgagebrg.com.au/sitemap.xml
