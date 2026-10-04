@@ -230,11 +230,11 @@ body{font-family:'Inter',sans-serif;}
 <h2 class="font-display text-2xl font-bold mb-2">Get your exact LMI figure</h2>
 <p class="text-on-primary/80 mb-6 leading-relaxed">The estimate above is a range. To get the real number we run your details against the actual lender rate tables — and check whether a waiver or scheme removes the premium altogether. Free, no obligation, we call you back within 12 hours.</p>
 <form data-lead-form="LMI Calculator enquiry" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到!顾问将在12小时内与你联系。" class="grid sm:grid-cols-2 gap-4">
-  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="name" placeholder="Your name" required type="text"/>
-  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="phone" placeholder="Phone number" required type="tel"/>
-  <input class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="email" placeholder="Email" type="email"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="name" placeholder="Your name" required type="text" aria-label="name"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="phone" placeholder="Phone number" required type="tel" aria-label="phone"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="email" placeholder="Email" type="email" aria-label="email"/>
   <input data-noi18n="true" id="formSnapshot" name="calculator_snapshot" type="hidden"/>
-  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="language">
+  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="language" aria-label="language">
     <option>Preferred language — English</option>
     <option>普通话 Mandarin</option>
     <option>粵語 Cantonese</option>
@@ -276,7 +276,7 @@ body{font-family:'Inter',sans-serif;}
 <a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm" href="stamp-duty-calculator-nsw.html"><span class="material-symbols-outlined text-base">calculate</span>NSW Stamp Duty Calculator</a>
 </div>
 
-<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. LMI premiums are set by mortgage insurers using confidential rate tables and the actual premium charged may differ materially from the estimate shown. Speak with a qualified mortgage broker before making any decision. Mortgage Bridge does not guarantee loan approval or any particular premium, rate or outcome.</p>
+<p class="text-on-surface-variant/85 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. LMI premiums are set by mortgage insurers using confidential rate tables and the actual premium charged may differ materially from the estimate shown. Speak with a qualified mortgage broker before making any decision. Mortgage Bridge does not guarantee loan approval or any particular premium, rate or outcome.</p>
 
 </main>
 

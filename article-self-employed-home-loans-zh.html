@@ -156,15 +156,15 @@ body{font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;}
 <h3 class="font-display text-xl md:text-2xl font-bold mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">calculate</span>不确定自己能贷多少？免费评估一下</h3>
 <p class="text-on-primary/80 mb-6 text-sm md:text-base">填 30 秒，讲普通话/粤语的自雇房贷顾问会在 <strong>12 小时内</strong>回电，帮你算清可用收入和大概额度。资料保密，不收费。</p>
 <form data-lead-form="自雇房贷评估 (Self-employed lead)" data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
-<input required name="姓名" placeholder="你的称呼" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed"/>
-<input required name="联系方式(电话/微信)" placeholder="电话 或 微信号" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed"/>
-<select name="自雇情况" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed">
+<input required name="姓名" placeholder="你的称呼" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="姓名"/>
+<input required name="联系方式(电话/微信)" placeholder="电话 或 微信号" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="联系方式(电话/微信)"/>
+<select name="自雇情况" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="自雇情况">
 <option value="个体经营 (ABN/Sole Trader)">个体经营（ABN / Sole Trader）</option>
 <option value="公司董事 (Company Director)">公司董事（Company Director）</option>
 <option value="分包商 (Subcontractor)">分包商（Subcontractor）</option>
 <option value="其他/不确定">其他 / 不确定</option>
 </select>
-<select name="大致贷款金额" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed">
+<select name="大致贷款金额" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="大致贷款金额">
 <option value="未定">大致贷款金额（可选）</option>
 <option value="50万以下">$500k 以下</option>
 <option value="50-80万">$500k – $800k</option>
@@ -234,7 +234,7 @@ body{font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;}
 </details>
 </div>
 
-<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">本文仅为一般性信息，未考虑你的个人情况。具体建议请咨询持牌房贷顾问（Credit Representative）。</p>
+<p class="text-on-surface-variant/85 text-xs mt-8 leading-relaxed">本文仅为一般性信息，未考虑你的个人情况。具体建议请咨询持牌房贷顾问（Credit Representative）。</p>
 
 <!-- Inline CTA #2 -->
 <div class="mt-12 p-8 rounded-2xl bg-surface-container-low border border-outline-variant/20 text-center">
@@ -260,7 +260,7 @@ body{font-family:'Inter','PingFang SC','Microsoft YaHei',sans-serif;}
 <div class="max-w-4xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
 <div class="font-display text-xl font-bold">Mortgage Bridge</div>
 <p class="text-on-primary/60 text-sm text-center">© 2026 Mortgage Bridge. 为悉尼多元文化社区提供专业房贷指导。</p>
-<p class="text-on-primary/50 text-xs leading-relaxed text-center mt-8 pt-6 border-t border-on-primary/10">仅供一般参考,不构成信贷建议。Mortgage Bridge 在悉尼各区提供贷款经纪服务。具体情况请咨询持牌贷款经纪。</p>
+<p class="text-on-primary/65 text-xs leading-relaxed text-center mt-8 pt-6 border-t border-on-primary/10">仅供一般参考,不构成信贷建议。Mortgage Bridge 在悉尼各区提供贷款经纪服务。具体情况请咨询持牌贷款经纪。</p>
 </div>
 </footer>
 <script src="forms.js"></script>

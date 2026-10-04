@@ -123,9 +123,9 @@ body{font-family:'Inter','PingFang SC',sans-serif;}
 <h2 class="font-display text-xl md:text-2xl font-bold mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed">handshake</span>Talk to a Chatswood mortgage broker</h2>
 <p class="text-on-primary/80 mb-6 text-sm md:text-base">Tell us a little about you and a broker will call you back within 12 hours — free, in your language. <span class="text-on-primary/70">我们提供普通话/粤语服务。</span></p>
 <form data-lead-form="Mortgage broker Chatswood lead" data-success-en="✓ Thanks! A broker will call you within 12 hours." data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
-<input required name="Name" placeholder="Your name / 称呼" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed"/>
-<input required name="Phone/WeChat" placeholder="Phone or WeChat / 电话或微信" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed"/>
-<select name="I need help with" class="sm:col-span-2 w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed">
+<input required name="Name" placeholder="Your name / 称呼" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="Name"/>
+<input required name="Phone/WeChat" placeholder="Phone or WeChat / 电话或微信" class="w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface placeholder-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="Phone/WeChat"/>
+<select name="I need help with" class="sm:col-span-2 w-full px-4 py-3 rounded-xl bg-on-primary text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-fixed" aria-label="I need help with">
 <option value="First home buyer">Buying my first home</option>
 <option value="Refinancing">Refinancing</option>
 <option value="Investment">Investment loan</option>
@@ -152,7 +152,7 @@ body{font-family:'Inter','PingFang SC',sans-serif;}
 </details>
 </div>
 
-<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">General information only; not credit advice. Mortgage Bridge provides broking services across Sydney including Chatswood. Speak with a licensed broker for advice specific to you.</p>
+<p class="text-on-surface-variant/85 text-xs mt-8 leading-relaxed">General information only; not credit advice. Mortgage Bridge provides broking services across Sydney including Chatswood. Speak with a licensed broker for advice specific to you.</p>
 
 <!-- Tools -->
 <div class="mt-12 pt-8 border-t border-outline-variant/30">

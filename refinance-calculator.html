@@ -193,10 +193,10 @@ body{font-family:'Inter','PingFang SC',sans-serif;}
 <h2 class="font-display text-2xl font-bold mb-2">Find out if switching is worth it for you</h2>
 <p class="text-on-primary/80 mb-6 leading-relaxed">The rate is only part of it. Break costs on a fixed loan, a valuation that comes in low, or an LVR above 80% can wipe out the saving entirely. We check all of it before you apply anywhere — free, no obligation, called back within 12 hours. <span class="text-on-primary/70">我们提供普通话/粤语服务。</span></p>
 <form data-lead-form="Refinance calculator enquiry" data-success-en="✓ Thanks! A specialist will call you within 12 hours." data-success-zh="✓ 已收到！顾问会在12小时内联系你。" class="grid sm:grid-cols-2 gap-4">
-  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Name" placeholder="Your name / 称呼" required type="text"/>
-  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Contact" placeholder="Phone or WeChat / 电话或微信" required type="tel"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Name" placeholder="Your name / 称呼" required type="text" aria-label="Name"/>
+  <input class="rounded-xl border-0 px-4 py-3 text-on-surface" name="Contact" placeholder="Phone or WeChat / 电话或微信" required type="tel" aria-label="Contact"/>
   <input data-noi18n="true" id="snapshot" name="calculator_snapshot" type="hidden"/>
-  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="Situation">
+  <select class="rounded-xl border-0 px-4 py-3 text-on-surface sm:col-span-2" name="Situation" aria-label="Situation">
     <option>Current loan type — Variable rate</option>
     <option>Fixed rate (may have break costs)</option>
     <option>Split loan</option>
@@ -236,7 +236,7 @@ body{font-family:'Inter','PingFang SC',sans-serif;}
 <a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-bold hover:opacity-90 transition text-sm" href="lmi-calculator.html"><span class="material-symbols-outlined text-base">calculate</span>LMI Calculator</a>
 </div>
 
-<p class="text-on-surface-variant/70 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. It assumes principal and interest repayments at a constant rate and does not model offset accounts, redraw, fee structures, fixed-rate break costs or LMI. Actual savings depend on the loan product and lender assessment. Speak with a qualified mortgage broker before switching. Mortgage Bridge does not guarantee loan approval, any particular rate, or any particular outcome.</p>
+<p class="text-on-surface-variant/85 text-xs mt-8 leading-relaxed">This calculator provides general information only and produces an estimate, not a quote. It does not take into account your objectives, financial situation or needs. It assumes principal and interest repayments at a constant rate and does not model offset accounts, redraw, fee structures, fixed-rate break costs or LMI. Actual savings depend on the loan product and lender assessment. Speak with a qualified mortgage broker before switching. Mortgage Bridge does not guarantee loan approval, any particular rate, or any particular outcome.</p>
 
 </main>
 

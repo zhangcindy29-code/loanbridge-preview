@@ -295,15 +295,15 @@
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Full Name</label>
-<input name="Full Name" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="Your name" type="text" required/>
+<input name="Full Name" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="Your name" type="text" required aria-label="Full Name"/>
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Phone Number</label>
-<input name="Phone" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="04xx xxx xxx" type="tel" required/>
+<input name="Phone" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface" placeholder="04xx xxx xxx" type="tel" required aria-label="Phone"/>
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Location</label>
-<input name="Location" list="sydney-regions" placeholder="Select or type your area" autocomplete="off" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary"/>
+<input name="Location" list="sydney-regions" placeholder="Select or type your area" autocomplete="off" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary" aria-label="Location"/>
 <datalist id="sydney-regions">
 <option value="North Shore"></option>
 <option value="Western Sydney"></option>
@@ -320,7 +320,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Preferred Language</label>
-<select name="Preferred Language" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<select name="Preferred Language" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none" aria-label="Preferred Language">
 <option>Select Language</option>
 <option>English</option>
 <option>Mandarin (普通话)</option>
@@ -330,7 +330,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Loan Type</label>
-<select name="Loan Type" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none">
+<select name="Loan Type" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none" aria-label="Loan Type">
 <option>Select Type</option>
 <option>Owner Occupier</option>
 <option>Investment</option>
@@ -342,7 +342,7 @@
 </div>
 <div class="space-y-2">
 <label class="text-label-sm text-on-surface-variant">Loan Amount</label>
-<select name="Loan Amount" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary">
+<select name="Loan Amount" class="w-full h-12 px-4 rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface appearance-none focus:border-primary" aria-label="Loan Amount">
 <option>Not sure — help me work it out</option>
 <option>Under $500k</option>
 <option>$500k – $750k</option>
@@ -475,22 +475,22 @@
 <div>
 <label class="text-label-sm font-semibold block mb-2">Loan Amount</label>
 <div class="flex items-center gap-3">
-<input id="rc-amount" class="flex-1 accent-secondary" type="range" min="50000" max="20000000" step="10000" value="650000"/>
-<input id="rc-amount-num" type="number" min="50000" max="20000000" step="10000" value="650000" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right"/>
+<input id="rc-amount" class="flex-1 accent-secondary" type="range" min="50000" max="20000000" step="10000" value="650000" aria-label="Loan Amount slider"/>
+<input id="rc-amount-num" type="number" min="50000" max="20000000" step="10000" value="650000" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right" aria-label="Loan Amount value"/>
 </div>
 </div>
 <div>
 <label class="text-label-sm font-semibold block mb-2">Loan Term (years)</label>
 <div class="flex items-center gap-3">
-<input id="rc-term" class="flex-1 accent-secondary" type="range" min="1" max="30" step="1" value="30"/>
-<input id="rc-term-num" type="number" min="1" max="30" step="1" value="30" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right"/>
+<input id="rc-term" class="flex-1 accent-secondary" type="range" min="1" max="30" step="1" value="30" aria-label="Loan Term (years) slider"/>
+<input id="rc-term-num" type="number" min="1" max="30" step="1" value="30" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right" aria-label="Loan Term (years) value"/>
 </div>
 </div>
 <div>
 <label class="text-label-sm font-semibold block mb-2">Interest Rate (p.a.)</label>
 <div class="flex items-center gap-3">
-<input id="rc-rate" class="flex-1 accent-secondary" type="range" min="1" max="12" step="0.05" value="6.00"/>
-<input id="rc-rate-num" type="number" min="1" max="12" step="0.05" value="6.00" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right"/>
+<input id="rc-rate" class="flex-1 accent-secondary" type="range" min="1" max="12" step="0.05" value="6.00" aria-label="Interest Rate (p.a.) slider"/>
+<input id="rc-rate-num" type="number" min="1" max="12" step="0.05" value="6.00" class="w-28 h-9 px-2 rounded-lg border-outline-variant bg-surface-container-lowest text-sm text-right" aria-label="Interest Rate (p.a.) value"/>
 </div>
 </div>
 <div>
@@ -551,7 +551,7 @@
 <div class="text-3xl font-bold text-on-primary" id="rc-interest">$0</div>
 </div>
 </div>
-<p class="text-on-surface-variant/70 text-xs leading-relaxed mt-6">Estimate only — actual repayments depend on your rate, fees and loan structure. <a href="#find-broker" class="text-primary font-semibold underline">Talk to us for an exact quote.</a></p>
+<p class="text-on-surface-variant/85 text-xs leading-relaxed mt-6">Estimate only — actual repayments depend on your rate, fees and loan structure. <a href="#find-broker" class="text-primary font-semibold underline">Talk to us for an exact quote.</a></p>
 </div>
 </div>
 <!-- More calculators -->
@@ -627,7 +627,7 @@
 <h2 class="font-display-lg text-headline-md text-primary mb-4">Success Stories</h2>
 <p class="text-on-surface-variant max-w-2xl mx-auto">Real client scenarios — structured, approved, settled.</p>
 </div>
-<p class="text-center text-on-surface-variant/70 text-label-sm mb-12">Client details have been anonymised for privacy.</p>
+<p class="text-center text-on-surface-variant/85 text-label-sm mb-12">Client details have been anonymised for privacy.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="bg-surface rounded-2xl p-8 card-shadow border border-outline-variant/10 flex flex-col">
 <span class="self-start px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-4">First Home Buyer</span>
@@ -738,18 +738,18 @@
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
 <div class="space-y-2">
 <label class="block text-label-sm text-on-surface-variant">Full Name</label>
-<input name="Full Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required/>
+<input name="Full Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required aria-label="Full Name"/>
 </div>
 <div class="space-y-2">
 <label class="block text-label-sm text-on-surface-variant">Email</label>
-<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email" required/>
+<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email" required aria-label="Email"/>
 </div>
 <div class="space-y-2">
 <label class="block text-label-sm text-on-surface-variant">Phone (optional)</label>
-<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel"/>
+<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel" aria-label="Phone"/>
 </div>
 <button type="submit" class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-opacity">Send Me the Guide</button>
-<p class="text-on-surface-variant/70 text-[11px] text-center">No spam. Unsubscribe anytime.</p>
+<p class="text-on-surface-variant/85 text-[11px] text-center">No spam. Unsubscribe anytime.</p>
 </form>
 </div>
 </div>
@@ -849,19 +849,19 @@
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off"/>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Name</label>
-<input name="Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required/>
+<input name="Name" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="text" required aria-label="Name"/>
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Phone</label>
-<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel" required/>
+<input name="Phone" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="tel" required aria-label="Phone"/>
 </div>
 <div class="col-span-2">
 <label class="block text-label-sm mb-1">Email</label>
-<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email"/>
+<input name="Email" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" type="email" aria-label="Email"/>
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Preferred Language</label>
-<select name="Preferred Language" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5">
+<select name="Preferred Language" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" aria-label="Preferred Language">
 <option>English</option>
 <option>Mandarin</option>
 <option>Cantonese</option>
@@ -870,11 +870,11 @@
 </div>
 <div class="col-span-1">
 <label class="block text-label-sm mb-1">Loan Amount</label>
-<input name="Loan Amount" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" placeholder="$" type="text"/>
+<input name="Loan Amount" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" placeholder="$" type="text" aria-label="Loan Amount"/>
 </div>
 <div class="col-span-2">
 <label class="block text-label-sm mb-1">How can we help?</label>
-<textarea name="Message" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" rows="3"></textarea>
+<textarea name="Message" class="w-full rounded-lg border-outline-variant bg-surface-container-lowest py-2.5" rows="3" aria-label="How can we help?"></textarea>
 </div>
 <div class="col-span-2 pt-2">
 <button class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:opacity-90 transition-opacity">Submit Request</button>
@@ -922,7 +922,7 @@
 <div class="col-span-1 md:col-span-1 text-right self-end">
 <p class="text-on-primary/60 text-sm">© 2026 Mortgage Bridge. Auspicious Professionalism in Mortgage Services.</p></div>
 </div>
-<p class="text-on-primary/50 text-xs leading-relaxed mt-10 pt-6 border-t border-on-primary/10">General information only; not credit advice. Mortgage Bridge provides broking services across Sydney. Speak with a licensed broker for advice specific to you.</p>
+<p class="text-on-primary/65 text-xs leading-relaxed mt-10 pt-6 border-t border-on-primary/10">General information only; not credit advice. Mortgage Bridge provides broking services across Sydney. Speak with a licensed broker for advice specific to you.</p>
 </div>
 </div>
 </footer>
