@@ -139,7 +139,7 @@ def low_doc():
     d, T = maker()
     spec = {
         "slug": "article-self-employed-home-loans",
-        "title": "Self-Employed & Low Doc Home Loans Explained | Mortgage Bridge",
+        "title": "Self-Employed & Low Doc Home Loans | Mortgage Bridge",
         "desc": "How lenders assess self-employed income, what full doc and low doc loans ask for, the real trade-offs, and how to prepare before you apply.",
         "date": "2026-11-05",
         "badge": T("Self-employed · Low doc", "自雇 · Low Doc"),
