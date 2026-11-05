@@ -22,7 +22,7 @@
   "use strict";
 
   // ====== 在这里填你的 ID ======
-  var GA4_ID         = "G-XXXXXXXXXX";   // GA4 衡量 ID
+  var GA4_ID         = "G-RBMNCJ2TBK";   // GA4 衡量 ID
   var ADS_ID         = "AW-XXXXXXXXX";   // Google Ads 转化 ID(没投广告可先不填)
   var ADS_LEAD_LABEL = "XXXXXXXXXXXX";   // Google Ads 潜在客户转化"标签"
   // =============================
