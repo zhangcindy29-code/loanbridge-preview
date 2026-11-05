@@ -33,6 +33,7 @@ def construction():
                         "建房期间通常只还利息，并按已放款金额计算，所以每过一个阶段月供都会增加。完工后，贷款一般转为本息同还。要问清楚只还利息的期限多长，工期延误时怎么处理。")),
                 ("p", T("If you are renting or paying another mortgage at the same time, budget for both for the whole build, plus some room for delays.",
                         "如果同时在租房或还另一笔房贷，要按整个工期预留两边的开支，并多留一些余地应对延误。")),
+                ("p", link("construction-loan-calculator.html", T("Estimate it stage by stage with our construction loan calculator", "用自建贷款计算器按阶段估算"))),
             ]},
             {"h2": T("What lenders usually ask for", "贷款机构通常要什么"), "blocks": [
                 ("ul", [T("A signed building contract with a licensed builder. Many lenders prefer a fixed-price contract.", "与持牌建筑商签订的建筑合同。很多贷款机构更偏好固定总价合同。"),
@@ -82,7 +83,7 @@ def construction():
                 "可以，但要符合贷款机构的条件。你需要证明收入，选择可能较少，所以签建筑合同前要比较各家政策。"),
         ],
         "related": [
-            ("borrowing-power-calculator.html", T("Borrowing power calculator", "借款能力计算器"), T("Estimate how much you may be able to borrow.", "估算你可能借到多少。")),
+            ("construction-loan-calculator.html", T("Construction loan calculator", "自建贷款计算器"), T("Interest and repayments, stage by stage.", "按阶段估算利息和月供。")),
             ("bridging-loan-australia.html", T("Bridging loans explained", "过桥贷款解析"), T("If you need to build or buy before you sell.", "如果需要先建或先买，再卖旧房。")),
             ("article-self-employed-home-loans.html", T("Self-employed and low doc loans", "自雇与 Low Doc 贷款"), T("What lenders ask for when income is harder to prove.", "收入较难证明时，贷款机构会要什么。")),
             ("first-home-buyer-grants-nsw.html", T("NSW first home buyer schemes", "NSW 首次置业计划"), T("Grants, stamp duty and the 5% deposit scheme.", "补助、印花税和 5% 首付计划。")),
